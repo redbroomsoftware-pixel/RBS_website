@@ -154,7 +154,8 @@
       "Bash(git -C /home/brillo/Projects/colectiva-RBS/colectiva push origin main)",
       "Bash(node /tmp/check-supabase-user.mjs:*)",
       "Bash(git -C /home/brillo/Projects/caracol log --oneline -5)",
-      "Bash(node scripts/add-ecosystem-write-permission.mjs:*)"
+      "Bash(node scripts/add-ecosystem-write-permission.mjs:*)",
+      "Bash(cd /home/user/RBS_website *)"
     ],
     "deny": [],
     "ask": []
