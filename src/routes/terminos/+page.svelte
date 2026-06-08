@@ -23,154 +23,154 @@
 <main class="py-16 px-4 sm:px-6 lg:px-8">
 	<article class="max-w-4xl mx-auto" use:scrollReveal>
 		<div class="mb-12">
-			<h1 class="text-4xl font-bold text-white mb-4">{$_('terms.title')}</h1>
-			<p class="text-slate-400">{$_('terms.lastUpdated')}: {$_('terms.date')}</p>
+			<h1 class="text-4xl font-bold text-gray-900 mb-4 tracking-tight">{$_('terms.title')}</h1>
+			<p class="text-gray-500">{$_('terms.lastUpdated')}: {$_('terms.date')}</p>
 		</div>
 
-		<div class="prose prose-invert prose-slate max-w-none space-y-8">
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section1.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+		<div class="prose prose-slate max-w-none space-y-8">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section1.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section1.content')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section2.title')}</h2>
-				<p class="text-slate-300 leading-relaxed mb-4">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section2.title')}</h2>
+				<p class="text-gray-700 leading-relaxed mb-4">
 					{$_('terms.section2.intro')}
 				</p>
-				<ul class="list-disc list-inside text-slate-300 space-y-2">
+				<ul class="list-disc list-inside text-gray-700 space-y-2">
 					{#each serviceItems as item}
-						<li><strong class="text-white">{$_(`terms.section2.items.${item}.label`)}</strong> {$_(`terms.section2.items.${item}.desc`)}</li>
+						<li><strong class="text-gray-900">{$_(`terms.section2.items.${item}.label`)}</strong> {$_(`terms.section2.items.${item}.desc`)}</li>
 					{/each}
 				</ul>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section3.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section3.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section3.p1')}
 				</p>
-				<p class="text-slate-300 leading-relaxed mt-4">
+				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('terms.section3.p2')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section4.title')}</h2>
-				<p class="text-slate-300 leading-relaxed mb-4">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section4.title')}</h2>
+				<p class="text-gray-700 leading-relaxed mb-4">
 					{$_('terms.section4.intro')}
 				</p>
-				<ul class="list-disc list-inside text-slate-300 space-y-2">
+				<ul class="list-disc list-inside text-gray-700 space-y-2">
 					{#each paymentItems as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
-				<p class="text-slate-300 leading-relaxed mt-4">
+				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('terms.section4.note')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section5.title')}</h2>
-				<p class="text-slate-300 leading-relaxed mb-4">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section5.title')}</h2>
+				<p class="text-gray-700 leading-relaxed mb-4">
 					{$_('terms.section5.intro')}
 				</p>
-				<ul class="list-disc list-inside text-slate-300 space-y-2">
+				<ul class="list-disc list-inside text-gray-700 space-y-2">
 					{#each useItems as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section6.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section6.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section6.p1')}
 				</p>
-				<p class="text-slate-300 leading-relaxed mt-4">
+				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('terms.section6.p2')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section7.title')}</h2>
-				<p class="text-slate-300 leading-relaxed mb-4">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section7.title')}</h2>
+				<p class="text-gray-700 leading-relaxed mb-4">
 					{$_('terms.section7.intro')}
 				</p>
-				<ul class="list-disc list-inside text-slate-300 space-y-2">
+				<ul class="list-disc list-inside text-gray-700 space-y-2">
 					{#each availabilityItems as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section8.title')}</h2>
-				<p class="text-slate-300 leading-relaxed mb-4">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section8.title')}</h2>
+				<p class="text-gray-700 leading-relaxed mb-4">
 					{$_('terms.section8.intro')}
 				</p>
-				<ul class="list-disc list-inside text-slate-300 space-y-2">
+				<ul class="list-disc list-inside text-gray-700 space-y-2">
 					{#each cfdiItems as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section9.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section9.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section9.p1')}
 				</p>
-				<p class="text-slate-300 leading-relaxed mt-4">
+				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('terms.section9.p2')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section10.title')}</h2>
-				<p class="text-slate-300 leading-relaxed mb-4">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section10.title')}</h2>
+				<p class="text-gray-700 leading-relaxed mb-4">
 					{$_('terms.section10.intro')}
 				</p>
-				<ul class="list-disc list-inside text-slate-300 space-y-2">
+				<ul class="list-disc list-inside text-gray-700 space-y-2">
 					{#each cancelItems as item}
 						<li>{item}</li>
 					{/each}
 				</ul>
-				<p class="text-slate-300 leading-relaxed mt-4">
+				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('terms.section10.note')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section11.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section11.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section11.content')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section12.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section12.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section12.content')}
 				</p>
 			</section>
 
-			<section class="bg-slate-900 rounded-2xl border border-slate-800 p-8">
-				<h2 class="text-2xl font-bold text-white mb-4">{$_('terms.section13.title')}</h2>
-				<p class="text-slate-300 leading-relaxed">
+			<section class="bg-white rounded-2xl border border-gray-200 p-8">
+				<h2 class="text-2xl font-bold text-gray-900 mb-4">{$_('terms.section13.title')}</h2>
+				<p class="text-gray-700 leading-relaxed">
 					{$_('terms.section13.intro')}
 				</p>
-				<div class="mt-4 text-slate-300">
-					<p><strong class="text-white">Red Broom Software S.A.S. de C.V.</strong></p>
+				<div class="mt-4 text-gray-700">
+					<p><strong class="text-gray-900">Red Broom Software S.A.S. de C.V.</strong></p>
 					<p>{$_('terms.section13.location')}</p>
-					<p>Email: <a href="mailto:dia@redbroomsoftware.com" class="text-blue-400 hover:text-blue-300">dia@redbroomsoftware.com</a></p>
+					<p>Email: <a href="mailto:dia@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">dia@redbroomsoftware.com</a></p>
 				</div>
 			</section>
 
-			<section class="bg-blue-900/20 rounded-2xl border border-blue-500/30 p-8">
-				<p class="text-slate-300 leading-relaxed text-center">
+			<section class="bg-gray-50 rounded-2xl border border-gray-200 p-8">
+				<p class="text-gray-700 leading-relaxed text-center">
 					{$_('terms.acceptance')}
 				</p>
 			</section>

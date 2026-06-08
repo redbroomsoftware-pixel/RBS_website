@@ -58,12 +58,11 @@
 
 <!-- Hero -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 relative">
-	<div class="absolute inset-0 bg-gradient-to-b from-emerald-600/10 via-transparent to-transparent"></div>
 	<div class="max-w-7xl mx-auto text-center relative">
-		<h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
-			{$_('technology.hero.titlePart1')} <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">{$_('technology.hero.titleHighlight')}</span>
+		<h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+			{$_('technology.hero.titlePart1')} <span class="text-gray-500">{$_('technology.hero.titleHighlight')}</span>
 		</h2>
-		<p class="text-xl text-slate-400 max-w-3xl mx-auto">
+		<p class="text-xl text-gray-600 max-w-3xl mx-auto">
 			{$_('technology.hero.subtitle')}
 		</p>
 	</div>
@@ -75,8 +74,8 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 			{#each principleKeys as key, i}
 				<div use:scrollReveal={{ delay: i * 100 }} class="glass rounded-xl p-6">
-					<h3 class="text-lg font-bold text-emerald-400 mb-2">{$_(`technology.principles.${key}.title`)}</h3>
-					<p class="text-slate-400 text-sm">{$_(`technology.principles.${key}.description`)}</p>
+					<h3 class="text-lg font-bold text-gray-900 mb-2">{$_(`technology.principles.${key}.title`)}</h3>
+					<p class="text-gray-600 text-sm">{$_(`technology.principles.${key}.description`)}</p>
 				</div>
 			{/each}
 		</div>
@@ -86,13 +85,13 @@
 <!-- Frontend -->
 <section class="py-12 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
-		<h3 class="text-2xl font-bold text-white mb-6">{$_("technology.sections.frontend")}</h3>
+		<h3 class="text-2xl font-bold text-gray-900 mb-6">{$_("technology.sections.frontend")}</h3>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			{#each techStackKeys.frontend as tech}
-				<div class="glass rounded-xl p-5 hover:border-emerald-500/50 transition-all">
+				<div class="glass rounded-xl p-5 hover:border-gray-900 transition-all">
 					<div class="text-2xl mb-2">{tech.icon}</div>
-					<h4 class="text-white font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
-					<p class="text-slate-400 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
+					<h4 class="text-gray-900 font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
+					<p class="text-gray-600 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
 				</div>
 			{/each}
 		</div>
@@ -102,13 +101,13 @@
 <!-- Backend -->
 <section class="py-12 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
-		<h3 class="text-2xl font-bold text-white mb-6">{$_("technology.sections.backend")}</h3>
+		<h3 class="text-2xl font-bold text-gray-900 mb-6">{$_("technology.sections.backend")}</h3>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			{#each techStackKeys.backend as tech}
-				<div class="glass rounded-xl p-5 hover:border-emerald-500/50 transition-all">
+				<div class="glass rounded-xl p-5 hover:border-gray-900 transition-all">
 					<div class="text-2xl mb-2">{tech.icon}</div>
-					<h4 class="text-white font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
-					<p class="text-slate-400 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
+					<h4 class="text-gray-900 font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
+					<p class="text-gray-600 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
 				</div>
 			{/each}
 		</div>
@@ -116,15 +115,15 @@
 </section>
 
 <!-- AI -->
-<section class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+<section class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
 	<div class="max-w-7xl mx-auto">
-		<h3 class="text-2xl font-bold text-white mb-6">{$_("technology.sections.ai")}</h3>
+		<h3 class="text-2xl font-bold text-gray-900 mb-6">{$_("technology.sections.ai")}</h3>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			{#each techStackKeys.ai as tech}
-				<div class="glass rounded-xl p-5 hover:border-purple-500/50 transition-all">
+				<div class="glass rounded-xl p-5 hover:border-gray-900 transition-all">
 					<div class="text-2xl mb-2">{tech.icon}</div>
-					<h4 class="text-white font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
-					<p class="text-slate-400 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
+					<h4 class="text-gray-900 font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
+					<p class="text-gray-600 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
 				</div>
 			{/each}
 		</div>
@@ -135,8 +134,8 @@
 <section class="py-16 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
 		<div class="mb-10" use:scrollReveal>
-			<h3 class="text-2xl font-bold text-white mb-2">{$_('technology.agents.title')}</h3>
-			<p class="text-slate-400 max-w-2xl">
+			<h3 class="text-2xl font-bold text-gray-900 mb-2">{$_('technology.agents.title')}</h3>
+			<p class="text-gray-600 max-w-2xl">
 				{$_('technology.agents.subtitle')}
 			</p>
 		</div>
@@ -144,77 +143,77 @@
 		<!-- Pipeline flow -->
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
 			<div class="glass rounded-xl p-5">
-				<div class="text-purple-400 font-mono text-xs mb-2">1. REQUEST</div>
-				<p class="text-white font-semibold text-sm mb-1">{$_('technology.agents.pipeline.request.title')}</p>
-				<p class="text-slate-400 text-xs">{$_('technology.agents.pipeline.request.desc')}</p>
+				<div class="text-gray-900 font-mono text-xs mb-2">1. REQUEST</div>
+				<p class="text-gray-900 font-semibold text-sm mb-1">{$_('technology.agents.pipeline.request.title')}</p>
+				<p class="text-gray-600 text-xs">{$_('technology.agents.pipeline.request.desc')}</p>
 			</div>
-			<div class="bg-slate-900 border border-purple-500/30 rounded-xl p-5">
-				<div class="text-purple-400 font-mono text-xs mb-2">2. ROUTE</div>
-				<p class="text-white font-semibold text-sm mb-1">{$_('technology.agents.pipeline.route.title')}</p>
-				<p class="text-slate-400 text-xs">{$_('technology.agents.pipeline.route.desc')}</p>
-			</div>
-			<div class="glass rounded-xl p-5">
-				<div class="text-purple-400 font-mono text-xs mb-2">3. EXECUTE</div>
-				<p class="text-white font-semibold text-sm mb-1">{$_('technology.agents.pipeline.execute.title')}</p>
-				<p class="text-slate-400 text-xs">{$_('technology.agents.pipeline.execute.desc')}</p>
+			<div class="bg-gray-50 border border-gray-900 rounded-xl p-5">
+				<div class="text-gray-900 font-mono text-xs mb-2">2. ROUTE</div>
+				<p class="text-gray-900 font-semibold text-sm mb-1">{$_('technology.agents.pipeline.route.title')}</p>
+				<p class="text-gray-600 text-xs">{$_('technology.agents.pipeline.route.desc')}</p>
 			</div>
 			<div class="glass rounded-xl p-5">
-				<div class="text-purple-400 font-mono text-xs mb-2">4. METER</div>
-				<p class="text-white font-semibold text-sm mb-1">{$_('technology.agents.pipeline.meter.title')}</p>
-				<p class="text-slate-400 text-xs">{$_('technology.agents.pipeline.meter.desc')}</p>
+				<div class="text-gray-900 font-mono text-xs mb-2">3. EXECUTE</div>
+				<p class="text-gray-900 font-semibold text-sm mb-1">{$_('technology.agents.pipeline.execute.title')}</p>
+				<p class="text-gray-600 text-xs">{$_('technology.agents.pipeline.execute.desc')}</p>
+			</div>
+			<div class="glass rounded-xl p-5">
+				<div class="text-gray-900 font-mono text-xs mb-2">4. METER</div>
+				<p class="text-gray-900 font-semibold text-sm mb-1">{$_('technology.agents.pipeline.meter.title')}</p>
+				<p class="text-gray-600 text-xs">{$_('technology.agents.pipeline.meter.desc')}</p>
 			</div>
 		</div>
 
 		<!-- Live agents -->
-		<h4 class="text-lg font-semibold text-white mb-4" use:scrollReveal>{$_('technology.agents.liveTitle')}</h4>
+		<h4 class="text-lg font-semibold text-gray-900 mb-4" use:scrollReveal>{$_('technology.agents.liveTitle')}</h4>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 			<div class="glass rounded-xl p-5">
 				<div class="flex items-center gap-2 mb-3">
-					<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-					<span class="text-xs text-emerald-400 font-medium">{$_('technology.agents.live')} · Colectiva</span>
+					<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+					<span class="text-xs text-emerald-600 font-medium">{$_('technology.agents.live')} · Colectiva</span>
 				</div>
-				<h5 class="text-white font-semibold mb-1">{$_('technology.agents.oracle.title')}</h5>
-				<p class="text-slate-400 text-sm">{$_('technology.agents.oracle.desc')}</p>
+				<h5 class="text-gray-900 font-semibold mb-1">{$_('technology.agents.oracle.title')}</h5>
+				<p class="text-gray-600 text-sm">{$_('technology.agents.oracle.desc')}</p>
 			</div>
 			<div class="glass rounded-xl p-5">
 				<div class="flex items-center gap-2 mb-3">
-					<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-					<span class="text-xs text-emerald-400 font-medium">{$_('technology.agents.live')} · Rito</span>
+					<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+					<span class="text-xs text-emerald-600 font-medium">{$_('technology.agents.live')} · Rito</span>
 				</div>
-				<h5 class="text-white font-semibold mb-1">{$_('technology.agents.dealCopilot.title')}</h5>
-				<p class="text-slate-400 text-sm">{$_('technology.agents.dealCopilot.desc')}</p>
+				<h5 class="text-gray-900 font-semibold mb-1">{$_('technology.agents.dealCopilot.title')}</h5>
+				<p class="text-gray-600 text-sm">{$_('technology.agents.dealCopilot.desc')}</p>
 			</div>
 			<div class="glass rounded-xl p-5">
 				<div class="flex items-center gap-2 mb-3">
-					<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-					<span class="text-xs text-emerald-400 font-medium">{$_('technology.agents.live')} · Camino</span>
+					<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+					<span class="text-xs text-emerald-600 font-medium">{$_('technology.agents.live')} · Camino</span>
 				</div>
-				<h5 class="text-white font-semibold mb-1">{$_('technology.agents.support.title')}</h5>
-				<p class="text-slate-400 text-sm">{$_('technology.agents.support.desc')}</p>
+				<h5 class="text-gray-900 font-semibold mb-1">{$_('technology.agents.support.title')}</h5>
+				<p class="text-gray-600 text-sm">{$_('technology.agents.support.desc')}</p>
 			</div>
 			<div class="glass rounded-xl p-5">
 				<div class="flex items-center gap-2 mb-3">
-					<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-					<span class="text-xs text-emerald-400 font-medium">{$_('technology.agents.live')} · Plenura</span>
+					<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+					<span class="text-xs text-emerald-600 font-medium">{$_('technology.agents.live')} · Plenura</span>
 				</div>
-				<h5 class="text-white font-semibold mb-1">{$_('technology.agents.wellness.title')}</h5>
-				<p class="text-slate-400 text-sm">{$_('technology.agents.wellness.desc')}</p>
+				<h5 class="text-gray-900 font-semibold mb-1">{$_('technology.agents.wellness.title')}</h5>
+				<p class="text-gray-600 text-sm">{$_('technology.agents.wellness.desc')}</p>
 			</div>
 			<div class="glass rounded-xl p-5">
 				<div class="flex items-center gap-2 mb-3">
-					<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-					<span class="text-xs text-emerald-400 font-medium">{$_('technology.agents.live')} · Constanza</span>
+					<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+					<span class="text-xs text-emerald-600 font-medium">{$_('technology.agents.live')} · Constanza</span>
 				</div>
-				<h5 class="text-white font-semibold mb-1">{$_('technology.agents.fiscal.title')}</h5>
-				<p class="text-slate-400 text-sm">{$_('technology.agents.fiscal.desc')}</p>
+				<h5 class="text-gray-900 font-semibold mb-1">{$_('technology.agents.fiscal.title')}</h5>
+				<p class="text-gray-600 text-sm">{$_('technology.agents.fiscal.desc')}</p>
 			</div>
 			<div class="glass rounded-xl p-5">
 				<div class="flex items-center gap-2 mb-3">
-					<span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-					<span class="text-xs text-emerald-400 font-medium">{$_('technology.agents.live')} · Agora</span>
+					<span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+					<span class="text-xs text-emerald-600 font-medium">{$_('technology.agents.live')} · Agora</span>
 				</div>
-				<h5 class="text-white font-semibold mb-1">{$_('technology.agents.legal.title')}</h5>
-				<p class="text-slate-400 text-sm">{$_('technology.agents.legal.desc')}</p>
+				<h5 class="text-gray-900 font-semibold mb-1">{$_('technology.agents.legal.title')}</h5>
+				<p class="text-gray-600 text-sm">{$_('technology.agents.legal.desc')}</p>
 			</div>
 		</div>
 	</div>
@@ -223,13 +222,13 @@
 <!-- Integrations -->
 <section class="py-12 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
-		<h3 class="text-2xl font-bold text-white mb-6">{$_("technology.sections.integrations")}</h3>
+		<h3 class="text-2xl font-bold text-gray-900 mb-6">{$_("technology.sections.integrations")}</h3>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
 			{#each techStackKeys.integrations as tech}
-				<div class="glass rounded-xl p-5 hover:border-blue-500/50 transition-all">
+				<div class="glass rounded-xl p-5 hover:border-gray-900 transition-all">
 					<div class="text-2xl mb-2">{tech.icon}</div>
-					<h4 class="text-white font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
-					<p class="text-slate-400 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
+					<h4 class="text-gray-900 font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
+					<p class="text-gray-600 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
 				</div>
 			{/each}
 		</div>
@@ -239,13 +238,13 @@
 <!-- Infrastructure -->
 <section class="py-12 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
-		<h3 class="text-2xl font-bold text-white mb-6">{$_("technology.sections.infrastructure")}</h3>
+		<h3 class="text-2xl font-bold text-gray-900 mb-6">{$_("technology.sections.infrastructure")}</h3>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 			{#each techStackKeys.infrastructure as tech}
-				<div class="glass rounded-xl p-5 hover:border-cyan-500/50 transition-all">
+				<div class="glass rounded-xl p-5 hover:border-gray-900 transition-all">
 					<div class="text-2xl mb-2">{tech.icon}</div>
-					<h4 class="text-white font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
-					<p class="text-slate-400 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
+					<h4 class="text-gray-900 font-semibold">{$_(`technology.stack.${tech.key}.name`)}</h4>
+					<p class="text-gray-600 text-sm">{$_(`technology.stack.${tech.key}.description`)}</p>
 				</div>
 			{/each}
 		</div>
@@ -255,9 +254,9 @@
 <!-- CTA -->
 <section class="py-20 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-3xl mx-auto text-center">
-		<h3 class="text-3xl font-bold text-white mb-4">{$_("technology.cta.title")}</h3>
-		<p class="text-slate-400 mb-8">{$_("technology.cta.subtitle")}</p>
-		<a href="/contacto" class="inline-flex px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-600 text-white rounded-xl hover:from-emerald-600 hover:to-cyan-700 transition-all font-semibold">
+		<h3 class="text-3xl font-bold text-gray-900 mb-4">{$_("technology.cta.title")}</h3>
+		<p class="text-gray-600 mb-8">{$_("technology.cta.subtitle")}</p>
+		<a href="/contacto" class="inline-flex px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-all font-semibold">
 			{$_('technology.cta.button')}
 		</a>
 	</div>

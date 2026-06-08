@@ -28,4 +28,4 @@
 	});
 </script>
 
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{currentText}</span><span class="animate-pulse text-blue-400">|</span>
+<span class="text-gray-900">{currentText}</span><span class="animate-pulse text-gray-400">|</span>

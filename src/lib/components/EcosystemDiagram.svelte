@@ -33,15 +33,15 @@
 				class="glass rounded-xl p-3 text-center hover:scale-105 transition-transform cursor-default"
 				style="animation-delay: {i * 100}ms"
 			>
-				<div class="w-8 h-8 rounded-lg bg-gradient-to-r {app.color} mx-auto mb-1.5 opacity-80"></div>
-				<p class="text-white text-xs font-semibold">{app.name}</p>
-				<p class="text-slate-400 text-[10px]">{$_(`ecosystemDiagram.roles.${app.roleKey}`)}</p>
+				<div class="w-8 h-8 rounded-lg bg-gradient-to-r {app.color} mx-auto mb-1.5 opacity-90"></div>
+				<p class="text-gray-900 text-xs font-semibold">{app.name}</p>
+				<p class="text-gray-500 text-[10px]">{$_(`ecosystemDiagram.roles.${app.roleKey}`)}</p>
 			</div>
 		{/each}
 	</div>
 
 	<!-- Connection lines (decorative) -->
 	<div class="absolute inset-0 pointer-events-none overflow-hidden">
-		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-slate-800/50 rounded-full"></div>
+		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-gray-100 rounded-full"></div>
 	</div>
 </div>
