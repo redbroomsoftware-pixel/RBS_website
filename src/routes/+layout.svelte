@@ -3,7 +3,7 @@
 	import { getStoredLocale, setLocale } from '$lib/i18n';
 	import { onMount } from 'svelte';
 	import { _, locale } from 'svelte-i18n';
-	import { SiteHeader, SiteFooter } from '@r-bsoftware/palacio-ui';
+	import { SiteHeader } from '@r-bsoftware/palacio-ui';
 
 	let { children } = $props();
 
@@ -40,5 +40,6 @@
 	<main id="main" class="flex-1">
 		{@render children()}
 	</main>
-	<SiteFooter surface="rbs" locale={shellLocale} />
+	<!-- Footer is rendered per-page (rich marketing Footer in $lib/components/Footer.svelte).
+	     The minimal palacio-ui SiteFooter was removed here to avoid a double footer (S434). -->
 </div>
