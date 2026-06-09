@@ -64,16 +64,15 @@
 
 <!-- Hero -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 relative">
-	<div class="absolute inset-0 bg-gradient-to-b from-purple-600/10 via-transparent to-transparent"></div>
 	<div class="max-w-7xl mx-auto text-center relative">
-		<div class="inline-flex items-center px-4 py-2 glass rounded-full text-sm text-slate-300 mb-6">
-			<span class="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+		<div class="inline-flex items-center px-4 py-2 glass rounded-full text-sm text-gray-600 mb-6">
+			<span class="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
 			{$_("portfolio.hero.badge")}
 		</div>
-		<h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
-			{$_("portfolio.hero.titlePart1")} <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{$_("portfolio.hero.titleHighlight")}</span>
+		<h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
+			{$_("portfolio.hero.titlePart1")} <span class="text-gray-500">{$_("portfolio.hero.titleHighlight")}</span>
 		</h2>
-		<p class="text-xl text-slate-400 max-w-3xl mx-auto">
+		<p class="text-xl text-gray-600 max-w-3xl mx-auto">
 			{$_("portfolio.hero.subtitle")}
 		</p>
 	</div>
@@ -88,8 +87,8 @@
 					onclick={() => activeCategory = cat.value}
 					class="px-4 py-2 rounded-full text-sm font-medium transition-all
 						{activeCategory === cat.value
-							? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
-							: 'glass text-slate-400 hover:text-white'}"
+							? 'bg-black text-white border border-black'
+							: 'glass text-gray-600 hover:text-gray-900'}"
 				>
 					{$_(cat.labelKey)}
 				</button>
@@ -105,42 +104,42 @@
 			{#each filteredProducts as product, i (product.key)}
 				<article
 					use:scrollReveal={{ delay: Math.min(i * 80, 400) }}
-					class="glass rounded-2xl p-6 hover:border-purple-500/50 transition-all hover:shadow-lg hover:shadow-purple-500/10 group"
+					class="glass rounded-2xl p-6 hover:border-gray-900 transition-all hover:shadow-md group"
 				>
 					<div class="flex items-start justify-between mb-4">
 						<div class="flex items-center gap-4">
-							<div class="w-14 h-14 bg-slate-800/80 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+							<div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
 								{product.icon}
 							</div>
 							<div>
-								<h3 class="text-xl font-bold text-white">{$_(`portfolio.products.${product.key}.name`)}</h3>
-								<p class="text-sm text-purple-400">{$_(`portfolio.products.${product.key}.subtitle`)}</p>
+								<h3 class="text-xl font-bold text-gray-900">{$_(`portfolio.products.${product.key}.name`)}</h3>
+								<p class="text-sm text-gray-500">{$_(`portfolio.products.${product.key}.subtitle`)}</p>
 							</div>
 						</div>
 						<div class="flex flex-col items-end gap-1">
-							<span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">
+							<span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium">
 								{$_('portfolio.products.live')}
 							</span>
 							{#if product.agentBadgeKey}
-								<span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs font-medium">
+								<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
 									{$_(product.agentBadgeKey)}
 								</span>
 							{/if}
 						</div>
 					</div>
 
-					<p class="text-slate-400 text-sm mb-4">{$_(`portfolio.products.${product.key}.description`)}</p>
+					<p class="text-gray-600 text-sm mb-4">{$_(`portfolio.products.${product.key}.description`)}</p>
 
 					<div class="flex flex-wrap gap-2 mb-4">
 						{#each product.tech as tech}
-							<span class="px-2 py-1 bg-slate-800/80 text-slate-300 rounded text-xs">{tech}</span>
+							<span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">{tech}</span>
 						{/each}
 					</div>
 
 					<ul class="grid grid-cols-2 gap-2 mb-4">
 						{#each highlightIndices as idx}
-							<li class="flex items-center text-sm text-slate-300">
-								<svg class="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<li class="flex items-center text-sm text-gray-700">
+								<svg class="w-4 h-4 text-emerald-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								{$_(`portfolio.products.${product.key}.highlights.${idx}`)}
@@ -148,7 +147,7 @@
 						{/each}
 					</ul>
 
-					<a href={product.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
+					<a href={product.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors">
 						{$_('portfolio.products.visitProduct')}
 						<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -161,16 +160,16 @@
 </section>
 
 <!-- B2C Services -->
-<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 via-emerald-950/20 to-slate-950">
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
 	<div class="max-w-7xl mx-auto">
 		<div class="text-center mb-12" use:scrollReveal>
-			<div class="inline-flex items-center px-4 py-2 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-sm text-emerald-300 mb-6">
+			<div class="inline-flex items-center px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-full text-sm text-emerald-700 mb-6">
 				{$_("portfolio.b2cServices.new")}
 			</div>
-			<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-				{$_("portfolio.b2cServices.title").split(" ")[0]} <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">B2C</span>
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+				{$_("portfolio.b2cServices.title").split(" ")[0]} <span class="text-gray-500">B2C</span>
 			</h2>
-			<p class="text-xl text-slate-400 max-w-2xl mx-auto">
+			<p class="text-xl text-gray-600 max-w-2xl mx-auto">
 				{$_("portfolio.b2cServices.subtitle")}
 			</p>
 		</div>
@@ -179,35 +178,35 @@
 			{#each b2cServiceKeys as service, i}
 				<article
 					use:scrollReveal={{ delay: i * 100 }}
-					class="glass rounded-2xl p-6 hover:border-emerald-500/50 transition-all hover:shadow-lg hover:shadow-emerald-500/10 group"
+					class="glass rounded-2xl p-6 hover:border-gray-900 transition-all hover:shadow-md group"
 				>
 					<div class="flex items-start justify-between mb-4">
 						<div class="flex items-center gap-4">
-							<div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
+							<div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
 								{service.icon}
 							</div>
 							<div>
-								<h3 class="text-xl font-bold text-white">{$_(`portfolio.b2cServices.${service.key}.name`)}</h3>
-								<p class="text-sm text-emerald-400">{$_(`portfolio.b2cServices.${service.key}.subtitle`)}</p>
+								<h3 class="text-xl font-bold text-gray-900">{$_(`portfolio.b2cServices.${service.key}.name`)}</h3>
+								<p class="text-sm text-gray-500">{$_(`portfolio.b2cServices.${service.key}.subtitle`)}</p>
 							</div>
 						</div>
 						{#if service.status === 'live'}
-							<span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">
+							<span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium">
 								{$_('portfolio.b2cServices.active')}
 							</span>
 						{:else}
-							<span class="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs font-medium">
+							<span class="px-3 py-1 bg-amber-50 text-amber-700 rounded-full text-xs font-medium">
 								{$_('portfolio.b2cServices.comingSoon')}
 							</span>
 						{/if}
 					</div>
 
-					<p class="text-slate-400 text-sm mb-4">{$_(`portfolio.b2cServices.${service.key}.description`)}</p>
+					<p class="text-gray-600 text-sm mb-4">{$_(`portfolio.b2cServices.${service.key}.description`)}</p>
 
 					<ul class="grid grid-cols-2 gap-2 mb-4">
 						{#each highlightIndices as idx}
-							<li class="flex items-center text-sm text-slate-300">
-								<svg class="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<li class="flex items-center text-sm text-gray-700">
+								<svg class="w-4 h-4 text-emerald-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
 								</svg>
 								{$_(`portfolio.b2cServices.${service.key}.highlights.${idx}`)}
@@ -216,14 +215,14 @@
 					</ul>
 
 					{#if service.status === 'live'}
-						<a href={service.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-emerald-400 hover:text-emerald-300 text-sm font-medium transition-colors">
+						<a href={service.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors">
 							{$_('portfolio.b2cServices.learnMore')}
 							<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
 							</svg>
 						</a>
 					{:else}
-						<span class="inline-flex items-center text-slate-500 text-sm">{$_("portfolio.b2cServices.availableSoon")}</span>
+						<span class="inline-flex items-center text-gray-400 text-sm">{$_("portfolio.b2cServices.availableSoon")}</span>
 					{/if}
 				</article>
 			{/each}
@@ -232,28 +231,28 @@
 </section>
 
 <!-- Stats -->
-<section class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/50">
+<section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
 	<div class="max-w-7xl mx-auto">
 		<div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center" use:scrollReveal>
 			<div>
-				<p class="text-4xl font-bold text-white"><AnimatedCounter value={16} /></p>
-				<p class="text-slate-400">{$_("portfolio.stats.saasProducts")}</p>
+				<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={16} /></p>
+				<p class="text-gray-500">{$_("portfolio.stats.saasProducts")}</p>
 			</div>
 			<div>
-				<p class="text-4xl font-bold text-white"><AnimatedCounter value={5} /></p>
-				<p class="text-slate-400">{$_("portfolio.stats.b2cServices")}</p>
+				<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={5} /></p>
+				<p class="text-gray-500">{$_("portfolio.stats.b2cServices")}</p>
 			</div>
 			<div>
-				<p class="text-4xl font-bold text-white"><AnimatedCounter value={10} suffix="+" /></p>
-				<p class="text-slate-400">{$_("portfolio.stats.industries")}</p>
+				<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={10} suffix="+" /></p>
+				<p class="text-gray-500">{$_("portfolio.stats.industries")}</p>
 			</div>
 			<div>
-				<p class="text-4xl font-bold text-white">99.9%</p>
-				<p class="text-slate-400">{$_("portfolio.stats.uptime")}</p>
+				<p class="text-4xl font-bold text-gray-900">99.9%</p>
+				<p class="text-gray-500">{$_("portfolio.stats.uptime")}</p>
 			</div>
 			<div>
-				<p class="text-4xl font-bold text-white">24/7</p>
-				<p class="text-slate-400">{$_("portfolio.stats.support")}</p>
+				<p class="text-4xl font-bold text-gray-900">24/7</p>
+				<p class="text-gray-500">{$_("portfolio.stats.support")}</p>
 			</div>
 		</div>
 	</div>
@@ -262,9 +261,9 @@
 <!-- CTA -->
 <section class="py-20 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-3xl mx-auto text-center" use:scrollReveal>
-		<h3 class="text-3xl font-bold text-white mb-4">{$_("portfolio.cta.title")}</h3>
-		<p class="text-slate-400 mb-8">{$_("portfolio.cta.subtitle")}</p>
-		<a href="/contacto" class="inline-flex px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all font-semibold hover:shadow-lg hover:shadow-purple-500/25 hover:-translate-y-0.5">
+		<h3 class="text-3xl font-bold text-gray-900 mb-4">{$_("portfolio.cta.title")}</h3>
+		<p class="text-gray-600 mb-8">{$_("portfolio.cta.subtitle")}</p>
+		<a href="/contacto" class="inline-flex px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-all font-semibold hover:-translate-y-0.5">
 			{$_('portfolio.cta.button')}
 		</a>
 	</div>

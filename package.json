@@ -24,7 +24,7 @@
   "type": "module",
   "dependencies": {
     "@fontsource-variable/inter": "^5.0.0",
-    "@r-bsoftware/palacio-ui": "^0.0.1",
+    "@r-bsoftware/palacio-ui": "^0.1.1",
     "@sentry/sveltekit": "^10.38.0",
     "svelte-i18n": "^4.0.1"
   }

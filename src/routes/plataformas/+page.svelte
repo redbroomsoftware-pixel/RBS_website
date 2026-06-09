@@ -176,18 +176,20 @@
 	}
 
 	// Color map for Tailwind (static classes for purging)
+	// Palacio re-skin: pricing text reads as strong black on light; cards share a uniform
+	// hairline → gray-900 hover. The per-app color key is retained (used by c()) but maps to neutral.
 	const colors = {
-		amber:  { text: 'text-amber-400',  border: 'hover:border-amber-500/50',  shadow: 'hover:shadow-amber-500/10' },
-		rose:   { text: 'text-rose-400',   border: 'hover:border-rose-500/50',   shadow: 'hover:shadow-rose-500/10' },
-		purple: { text: 'text-purple-400', border: 'hover:border-purple-500/50', shadow: 'hover:shadow-purple-500/10' },
-		teal:   { text: 'text-teal-400',   border: 'hover:border-teal-500/50',   shadow: 'hover:shadow-teal-500/10' },
-		indigo: { text: 'text-indigo-400', border: 'hover:border-indigo-500/50', shadow: 'hover:shadow-indigo-500/10' },
-		sky:    { text: 'text-sky-400',    border: 'hover:border-sky-500/50',    shadow: 'hover:shadow-sky-500/10' },
-		lime:   { text: 'text-lime-400',   border: 'hover:border-lime-500/50',   shadow: 'hover:shadow-lime-500/10' },
-		orange: { text: 'text-orange-400', border: 'hover:border-orange-500/50', shadow: 'hover:shadow-orange-500/10' },
-		cyan:   { text: 'text-cyan-400',   border: 'hover:border-cyan-500/50',   shadow: 'hover:shadow-cyan-500/10' },
-		blue:   { text: 'text-blue-400',   border: 'hover:border-blue-500/50',   shadow: 'hover:shadow-blue-500/10' },
-		emerald:{ text: 'text-emerald-400',border: 'hover:border-emerald-500/50',shadow: 'hover:shadow-emerald-500/10' }
+		amber:  { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		rose:   { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		purple: { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		teal:   { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		indigo: { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		sky:    { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		lime:   { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		orange: { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		cyan:   { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		blue:   { text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' },
+		emerald:{ text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' }
 	};
 
 	function c(color) { return colors[color] || colors.blue; }
@@ -208,19 +210,18 @@
 
 <!-- Hero -->
 <section class="py-20 px-4 sm:px-6 lg:px-8 relative">
-	<div class="absolute inset-0 bg-gradient-to-b from-blue-600/10 via-transparent to-transparent"></div>
 	<div class="max-w-7xl mx-auto text-center relative">
-		<h1 class="text-4xl md:text-6xl font-bold text-white mb-6" use:scrollReveal>
-			{heroData.title} <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">{heroData.title_highlight}</span>
+		<h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight" use:scrollReveal>
+			{heroData.title} <span class="text-gray-500">{heroData.title_highlight}</span>
 		</h1>
-		<p class="text-xl text-slate-400 max-w-3xl mx-auto mb-8" use:scrollReveal={{ delay: 100 }}>
+		<p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8" use:scrollReveal={{ delay: 100 }}>
 			{heroData.subtitle}
 		</p>
 		<div class="flex flex-col sm:flex-row gap-4 justify-center" use:scrollReveal={{ delay: 200 }}>
-			<a href={heroData.cta_primary.href} class="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all rounded-xl px-8 py-4 font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40" data-camino-cta="hero-primary">
+			<a href={heroData.cta_primary.href} class="bg-black text-white hover:bg-gray-800 transition-all rounded-xl px-8 py-4 font-semibold" data-camino-cta="hero-primary">
 				{heroData.cta_primary.text}
 			</a>
-			<a href={heroData.cta_secondary.href} class="glass text-white hover:bg-slate-800/80 transition-all rounded-xl px-8 py-4 font-semibold" data-camino-cta="hero-secondary">
+			<a href={heroData.cta_secondary.href} class="bg-white text-gray-900 border border-gray-300 hover:border-gray-900 transition-all rounded-xl px-8 py-4 font-semibold" data-camino-cta="hero-secondary">
 				{heroData.cta_secondary.text}
 			</a>
 		</div>
@@ -230,19 +231,19 @@
 <!-- Bundle Discount Banner -->
 <section class="px-4 sm:px-6 lg:px-8 -mt-8 mb-16">
 	<div class="max-w-4xl mx-auto" use:scrollReveal={{ delay: 200 }}>
-		<div class="glass rounded-2xl p-6 md:p-8 border border-emerald-500/20">
+		<div class="glass rounded-2xl p-6 md:p-8">
 			<div class="flex flex-col md:flex-row items-center gap-6">
 				<div class="flex-1">
-					<h3 class="text-lg font-semibold text-white mb-2">
-						<span class="text-emerald-400">{bannerData.title}</span> — {bannerData.subtitle}
+					<h3 class="text-lg font-semibold text-gray-900 mb-2">
+						<span class="text-emerald-600">{bannerData.title}</span> — {bannerData.subtitle}
 					</h3>
-					<p class="text-slate-400 text-sm">{bannerData.description}</p>
+					<p class="text-gray-600 text-sm">{bannerData.description}</p>
 				</div>
 				<div class="flex gap-4">
 					{#each bannerData.items as item}
 						<div class="text-center">
-							<div class="text-2xl font-bold text-emerald-400">{item.value}</div>
-							<div class="text-xs text-slate-500">{item.label}</div>
+							<div class="text-2xl font-bold text-emerald-600">{item.value}</div>
+							<div class="text-xs text-gray-500">{item.label}</div>
 						</div>
 					{/each}
 				</div>
@@ -255,8 +256,8 @@
 <section id="plataformas" class="py-16 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
 		<div class="mb-10" use:scrollReveal>
-			<h2 class="text-3xl font-bold text-white mb-2">{gridData.title}</h2>
-			<p class="text-slate-400">{gridData.subtitle}</p>
+			<h2 class="text-3xl font-bold text-gray-900 mb-2">{gridData.title}</h2>
+			<p class="text-gray-600">{gridData.subtitle}</p>
 		</div>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{#each gridData.platforms as platform, i}
@@ -265,16 +266,16 @@
 					use:scrollReveal={{ delay: i * 80 }}
 				>
 					<div class="mb-4">
-						<h3 class="text-lg font-bold text-white">{platform.name}</h3>
-						<p class="text-sm text-slate-400 mt-1">{platform.tagline}</p>
+						<h3 class="text-lg font-bold text-gray-900">{platform.name}</h3>
+						<p class="text-sm text-gray-500 mt-1">{platform.tagline}</p>
 					</div>
 					<div class="mb-4">
 						<span class="text-xl font-bold {c(platform.color).text}">{platform.pricing}</span>
 					</div>
 					<ul class="space-y-2 mb-6 flex-1">
 						{#each platform.features as feature}
-							<li class="flex items-start gap-2 text-sm text-slate-300">
-								<svg class="w-4 h-4 text-emerald-400 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<li class="flex items-start gap-2 text-sm text-gray-700">
+								<svg class="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 								</svg>
 								{feature}
@@ -283,7 +284,7 @@
 					</ul>
 					<a
 						href={platform.cta_href}
-						class="block text-center glass text-white hover:bg-slate-800/80 transition-all rounded-xl px-6 py-3 font-semibold text-sm"
+						class="block text-center bg-black text-white hover:bg-gray-800 transition-all rounded-xl px-6 py-3 font-semibold text-sm"
 						data-camino-cta="platform-{platform.id}"
 					>
 						{$_('plataformas.trialButton')}
@@ -297,19 +298,19 @@
 <!-- Patadas Discovery CTA -->
 <section class="py-16 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-3xl mx-auto text-center" use:scrollReveal>
-		<div class="glass rounded-2xl p-8 md:p-12 border border-orange-500/20">
+		<div class="glass rounded-2xl p-8 md:p-12">
 			<div class="text-4xl mb-4">⚡</div>
-			<h2 class="text-2xl md:text-3xl font-bold text-white mb-3">
+			<h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
 				{isEs ? '¿No sabes cuál necesitas?' : "Not sure which one you need?"}
 			</h2>
-			<p class="text-lg text-slate-400 mb-6 max-w-xl mx-auto">
+			<p class="text-lg text-gray-600 mb-6 max-w-xl mx-auto">
 				{isEs
 					? 'Nuestro marketplace de IA analiza tu negocio en 2 minutos y te recomienda la combinación perfecta — o te conecta con un desarrollador certificado.'
 					: 'Our AI marketplace analyzes your business in 2 minutes and recommends the perfect product combination — or connects you with a vetted developer.'}
 			</p>
 			<a
 				href="https://patadas.redbroomsoftware.com/get-started"
-				class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 transition-all rounded-xl px-8 py-4 font-semibold shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40"
+				class="inline-block bg-black text-white hover:bg-gray-800 transition-all rounded-xl px-8 py-4 font-semibold"
 				data-camino-cta="patadas-discovery"
 			>
 				{isEs ? 'Obtener recomendación gratis →' : 'Get free recommendation →'}
@@ -321,15 +322,15 @@
 <!-- Enterprise CTA -->
 <section class="py-20 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-4xl mx-auto text-center" use:scrollReveal>
-		<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+		<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 			{ctaData.title}
 		</h2>
-		<p class="text-lg text-slate-400 mb-8 max-w-2xl mx-auto">{ctaData.subtitle}</p>
+		<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">{ctaData.subtitle}</p>
 		<div class="flex flex-col sm:flex-row gap-4 justify-center">
-			<a href={ctaData.cta_primary.href} class="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all rounded-xl px-8 py-4 font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40" data-camino-cta="enterprise-primary">
+			<a href={ctaData.cta_primary.href} class="bg-black text-white hover:bg-gray-800 transition-all rounded-xl px-8 py-4 font-semibold" data-camino-cta="enterprise-primary">
 				{ctaData.cta_primary.text}
 			</a>
-			<a href={ctaData.cta_secondary.href} class="glass text-white hover:bg-slate-800/80 transition-all rounded-xl px-8 py-4 font-semibold" data-camino-cta="enterprise-secondary">
+			<a href={ctaData.cta_secondary.href} class="bg-white text-gray-900 border border-gray-300 hover:border-gray-900 transition-all rounded-xl px-8 py-4 font-semibold" data-camino-cta="enterprise-secondary">
 				{ctaData.cta_secondary.text}
 			</a>
 		</div>
