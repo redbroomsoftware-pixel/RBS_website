@@ -6,6 +6,13 @@
 	import AnimatedCounter from '$lib/components/AnimatedCounter.svelte';
 	import EcosystemDiagram from '$lib/components/EcosystemDiagram.svelte';
 	import { scrollReveal } from '$lib/actions/scrollReveal';
+	// El número de apps NO se escribe en la prosa: se deriva del canon
+	// (`apps.json`) y se interpola. Antes vivía a mano en once cadenas y decía 22
+	// cuando el ecosistema tenía 25.
+	import ecosystemStats from '$lib/ecosystem-stats.json';
+
+	const appCount = ecosystemStats.appCount;
+	const conCuenta = { values: { appCount } };
 
 	const techLogos = [
 		'SvelteKit', 'Next.js', 'TypeScript', 'Supabase', 'Firebase', 'PostgreSQL',
@@ -34,24 +41,24 @@
 		{ key: 'forge', icon: '⚒️', href: 'https://palacio.redbroomsoftware.com#forge' },
 		{ key: 'patadas', icon: '↗', href: 'https://patadas.redbroomsoftware.com?source=apex' },
 		{ key: 'labs', icon: '✦', href: 'https://developers.redbroomsoftware.com' },
-		{ key: 'atlas', icon: '◇', href: 'https://palace.redbroomsoftware.com' }
+		{ key: 'atlas', icon: '◇', href: 'https://developers.redbroomsoftware.com/apps/' }
 	] as const;
 </script>
 
 <svelte:head>
-	<title>{$_('home.meta.title')}</title>
-	<meta name="description" content={$_('home.meta.description')} />
+	<title>{$_('home.meta.title', conCuenta)}</title>
+	<meta name="description" content={$_('home.meta.description', conCuenta)} />
 	<link rel="canonical" href="https://redbroomsoftware.com/" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://redbroomsoftware.com/" />
-	<meta property="og:title" content={$_('home.meta.title')} />
-	<meta property="og:description" content={$_('home.meta.description')} />
+	<meta property="og:title" content={$_('home.meta.title', conCuenta)} />
+	<meta property="og:description" content={$_('home.meta.description', conCuenta)} />
 	<meta property="og:image" content="https://redbroomsoftware.com/logo.svg" />
 	<meta property="og:locale" content={$locale === 'es' ? 'es_MX' : 'en_US'} />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={$_('home.meta.title')} />
+	<meta name="twitter:title" content={$_('home.meta.title', conCuenta)} />
 
 	{@html `<script type="application/ld+json">
 	{
@@ -77,7 +84,7 @@
 		<div class="max-w-7xl mx-auto text-center relative">
 			<div class="inline-flex items-center px-4 py-2 glass rounded-full text-sm text-gray-600 mb-8">
 				<span class="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
-				{$_('home.hero.badge')}
+				{$_('home.hero.badge', conCuenta)}
 			</div>
 
 			<h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
@@ -88,7 +95,7 @@
 			</h1>
 
 			<p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-				{$_('home.hero.subtitle')}
+				{$_('home.hero.subtitle', conCuenta)}
 			</p>
 
 			<div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +177,7 @@
 						<div class="text-4xl mb-4">{fn.icon}</div>
 						<h3 class="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-2">{$_(`home.functions.${fn.key}.tagline`)}</h3>
 						<p class="text-2xl font-bold text-gray-900 mb-3">{$_(`home.functions.${fn.key}.title`)}</p>
-						<p class="text-gray-600 leading-relaxed text-sm">{$_(`home.functions.${fn.key}.desc`)}</p>
+						<p class="text-gray-600 leading-relaxed text-sm">{$_(`home.functions.${fn.key}.desc`, conCuenta)}</p>
 						<p class="mt-6 text-xs font-semibold uppercase tracking-wider text-gray-400 group-hover:text-gray-900 transition-colors">
 							{$_(`home.functions.${fn.key}.cta`)} →
 						</p>
@@ -185,7 +192,7 @@
 		<div class="max-w-7xl mx-auto">
 			<div class="text-center mb-16" use:scrollReveal>
 				<h2 class="text-4xl font-bold text-gray-900 mb-4">{$_('home.ecosystem.title')}</h2>
-				<p class="text-xl text-gray-600">{$_('home.ecosystem.subtitle')}</p>
+				<p class="text-xl text-gray-600">{$_('home.ecosystem.subtitle', conCuenta)}</p>
 			</div>
 
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

@@ -1,1150 +1,1150 @@
 {
-	"common": {
-		"companyName": "Red Broom Software",
-		"tagline": "Enterprise Solutions",
-		"copyright": "2025 Red Broom Software S.A.S. de C.V. All rights reserved.",
-		"email": "dia@redbroomsoftware.com"
-	},
-	"nav": {
-		"services": "Services",
-		"portfolio": "Portfolio",
-		"technology": "Technology",
-		"contact": "Contact",
-		"privacy": "Privacy",
-		"terms": "Terms",
-		"developers": "Developers",
-		"pricing": "Platforms",
-		"menu": "Menu",
-		"skipToContent": "Skip to content",
-		"switchLanguage": "Switch language"
-	},
-	"home": {
-		"meta": {
-			"title": "Red Broom Software — 22 Apps, One Intelligent Ecosystem",
-			"description": "We build the most integrated enterprise software ecosystem in the world. 22 applications with AI, payments, invoicing, and contracts — connected by an SDK and an intelligent marketplace."
-		},
-		"hero": {
-			"badge": "22 applications · 1 SDK · AI in everything",
-			"titlePart1": "We build",
-			"subtitle": "Red Broom Software is the most integrated enterprise software ecosystem in the world. 22 applications that share authentication, payments, invoicing, and artificial intelligence.",
-			"typewriterWords": [
-				"intelligent software",
-				"connected ecosystems",
-				"AI-powered platforms",
-				"solutions that scale"
-			],
-			"forGlobalBusiness": "for global businesses"
-		},
-		"cta": {
-			"findSolution": "Find my solution",
-			"joinDeveloper": "Join as a developer"
-		},
-		"stats": {
-			"apps": "Applications",
-			"industries": "Industries",
-			"sdk": "Unified SDK",
-			"languages": "Languages"
-		},
-		"patadas": {
-			"title": "Patadas",
-			"subtitle": "Our intelligent marketplace",
-			"description": "Need a software solution or an AI developer? Patadas evaluates you, connects you with the right product or a verified developer, generates the contract, handles escrow and invoicing. All in one place.",
-			"button": "Go to Patadas"
-		},
-		"functions": {
-			"title": "The four functions of RBS",
-			"subtitle": "RBS is not a company that makes a product. It's a creative practice with four engines: one that builds, one that connects, one that researches, and one that operates.",
-			"forge": {
-				"tagline": "Our delivery practice",
-				"title": "Forge",
-				"desc": "We build software by sitting with the people who will use it. SaaS for restaurants, accountants, retailers, galleries, and community gardens. Each one started as a six-week sprint with an operator.",
-				"cta": "See the practice"
-			},
-			"patadas": {
-				"tagline": "Our matchmaking layer",
-				"title": "Patadas",
-				"desc": "Not every business needs a custom build. Patadas is the AI front door: it talks to operators, understands what they're trying to do, and connects them with the right answer — ours or someone else's.",
-				"cta": "Start evaluation"
-			},
-			"labs": {
-				"tagline": "Our research frontier",
-				"title": "Labs",
-				"desc": "The substrate beneath everything: the SDK that lets our apps talk, the AI that mediates them, the civic pilots where we test whether software can be infrastructure for places and not just companies.",
-				"cta": "Ecosystem documentation"
-			},
-			"atlas": {
-				"tagline": "Our portfolio of living products",
-				"title": "Atlas",
-				"desc": "Twenty-two apps in production. Caracol for restaurants. Constanza for accountants. Colectiva for collectives. Camino for subscriptions. Comal for retail. Each one operates for real tenants every day.",
-				"cta": "See the living topology"
-			}
-		},
-		"ecosystem": {
-			"title": "The Ecosystem",
-			"subtitle": "22 apps that share authentication, payments, invoicing, and AI",
-			"apps": {
-				"patadas": {
-					"name": "Patadas",
-					"desc": "AI Marketplace — intelligent broker",
-					"badge": "Front Door"
-				},
-				"camino": {
-					"name": "Camino",
-					"desc": "CRM with AI copilot, SSO, marketing",
-					"badge": "Infrastructure"
-				},
-				"colectiva": {
-					"name": "Colectiva",
-					"desc": "Payments, escrow, wallets, AI brain",
-					"badge": "Infrastructure"
-				},
-				"constanza": {
-					"name": "Constanza",
-					"desc": "Accounting, CFDI, intl invoicing",
-					"badge": "Infrastructure"
-				},
-				"agora": {
-					"name": "Agora",
-					"desc": "Legal: contracts, trust, time tracking",
-					"badge": "Vertical"
-				},
-				"caracol": {
-					"name": "Caracol",
-					"desc": "POS with vintages, FIFO, invoicing",
-					"badge": "Revenue"
-				},
-				"comal": {
-					"name": "Comal",
-					"desc": "E-commerce with subscription clubs",
-					"badge": "Revenue"
-				},
-				"lahoja": {
-					"name": "La Hoja",
-					"desc": "Production ERP, recipes, costs",
-					"badge": "Vertical"
-				},
-				"mancha": {
-					"name": "Mancha",
-					"desc": "Reservations with predictive AI",
-					"badge": "Vertical"
-				},
-				"plenura": {
-					"name": "Plenura",
-					"desc": "Therapist marketplace, video",
-					"badge": "Vertical"
-				},
-				"rito": {
-					"name": "Rito",
-					"desc": "Private equity and investments",
-					"badge": "Revenue"
-				},
-				"cosmosPet": {
-					"name": "Cosmos Pet",
-					"desc": "Veterinary: SOAP, surgery, vaccines",
-					"badge": "Vertical"
-				}
-			}
-		},
-		"ecosystemDiagram": {
-			"title": "A connected ecosystem",
-			"subtitle": "Every app strengthens the others"
-		},
-		"finalCta": {
-			"title": "Ready to get started?",
-			"subtitle": "Whether you need a ready-made product or a verified developer, Patadas connects you with the right solution.",
-			"findSolution": "Find my solution",
-			"directContact": "Direct contact"
-		},
-		"capabilities": {
-			"pos": {
-				"title": "POS & ERP",
-				"desc": "Operational systems with integrated CFDI 4.0"
-			},
-			"crm": {
-				"title": "AI-Powered CRM",
-				"desc": "Conversational agents for WhatsApp and voice"
-			},
-			"mobile": {
-				"title": "Mobile Apps",
-				"desc": "Flutter cross-platform with real-time sync"
-			}
-		}
-	},
-	"services": {
-		"meta": {
-			"title": "Development Services - Red Broom Software",
-			"description": "Enterprise software development: SaaS, POS, ERP, AI-powered CRM, FinTech integrations, and mobile applications. Mexico specialists."
-		},
-		"hero": {
-			"titlePart1": "What can we",
-			"titleHighlight": "build",
-			"titlePart2": "for you?",
-			"subtitle": "We develop high-performance enterprise software. From POS systems to AI-powered SaaS platforms."
-		},
-		"saas": {
-			"title": "SaaS Development",
-			"subtitle": "High-performance multi-tenant platforms",
-			"description": "We build SaaS applications with multi-tenant architecture, automated billing, and horizontal scalability. Experience with Stripe, SPEI, CoDi, and Open Banking.",
-			"features": [
-				"Native multi-tenancy",
-				"Recurring billing",
-				"REST API + Webhooks",
-				"White-labeling"
-			]
-		},
-		"pos": {
-			"title": "POS & ERP Systems",
-			"subtitle": "Operational software for SMBs",
-			"description": "Point of sale, inventory, cash control, real-time kitchen orders. SAT integration for CFDI 4.0 invoicing and Mexican tax compliance.",
-			"features": [
-				"Integrated CFDI 4.0",
-				"Offline sync",
-				"Multi-location",
-				"Tax reports"
-			]
-		},
-		"crm": {
-			"title": "AI-Powered CRM",
-			"subtitle": "Sales and marketing automation",
-			"description": "CRMs with lead scoring, AI agents for WhatsApp and phone calls, sales pipelines, and nurturing automation.",
-			"features": [
-				"Multichannel AI agents",
-				"Automatic lead scoring",
-				"Appointment automation",
-				"Conversion analytics"
-			]
-		},
-		"fintech": {
-			"title": "FinTech Integrations",
-			"subtitle": "Open Banking, payments, and reconciliation",
-			"description": "We connect your system with Fintoc, Belvo, Stripe, SPEI, CoDi. Automatic bank transaction reconciliation.",
-			"features": [
-				"Open Banking",
-				"SPEI/CoDi payments",
-				"Automatic reconciliation",
-				"Multi-merchant"
-			]
-		},
-		"mobile": {
-			"title": "Mobile Applications",
-			"subtitle": "Flutter cross-platform",
-			"description": "Native apps for iOS and Android with a single codebase. Real-time sync, push notifications, and offline mode.",
-			"features": [
-				"iOS + Android",
-				"Real-time sync",
-				"Offline mode",
-				"Push notifications"
-			]
-		},
-		"consulting": {
-			"title": "Technical Consulting",
-			"subtitle": "Architecture and optimization",
-			"description": "Architecture review, performance optimization, legacy system migration, and technical team training.",
-			"features": [
-				"Code review",
-				"Data migration",
-				"Performance tuning",
-				"Training"
-			]
-		},
-		"process": {
-			"title": "Our Process",
-			"step1": {
-				"title": "Discovery",
-				"desc": "We understand your business, processes, and objectives"
-			},
-			"step2": {
-				"title": "Design",
-				"desc": "Technical architecture and prototypes"
-			},
-			"step3": {
-				"title": "Development",
-				"desc": "Iterative sprints with frequent demos"
-			},
-			"step4": {
-				"title": "Launch",
-				"desc": "Deployment, training, and support"
-			}
-		},
-		"cta": {
-			"title": "Ready to build?",
-			"subtitle": "Tell us about your project and we'll give you a proposal within 48 hours.",
-			"button": "Request a Quote"
-		},
-		"legaltech": {
-			"title": "Legal Tech",
-			"subtitle": "Case management and AI documents",
-			"description": "Complete platforms for law firms: case management, trust accounting (IOLTA), time tracking, AI document generation, and court calendar.",
-			"features": [
-				"Case management",
-				"Trust accounting",
-				"AI documents",
-				"Court calendar"
-			]
-		}
-	},
-	"portfolio": {
-		"meta": {
-			"title": "Portfolio - Red Broom Software",
-			"description": "Portfolio of products developed by Red Broom Software: 16 SaaS platforms + 5 B2C services for Mexican SMBs."
-		},
-		"hero": {
-			"badge": "16 platforms + 5 B2C services",
-			"titlePart1": "Our",
-			"titleHighlight": "Portfolio",
-			"subtitle": "SaaS platforms we have developed and operate. Each one solves real problems for Mexican businesses."
-		},
-		"products": {
-			"live": "Live",
-			"visitProduct": "Visit product",
-			"caracol": {
-				"name": "Caracol",
-				"subtitle": "Inventory & Import Management",
-				"description": "Comprehensive system for complex imports: container tracking, batch costing, customs control, multi-warehouse inventory, and automatic reconciliation with international suppliers.",
-				"highlights": [
-					"Container tracking",
-					"Batch costing",
-					"Multi-warehouse",
-					"Auto reconciliation"
-				]
-			},
-			"lahoja": {
-				"name": "La Hoja",
-				"subtitle": "Restaurant and Retail ERP",
-				"description": "Complete ERP system for restaurants and food businesses: ultra-fast POS, FIFO inventory, supplier management, loyalty program, and analytics.",
-				"highlights": [
-					"High-speed POS",
-					"Loyalty program",
-					"Multi-location",
-					"Advanced analytics"
-				]
-			},
-			"cosmos": {
-				"name": "Cosmos Pet",
-				"subtitle": "Veterinary Software",
-				"description": "Specialized SaaS platform for veterinary clinics: SOAP medical records, vaccine control, scheduling, pet grooming, and invoicing.",
-				"highlights": [
-					"SOAP Records",
-					"Vaccine control",
-					"Smart scheduling",
-					"Multi-clinic"
-				]
-			},
-			"camino": {
-				"name": "Camino CRM",
-				"subtitle": "Multichannel AI CRM",
-				"description": "CRM with AI agents that automatically handle WhatsApp and phone calls. Unified customer context, lead scoring, sales pipeline.",
-				"highlights": [
-					"WhatsApp AI Agent",
-					"Voice AI Agent",
-					"Lead scoring",
-					"Full automation"
-				]
-			},
-			"colectiva": {
-				"name": "Colectiva",
-				"subtitle": "B2B Payments and Billing Platform",
-				"description": "B2B multi-merchant platform: billing for the entire RBS ecosystem, payment gateway (CoDi, SPEI, MercadoPago, cards), subscriptions, and virtual wallet.",
-				"highlights": [
-					"Ecosystem billing",
-					"Multi-merchant",
-					"Subscriptions",
-					"Automatic reconciliation"
-				]
-			},
-			"constanza": {
-				"name": "Constanza",
-				"subtitle": "Smart Accounting for Firms",
-				"description": "Multi-client platform for accountants: manage dozens of companies from a single dashboard. Tax AI, CFDI 4.0, automatic DIOT.",
-				"highlights": [
-					"Multi-client",
-					"Tax AI",
-					"Automatic DIOT/Balance",
-					"Group consolidation"
-				]
-			},
-			"plenura": {
-				"name": "Plenura",
-				"subtitle": "AI Wellness Platform",
-				"description": "System for health and wellness professionals: smart patient matching, AI prescreening, automated session notes, and appointment management.",
-				"highlights": [
-					"AI Matching",
-					"Smart prescreening",
-					"AI session notes",
-					"Multi-professional"
-				]
-			},
-			"agora": {
-				"name": "Agora",
-				"subtitle": "Legal Software for Firms",
-				"description": "Complete platform for law firms: case management, time tracking, IOLTA trust accounts, invoicing, AI documents, and court calendar.",
-				"highlights": [
-					"Case management",
-					"IOLTA Trust Accounts",
-					"Time tracking",
-					"AI for documents"
-				]
-			},
-			"mancha": {
-				"name": "Mancha",
-				"subtitle": "Restaurant Reservations",
-				"description": "OpenTable-style platform for Mexican restaurants: online reservations, table management, automatic confirmations via email and WhatsApp, and occupancy analytics.",
-				"highlights": [
-					"24/7 Reservations",
-					"Automatic confirmations",
-					"Table management",
-					"Embeddable widget"
-				]
-			},
-			"continua": {
-				"name": "Continua",
-				"subtitle": "Blood Donation Platform",
-				"description": "Connects donors with hospitals: donor registration, active emergencies, donation history, blood type notifications.",
-				"highlights": [
-					"Real-time emergencies",
-					"Type matching",
-					"Donation history",
-					"Hospital alerts"
-				]
-			},
-			"puppylove": {
-				"name": "Puppy Love",
-				"subtitle": "Pet Matching",
-				"description": "Matching platform for pet owners: find playmates, breeding partners, and adoption. Verified profiles.",
-				"highlights": [
-					"Smart matching",
-					"Verified profiles",
-					"Integrated chat",
-					"Premium subscription"
-				]
-			},
-			"baul": {
-				"name": "Baul",
-				"subtitle": "Storage and Warehousing",
-				"description": "Storage space rental: mini-warehouses, pallets, inventory management, pickup and home delivery.",
-				"highlights": [
-					"Multi-size",
-					"Home pickup",
-					"Access control",
-					"Digital inventory"
-				]
-			},
-			"servilleta": {
-				"name": "Servilleta",
-				"subtitle": "Services Marketplace",
-				"description": "Connects clients with verified taskers for cleaning, moving, repairs, and more. Reviews, secure payments, and service guarantee.",
-				"highlights": [
-					"Verified taskers",
-					"Secure payments",
-					"Reviews",
-					"Service guarantee"
-				]
-			},
-			"rito": {
-				"name": "Rito",
-				"subtitle": "Real Estate Private Equity",
-				"description": "Platform for real estate investment funds: deal underwriting, pro-formas, distribution waterfalls, investor management.",
-				"highlights": [
-					"Full underwriting",
-					"AI Deal Copilot",
-					"Investor portal",
-					"AI analysis"
-				]
-			},
-			"comal": {
-				"name": "Comal",
-				"subtitle": "Multi-Tenant E-commerce",
-				"description": "Shopify-style platform for Mexico: online stores, subscription clubs, gated content, CoDi/MercadoPago payments and premium themes.",
-				"highlights": [
-					"Multi-tenant",
-					"Subscription clubs",
-					"Premium themes",
-					"Custom domain"
-				]
-			},
-			"goodbay": {
-				"name": "Goodbay",
-				"subtitle": "Smart Vacation Rental",
-				"description": "Vacation rental platform with optimized tax model: property management, reservations, on-demand services, and cleaning management.",
-				"highlights": [
-					"Smart tax model",
-					"On-demand cleaning",
-					"Multi-property",
-					"Guest management"
-				]
-			}
-		},
-		"b2cServices": {
-			"title": "B2C Services",
-			"subtitle": "In addition to software, we operate direct services for businesses that prefer turnkey solutions.",
-			"new": "New",
-			"active": "Active Service",
-			"comingSoon": "Coming Soon",
-			"learnMore": "Learn more",
-			"availableSoon": "Available soon",
-			"constanza": {
-				"name": "Constanza Services",
-				"subtitle": "Managed Accounting",
-				"description": "Your complete accounting department: tax filings, CFDI 4.0, DIOT, Balance, IMSS - all handled by experts. Starting at $8,900/month.",
-				"highlights": [
-					"100% SAT Compliance",
-					"Assigned accountant",
-					"Multi-regime",
-					"Hassle-free"
-				]
-			},
-			"camino": {
-				"name": "Camino Services",
-				"subtitle": "Managed Marketing",
-				"description": "Your complete marketing department: social media, campaigns, WhatsApp AI, digital advertising, and analytics. Starting at $5,900/month.",
-				"highlights": [
-					"24/7 Social media",
-					"WhatsApp AI",
-					"Automated campaigns",
-					"Digital advertising"
-				]
-			},
-			"colectiva": {
-				"name": "Colectiva Services",
-				"subtitle": "Managed Treasury",
-				"description": "Collections, SPEI disbursements, integrated payroll, and fully managed treasury. Starting at $3,900/month.",
-				"highlights": [
-					"CoDi/SPEI Collections",
-					"Mass disbursements",
-					"Integrated payroll",
-					"Automatic reconciliation"
-				]
-			},
-			"aiSupport": {
-				"name": "AI Customer Support",
-				"subtitle": "Complete Ecosystem",
-				"description": "AI agents that handle WhatsApp and calls 24/7 for any business: restaurants, veterinaries, clinics, retail. Integrates with the entire ecosystem.",
-				"highlights": [
-					"Multi-industry",
-					"WhatsApp + Voice",
-					"Integrates with Mancha",
-					"Unified context"
-				]
-			},
-			"mancha": {
-				"name": "Mancha Services",
-				"subtitle": "Universal Reservations",
-				"description": "Appointment and reservation system for any business: restaurants, veterinaries, clinics, salons, studios. Automatic confirmations and embeddable widget.",
-				"highlights": [
-					"Multi-industry",
-					"Auto confirmations",
-					"Embeddable widget",
-					"Integrates with Camino AI"
-				]
-			}
-		},
-		"categories": {
-			"all": "All",
-			"core": "Core",
-			"hospitality": "Hospitality",
-			"verticals": "Verticals",
-			"fintech": "FinTech",
-			"marketplaces": "Marketplaces"
-		},
-		"stats": {
-			"saasProducts": "SaaS Products",
-			"b2cServices": "B2C Services",
-			"industries": "Industries",
-			"uptime": "Uptime",
-			"support": "Support"
-		},
-		"cta": {
-			"title": "Your product here?",
-			"subtitle": "We can develop the next platform for your industry.",
-			"button": "Let's talk"
-		},
-		"agentBadges": {
-			"aiAgents": "AI Agents",
-			"oracleAI": "Oracle AI",
-			"fiscalAI": "Fiscal AI",
-			"matchingAI": "AI Matching",
-			"dealCopilot": "Deal Copilot",
-			"docAI": "Doc AI"
-		}
-	},
-	"technology": {
-		"meta": {
-			"title": "Technology - Red Broom Software",
-			"description": "Red Broom Software's tech stack: SvelteKit, TypeScript, Supabase, OpenAI, and more. Modern development for Mexican SMBs."
-		},
-		"hero": {
-			"titlePart1": "Our",
-			"titleHighlight": "Technology",
-			"subtitle": "Modern stack, production-proven. Every technical decision optimized for performance, maintainability, and scalability."
-		},
-		"principles": {
-			"svelteFirst": {
-				"title": "Svelte-First",
-				"description": "We use SvelteKit for everything. Less JavaScript, better performance, superior developer experience."
-			},
-			"typeSafety": {
-				"title": "Type Safety",
-				"description": "Strict TypeScript across the entire codebase. Fewer bugs in production, reliable refactoring."
-			},
-			"edgePerformance": {
-				"title": "Edge Performance",
-				"description": "Serverless functions at the edge for minimal latency. Mexico first, global second."
-			},
-			"aiNative": {
-				"title": "AI-Native",
-				"description": "AI integrated from the design, not as an additional feature. Classification, automation, assistance."
-			}
-		},
-		"sections": {
-			"frontend": "Frontend",
-			"backend": "Backend & Database",
-			"ai": "Artificial Intelligence",
-			"integrations": "Integrations",
-			"infrastructure": "Infrastructure"
-		},
-		"stack": {
-			"sveltekit": {
-				"name": "SvelteKit",
-				"description": "Main framework for all applications"
-			},
-			"typescript": {
-				"name": "TypeScript",
-				"description": "Type safety across the codebase"
-			},
-			"tailwind": {
-				"name": "Tailwind CSS",
-				"description": "Consistent and responsive design"
-			},
-			"flutter": {
-				"name": "Flutter",
-				"description": "Cross-platform mobile apps"
-			},
-			"supabase": {
-				"name": "Supabase",
-				"description": "PostgreSQL, Auth, Realtime, Storage"
-			},
-			"firebase": {
-				"name": "Firebase",
-				"description": "Auth, Firestore for some products"
-			},
-			"nodejs": {
-				"name": "Node.js",
-				"description": "APIs and microservices"
-			},
-			"postgresql": {
-				"name": "PostgreSQL",
-				"description": "Primary database"
-			},
-			"gpt4": {
-				"name": "OpenAI GPT-4",
-				"description": "Conversational agents and classification"
-			},
-			"groq": {
-				"name": "Groq",
-				"description": "Primary provider: ultra-fast inference"
-			},
-			"claude": {
-				"name": "Anthropic Claude",
-				"description": "Tool-use agents and document analysis"
-			},
-			"gemini": {
-				"name": "Google Gemini",
-				"description": "Long context for extensive documents"
-			},
-			"whisper": {
-				"name": "Whisper",
-				"description": "Audio transcription"
-			},
-			"customml": {
-				"name": "Custom Models",
-				"description": "Scoring, matching, and domain-specific classification"
-			},
-			"satcfdi": {
-				"name": "SAT/CFDI 4.0",
-				"description": "Mexican electronic invoicing"
-			},
-			"speicodi": {
-				"name": "SPEI/CoDi",
-				"description": "Real-time bank payments"
-			},
-			"whatsapp": {
-				"name": "WhatsApp Cloud",
-				"description": "Business messaging"
-			},
-			"twilio": {
-				"name": "Twilio",
-				"description": "Voice, SMS, verification"
-			},
-			"fintocbelvo": {
-				"name": "Fintoc/Belvo",
-				"description": "Open Banking"
-			},
-			"stripe": {
-				"name": "Stripe",
-				"description": "International payments"
-			},
-			"vercel": {
-				"name": "Vercel",
-				"description": "Hosting and edge functions"
-			},
-			"supabasecloud": {
-				"name": "Supabase Cloud",
-				"description": "Managed database"
-			},
-			"github": {
-				"name": "GitHub Actions",
-				"description": "Automated CI/CD"
-			},
-			"cloudflare": {
-				"name": "Cloudflare",
-				"description": "DNS, CDN, protection"
-			}
-		},
-		"agents": {
-			"title": "Agent Architecture",
-			"subtitle": "All agents in the RBS ecosystem share centralized infrastructure: intelligent routing to the cheapest capable provider, MCP tools for real-time data access, and agentic loops for multi-step tasks.",
-			"live": "Live",
-			"liveTitle": "Agents in production",
-			"pipeline": {
-				"request": {
-					"title": "Client app",
-					"desc": "Camino, Rito, Plenura or another app sends messages and available tools to the centralized proxy"
-				},
-				"route": {
-					"title": "AI Router (Colectiva)",
-					"desc": "Tools → Anthropic · Long context → Gemini · Simple text → Groq"
-				},
-				"execute": {
-					"title": "MCP Tools",
-					"desc": "Access to Firestore, Supabase, external APIs. Agentic loop until task completion"
-				},
-				"meter": {
-					"title": "Centralized metering",
-					"desc": "Tokens counted, cost calculated in MXN, quota applied per organization"
-				}
-			},
-			"oracle": {
-				"title": "Oracle",
-				"desc": "Internal BI chat with 15+ MCP tools: real-time queries on agreements, distributions, quotas, wallets, and ecosystem health."
-			},
-			"dealCopilot": {
-				"title": "Deal Copilot",
-				"desc": "Underwriting assistant with 8 tools: analyzes deal PDFs, generates pro-formas, calculates distributions, and drafts packages for financial institutions."
-			},
-			"support": {
-				"title": "Support Agents",
-				"desc": "Handle WhatsApp and calls 24/7, qualify prospects, coordinate appointments, and synthesize conversations. The team only intervenes with real opportunities."
-			},
-			"wellness": {
-				"title": "Wellness Matching",
-				"desc": "Conversational prescreening, semantic patient-therapist matching, automated session notes, and review summaries."
-			},
-			"fiscal": {
-				"title": "Tax Classification",
-				"desc": "Classifies accounting transactions, suggests SAT accounts, detects deductions, and generates DIOT without manual intervention."
-			},
-			"legal": {
-				"title": "Legal Drafting",
-				"desc": "Generates 8 types of legal documents from case context: contracts, powers of attorney, agreements, and court filings in seconds."
-			}
-		},
-		"cta": {
-			"title": "Want to see the code?",
-			"subtitle": "If you're technical and want to evaluate our code quality, we can give you access to demo repos.",
-			"button": "Request Technical Demo"
-		}
-	},
-	"contact": {
-		"meta": {
-			"title": "Contact - Red Broom Software",
-			"description": "Contact us to discuss your software project. SaaS, POS, CRM, mobile app development and more for Mexican SMBs."
-		},
-		"hero": {
-			"titlePart1": "Let's talk about your",
-			"titleHighlight": "project",
-			"subtitle": "Tell us what you need and we'll give you a proposal within 48 hours."
-		},
-		"form": {
-			"title": "Send us a message",
-			"nameLabel": "Name",
-			"emailLabel": "Email",
-			"companyLabel": "Company",
-			"phoneLabel": "Phone",
-			"projectTypeLabel": "Project type",
-			"selectOption": "Select an option",
-			"messageLabel": "Tell us about your project",
-			"messagePlaceholder": "What problem do you want to solve? What features do you need?",
-			"submitButton": "Send message",
-			"submitting": "Sending...",
-			"successTitle": "Message sent",
-			"successMessage": "We'll respond within the next 48 hours.",
-			"required": "*",
-			"projectTypes": {
-				"saas": "SaaS Development",
-				"pos": "POS/ERP System",
-				"crm": "AI-Powered CRM",
-				"mobile": "Mobile App",
-				"integration": "Integration/API",
-				"consulting": "Consulting",
-				"other": "Other"
-			},
-			"errorSubmit": "Error submitting the form",
-			"errorGeneric": "Error submitting. Please try again."
-		},
-		"process": {
-			"title": "What's next?",
-			"step1": {
-				"title": "We receive your message",
-				"desc": "We review your project and assign the right team."
-			},
-			"step2": {
-				"title": "Discovery call",
-				"desc": "30 minutes to understand your business and requirements."
-			},
-			"step3": {
-				"title": "Detailed proposal",
-				"desc": "Scope, architecture, timeline, and budget."
-			}
-		},
-		"directContact": {
-			"title": "Direct contact"
-		},
-		"urgent": {
-			"title": "Urgent project?",
-			"desc": "If you have a critical deadline, mention it in your message and we'll prioritize you."
-		}
-	},
-	"footer": {
-		"description": "High-performance enterprise software development.",
-		"services": "Services",
-		"company": "Company",
-		"legal": "Legal",
-		"ecosystem": "Ecosystem",
-		"copyright": "Red Broom Software S.A.S. de C.V. All rights reserved."
-	},
-	"plataformas": {
-		"meta": {
-			"title": "Platforms — Red Broom Software",
-			"description": "Integrated SaaS platforms for Mexican businesses. Point of sale, e-commerce, invoicing, CRM and more. Prices in pesos."
-		},
-		"hero": {
-			"title": "Solutions for your",
-			"titleHighlight": "Business",
-			"subtitle": "Each platform solves a real problem. Use the ones you need — the more you use, the more you save.",
-			"ctaPrimary": "Explore Platforms",
-			"ctaSecondary": "Custom Quote"
-		},
-		"bundle": {
-			"title": "Multi-app discount",
-			"subtitle": "automatic when subscribing to more than one platform",
-			"description": "Discounts apply to the base subscription. No codes, no hassle.",
-			"apps2": "2 apps",
-			"apps3": "3 apps",
-			"apps4": "4+ apps"
-		},
-		"grid": {
-			"title": "Our Platforms",
-			"subtitle": "Each with its own fair price, designed to solve a specific problem."
-		},
-		"trialButton": "Free Trial",
-		"enterprise": {
-			"title": "Need a custom solution?",
-			"subtitle": "For businesses with multiple locations, custom integrations, or high volumes — we design tailored packages with preferential pricing and dedicated support.",
-			"ctaPrimary": "Custom Quote",
-			"ctaSecondary": "Start with Free Trial"
-		}
-	},
-	"privacy": {
-		"meta": {
-			"title": "Privacy Notice - Red Broom Software",
-			"description": "Privacy Notice of Red Broom Software S.A.S. de C.V. Learn how we protect and handle your personal data."
-		},
-		"title": "Privacy Notice",
-		"lastUpdated": "Last updated",
-		"date": "December 19, 2025",
-		"section1": {
-			"title": "1. Identity of the Data Controller",
-			"p1": "(hereinafter \"RBS\", \"we\" or \"the Company\"), with domicile in Mexico City, Mexico, is responsible for the processing of your personal data.",
-			"p2": "For any questions or exercise of ARCO rights, you can contact us at:"
-		},
-		"section2": {
-			"title": "2. Personal Data Collected",
-			"intro": "For the purposes stated in this privacy notice, we may collect the following categories of personal data:",
-			"items": {
-				"identification": {
-					"label": "Identification data:",
-					"desc": "full name, RFC, CURP, address"
-				},
-				"contact": {
-					"label": "Contact data:",
-					"desc": "email, phone number"
-				},
-				"work": {
-					"label": "Employment data:",
-					"desc": "company name, position, business sector"
-				},
-				"fiscal": {
-					"label": "Tax data:",
-					"desc": "tax regime, digital certificates (CSD), tax address"
-				},
-				"financial": {
-					"label": "Financial data:",
-					"desc": "banking information for payment processing"
-				},
-				"usage": {
-					"label": "Usage data:",
-					"desc": "information about how you use our services, access logs"
-				}
-			}
-		},
-		"section3": {
-			"title": "3. Purposes of Processing",
-			"intro": "Your personal data will be used for the following primary purposes:",
-			"primary": [
-				"Provision of contracted software services (POS, ERP, CRM, invoicing)",
-				"Issuance of Digital Tax Receipts via Internet (CFDI)",
-				"Payment and transaction processing",
-				"Technical support and customer service",
-				"Communications related to your account and services",
-				"Compliance with legal and tax obligations"
-			],
-			"secondaryIntro": "Secondary purposes (you may object):",
-			"secondary": [
-				"Sending promotional and marketing communications",
-				"Satisfaction surveys and service improvement",
-				"Invitations to events and webinars"
-			]
-		},
-		"section4": {
-			"title": "4. Data Transfers",
-			"intro": "Your personal data may be transferred to:",
-			"items": {
-				"cloud": {
-					"label": "Cloud service providers:",
-					"desc": "for storage and processing (Google Cloud, Firebase)"
-				},
-				"pac": {
-					"label": "Certificate Authorization Providers (PAC):",
-					"desc": "for CFDI stamping with the SAT"
-				},
-				"payment": {
-					"label": "Payment processors:",
-					"desc": "for transaction management"
-				},
-				"authorities": {
-					"label": "Competent authorities:",
-					"desc": "when required by law"
-				}
-			},
-			"note": "All transfers are made in accordance with applicable legislation and with the necessary security measures."
-		},
-		"section5": {
-			"title": "5. ARCO Rights",
-			"intro": "You have the right to:",
-			"access": {
-				"label": "Access",
-				"desc": "your personal data in our possession"
-			},
-			"rectify": {
-				"label": "Rectify",
-				"desc": "your data when it is inaccurate or incomplete"
-			},
-			"cancel": {
-				"label": "Cancel",
-				"desc": "your data when you consider it is not required for the purposes"
-			},
-			"oppose": {
-				"label": "Oppose",
-				"desc": "the processing of your data for specific purposes"
-			},
-			"howTo": "To exercise these rights, send your request to",
-			"howToSuffix": "with the following information: full name, clear description of your request, documents proving your identity."
-		},
-		"section6": {
-			"title": "6. Security Measures",
-			"intro": "We implement technical, administrative, and physical security measures to protect your personal data, including:",
-			"items": [
-				"AES-256 encryption for sensitive data",
-				"Secure connections via HTTPS/TLS",
-				"Role-based access controls",
-				"Access monitoring and auditing",
-				"Automatic backups and recovery plan",
-				"PCI DSS compliance for payment data"
-			]
-		},
-		"section7": {
-			"title": "7. Use of Cookies and Technologies",
-			"content": "We use cookies and similar technologies to improve your experience on our websites. These technologies allow us to remember your preferences, analyze site usage, and personalize content. You can configure your browser to reject cookies, although this may affect site functionality."
-		},
-		"section8": {
-			"title": "8. Changes to the Privacy Notice",
-			"content": "We reserve the right to modify this privacy notice at any time. Changes will be published on this page and, in case of significant changes, we will notify you by email. We recommend reviewing this page periodically."
-		},
-		"section9": {
-			"title": "9. Contact",
-			"intro": "If you have questions about this privacy notice or about the processing of your personal data, you can contact us at:",
-			"location": "Mexico City, Mexico"
-		}
-	},
-	"terms": {
-		"meta": {
-			"title": "Terms of Service - Red Broom Software",
-			"description": "Terms and Conditions of Use for Red Broom Software S.A.S. de C.V. services."
-		},
-		"title": "Terms of Service",
-		"lastUpdated": "Last updated",
-		"date": "December 19, 2025",
-		"section1": {
-			"title": "1. Acceptance of Terms",
-			"content": "By accessing and using the services of Red Broom Software S.A.S. de C.V. (including but not limited to Caracol, La Hoja, Cosmos Pet, Camino CRM, Colectiva, and Constanza), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services."
-		},
-		"section2": {
-			"title": "2. Description of Services",
-			"intro": "RBS provides enterprise software in SaaS (Software as a Service) mode, which includes:",
-			"items": {
-				"caracol": {
-					"label": "Caracol:",
-					"desc": "Inventory and complex import management"
-				},
-				"lahoja": {
-					"label": "La Hoja:",
-					"desc": "ERP for cafes and retail"
-				},
-				"cosmos": {
-					"label": "Cosmos Pet:",
-					"desc": "Software for veterinary clinics"
-				},
-				"camino": {
-					"label": "Camino CRM:",
-					"desc": "Customer relationship management system"
-				},
-				"colectiva": {
-					"label": "Colectiva:",
-					"desc": "Payment gateway and AI hub"
-				},
-				"constanza": {
-					"label": "Constanza:",
-					"desc": "Intelligent accounting platform"
-				}
-			}
-		},
-		"section3": {
-			"title": "3. Registration and Account",
-			"p1": "To use our services, you must create an account providing truthful, complete, and up-to-date information. You are responsible for maintaining the confidentiality of your access credentials and all activities that occur under your account. You must notify us immediately of any unauthorized use.",
-			"p2": "We reserve the right to suspend or cancel accounts that violate these terms or that remain inactive for prolonged periods without an active subscription."
-		},
-		"section4": {
-			"title": "4. Payments and Invoicing",
-			"intro": "RBS services are offered under a subscription model. By subscribing, you agree to:",
-			"items": [
-				"Pay the applicable fees according to the contracted plan",
-				"Initial implementation charges are payable before service begins",
-				"Monthly subscriptions are charged in advance",
-				"Prices may be updated with 30 days prior notice",
-				"No refunds for unused periods in case of early cancellation"
-			],
-			"note": "Failure to pay may result in suspension or cancellation of service. We issue CFDI for all payments received."
-		},
-		"section5": {
-			"title": "5. Acceptable Use",
-			"intro": "By using our services, you agree NOT to:",
-			"items": [
-				"Violate applicable laws or regulations, including tax laws",
-				"Attempt to access systems or data without authorization",
-				"Transmit malware, viruses, or malicious code",
-				"Interfere with the operation of the services",
-				"Use the services for fraudulent or illegal activities",
-				"Resell or sublicense the services without authorization",
-				"Issue CFDI with false or fraudulent information",
-				"Share access credentials with unauthorized third parties"
-			]
-		},
-		"section6": {
-			"title": "6. Intellectual Property",
-			"p1": "All software, design, code, documentation, and content of RBS services are the exclusive property of Red Broom Software S.A.S. de C.V. or its licensors. You are granted a limited, non-exclusive, and non-transferable license to use the services during the term of your subscription.",
-			"p2": "The data you enter into the systems remains your property. RBS will not claim ownership of your commercial, tax, or customer data."
-		},
-		"section7": {
-			"title": "7. Availability and Support",
-			"intro": "We strive to maintain 99.9% availability (SLA). However:",
-			"items": [
-				"Scheduled maintenance interruptions may occur (with prior notice)",
-				"Events beyond our control (force majeure) are not covered by the SLA",
-				"Technical support is available according to the contracted plan",
-				"Response times vary according to incident severity and plan"
-			]
-		},
-		"section8": {
-			"title": "8. Electronic Invoicing (CFDI)",
-			"intro": "For electronic invoicing services, you acknowledge and agree:",
-			"items": [
-				"It is your responsibility to provide correct and up-to-date tax data",
-				"Digital Seal Certificates (CSD) are your exclusive responsibility",
-				"RBS acts as an intermediary with the SAT-authorized PAC",
-				"CFDI issued through our systems have legal validity",
-				"You must comply with all applicable tax obligations",
-				"RBS is not responsible for errors in user-provided data"
-			]
-		},
-		"section9": {
-			"title": "9. Limitation of Liability",
-			"p1": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, RBS SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, OR ANY OTHER INTANGIBLE LOSS.",
-			"p2": "The total liability of RBS under these terms shall not exceed the amount paid by you in the last 12 months for the services related to the claim."
-		},
-		"section10": {
-			"title": "10. Cancellation and Termination",
-			"intro": "You may cancel your subscription at any time. Upon cancellation:",
-			"items": [
-				"Your access will continue until the end of the paid period",
-				"You may request a data export within the following 90 days",
-				"After 90 days, your data will be permanently deleted",
-				"Implementation charges are non-refundable"
-			],
-			"note": "RBS may suspend or terminate your access if you violate these terms, fail to make corresponding payments, or by requirement of a competent authority."
-		},
-		"section11": {
-			"title": "11. Modifications",
-			"content": "We reserve the right to modify these terms at any time. Significant changes will be notified at least 30 days in advance. Continued use of the services after the effective date of changes constitutes your acceptance of the new terms."
-		},
-		"section12": {
-			"title": "12. Applicable Law and Jurisdiction",
-			"content": "These terms are governed by the laws of the United Mexican States. Any dispute arising from these terms shall be submitted to the competent courts of Mexico City, with the parties waiving any other jurisdiction that may correspond to them by reason of their present or future domicile."
-		},
-		"section13": {
-			"title": "13. Contact",
-			"intro": "For questions about these Terms of Service, contact us at:",
-			"location": "Mexico City, Mexico"
-		},
-		"acceptance": "By using Red Broom Software services, you confirm that you have read, understood, and agree to these Terms of Service in their entirety."
-	},
-	"chat": {
-		"salesAssistant": "Sales assistant",
-		"openChat": "Open chat",
-		"closeChat": "Close chat",
-		"expand": "Expand",
-		"collapse": "Collapse",
-		"continueWhatsApp": "Continue on WhatsApp",
-		"placeholder": "Type your message...",
-		"poweredBy": "Powered by RBS AI",
-		"greeting": "Hi! I'm the Red Broom Software assistant. How can I help you today? I can tell you about our products, schedule a demo, or answer your questions.",
-		"errorGeneric": "Sorry, there was an error. Please try again.",
-		"errorConnection": "Sorry, I couldn't connect to the server. Please try again.",
-		"whatsappPrefill": "Hi, I'm coming from the chat on your website. I was asking about: {message}",
-		"whatsappDefault": "Hi, I'd like more information about your products."
-	},
-	"ecosystemDiagram": {
-		"hub": "Ecosystem",
-		"roles": {
-			"camino": "CRM + SSO",
-			"colectiva": "Payments + AI",
-			"constanza": "Accounting",
-			"caracol": "Inventory",
-			"lahoja": "ERP",
-			"plenura": "Wellness",
-			"rito": "Real Estate",
-			"agora": "Legal",
-			"comal": "E-commerce",
-			"mancha": "Reservations"
-		}
-	}
+  "common": {
+    "companyName": "Red Broom Software",
+    "tagline": "Enterprise Solutions",
+    "copyright": "2025 Red Broom Software S.A.S. de C.V. All rights reserved.",
+    "email": "dia@redbroomsoftware.com"
+  },
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "technology": "Technology",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "developers": "Developers",
+    "pricing": "Platforms",
+    "menu": "Menu",
+    "skipToContent": "Skip to content",
+    "switchLanguage": "Switch language"
+  },
+  "home": {
+    "meta": {
+      "title": "Red Broom Software — {appCount} Apps, One Intelligent Ecosystem",
+      "description": "We build the most integrated enterprise software ecosystem in the world. {appCount} applications with AI, payments, invoicing, and contracts — connected by an SDK and an intelligent marketplace."
+    },
+    "hero": {
+      "badge": "{appCount} applications · 1 SDK · AI in everything",
+      "titlePart1": "We build",
+      "subtitle": "Red Broom Software is the most integrated enterprise software ecosystem in the world. {appCount} applications that share authentication, payments, invoicing, and artificial intelligence.",
+      "typewriterWords": [
+        "intelligent software",
+        "connected ecosystems",
+        "AI-powered platforms",
+        "solutions that scale"
+      ],
+      "forGlobalBusiness": "for global businesses"
+    },
+    "cta": {
+      "findSolution": "Find my solution",
+      "joinDeveloper": "Join as a developer"
+    },
+    "stats": {
+      "apps": "Applications",
+      "industries": "Industries",
+      "sdk": "Unified SDK",
+      "languages": "Languages"
+    },
+    "patadas": {
+      "title": "Patadas",
+      "subtitle": "Our intelligent marketplace",
+      "description": "Need a software solution or an AI developer? Patadas evaluates you, connects you with the right product or a verified developer, generates the contract, handles escrow and invoicing. All in one place.",
+      "button": "Go to Patadas"
+    },
+    "functions": {
+      "title": "The four functions of RBS",
+      "subtitle": "RBS is not a company that makes a product. It's a creative practice with four engines: one that builds, one that connects, one that researches, and one that operates.",
+      "forge": {
+        "tagline": "Our delivery practice",
+        "title": "Forge",
+        "desc": "We build software by sitting with the people who will use it. SaaS for restaurants, accountants, retailers, galleries, and community gardens. Each one started as a six-week sprint with an operator.",
+        "cta": "See the practice"
+      },
+      "patadas": {
+        "tagline": "Our matchmaking layer",
+        "title": "Patadas",
+        "desc": "Not every business needs a custom build. Patadas is the AI front door: it talks to operators, understands what they're trying to do, and connects them with the right answer — ours or someone else's.",
+        "cta": "Start evaluation"
+      },
+      "labs": {
+        "tagline": "Our research frontier",
+        "title": "Labs",
+        "desc": "The substrate beneath everything: the SDK that lets our apps talk, the AI that mediates them, the civic pilots where we test whether software can be infrastructure for places and not just companies.",
+        "cta": "Ecosystem documentation"
+      },
+      "atlas": {
+        "tagline": "Our portfolio of living products",
+        "title": "Atlas",
+        "desc": "Twenty-two apps in production. Caracol for restaurants. Constanza for accountants. Colectiva for collectives. Camino for subscriptions. Comal for retail. Each one operates for real tenants every day.",
+        "cta": "See the living topology"
+      }
+    },
+    "ecosystem": {
+      "title": "The Ecosystem",
+      "subtitle": "{appCount} apps that share authentication, payments, invoicing, and AI",
+      "apps": {
+        "patadas": {
+          "name": "Patadas",
+          "desc": "AI Marketplace — intelligent broker",
+          "badge": "Front Door"
+        },
+        "camino": {
+          "name": "Camino",
+          "desc": "CRM with AI copilot, SSO, marketing",
+          "badge": "Infrastructure"
+        },
+        "colectiva": {
+          "name": "Colectiva",
+          "desc": "Payments, escrow, wallets, AI brain",
+          "badge": "Infrastructure"
+        },
+        "constanza": {
+          "name": "Constanza",
+          "desc": "Accounting, CFDI, intl invoicing",
+          "badge": "Infrastructure"
+        },
+        "agora": {
+          "name": "Agora",
+          "desc": "Legal: contracts, trust, time tracking",
+          "badge": "Vertical"
+        },
+        "caracol": {
+          "name": "Caracol",
+          "desc": "POS with vintages, FIFO, invoicing",
+          "badge": "Revenue"
+        },
+        "comal": {
+          "name": "Comal",
+          "desc": "E-commerce with subscription clubs",
+          "badge": "Revenue"
+        },
+        "lahoja": {
+          "name": "La Hoja",
+          "desc": "Production ERP, recipes, costs",
+          "badge": "Vertical"
+        },
+        "mancha": {
+          "name": "Mancha",
+          "desc": "Reservations with predictive AI",
+          "badge": "Vertical"
+        },
+        "plenura": {
+          "name": "Plenura",
+          "desc": "Therapist marketplace, video",
+          "badge": "Vertical"
+        },
+        "rito": {
+          "name": "Rito",
+          "desc": "Private equity and investments",
+          "badge": "Revenue"
+        },
+        "cosmosPet": {
+          "name": "Cosmos Pet",
+          "desc": "Veterinary: SOAP, surgery, vaccines",
+          "badge": "Vertical"
+        }
+      }
+    },
+    "ecosystemDiagram": {
+      "title": "A connected ecosystem",
+      "subtitle": "Every app strengthens the others"
+    },
+    "finalCta": {
+      "title": "Ready to get started?",
+      "subtitle": "Whether you need a ready-made product or a verified developer, Patadas connects you with the right solution.",
+      "findSolution": "Find my solution",
+      "directContact": "Direct contact"
+    },
+    "capabilities": {
+      "pos": {
+        "title": "POS & ERP",
+        "desc": "Operational systems with integrated CFDI 4.0"
+      },
+      "crm": {
+        "title": "AI-Powered CRM",
+        "desc": "Conversational agents for WhatsApp and voice"
+      },
+      "mobile": {
+        "title": "Mobile Apps",
+        "desc": "Flutter cross-platform with real-time sync"
+      }
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Development Services - Red Broom Software",
+      "description": "Enterprise software development: SaaS, POS, ERP, AI-powered CRM, FinTech integrations, and mobile applications. Mexico specialists."
+    },
+    "hero": {
+      "titlePart1": "What can we",
+      "titleHighlight": "build",
+      "titlePart2": "for you?",
+      "subtitle": "We develop high-performance enterprise software. From POS systems to AI-powered SaaS platforms."
+    },
+    "saas": {
+      "title": "SaaS Development",
+      "subtitle": "High-performance multi-tenant platforms",
+      "description": "We build SaaS applications with multi-tenant architecture, automated billing, and horizontal scalability. Experience with Stripe, SPEI, CoDi, and Open Banking.",
+      "features": [
+        "Native multi-tenancy",
+        "Recurring billing",
+        "REST API + Webhooks",
+        "White-labeling"
+      ]
+    },
+    "pos": {
+      "title": "POS & ERP Systems",
+      "subtitle": "Operational software for SMBs",
+      "description": "Point of sale, inventory, cash control, real-time kitchen orders. SAT integration for CFDI 4.0 invoicing and Mexican tax compliance.",
+      "features": [
+        "Integrated CFDI 4.0",
+        "Offline sync",
+        "Multi-location",
+        "Tax reports"
+      ]
+    },
+    "crm": {
+      "title": "AI-Powered CRM",
+      "subtitle": "Sales and marketing automation",
+      "description": "CRMs with lead scoring, AI agents for WhatsApp and phone calls, sales pipelines, and nurturing automation.",
+      "features": [
+        "Multichannel AI agents",
+        "Automatic lead scoring",
+        "Appointment automation",
+        "Conversion analytics"
+      ]
+    },
+    "fintech": {
+      "title": "FinTech Integrations",
+      "subtitle": "Open Banking, payments, and reconciliation",
+      "description": "We connect your system with Fintoc, Belvo, Stripe, SPEI, CoDi. Automatic bank transaction reconciliation.",
+      "features": [
+        "Open Banking",
+        "SPEI/CoDi payments",
+        "Automatic reconciliation",
+        "Multi-merchant"
+      ]
+    },
+    "mobile": {
+      "title": "Mobile Applications",
+      "subtitle": "Flutter cross-platform",
+      "description": "Native apps for iOS and Android with a single codebase. Real-time sync, push notifications, and offline mode.",
+      "features": [
+        "iOS + Android",
+        "Real-time sync",
+        "Offline mode",
+        "Push notifications"
+      ]
+    },
+    "consulting": {
+      "title": "Technical Consulting",
+      "subtitle": "Architecture and optimization",
+      "description": "Architecture review, performance optimization, legacy system migration, and technical team training.",
+      "features": [
+        "Code review",
+        "Data migration",
+        "Performance tuning",
+        "Training"
+      ]
+    },
+    "process": {
+      "title": "Our Process",
+      "step1": {
+        "title": "Discovery",
+        "desc": "We understand your business, processes, and objectives"
+      },
+      "step2": {
+        "title": "Design",
+        "desc": "Technical architecture and prototypes"
+      },
+      "step3": {
+        "title": "Development",
+        "desc": "Iterative sprints with frequent demos"
+      },
+      "step4": {
+        "title": "Launch",
+        "desc": "Deployment, training, and support"
+      }
+    },
+    "cta": {
+      "title": "Ready to build?",
+      "subtitle": "Tell us about your project and we'll give you a proposal within 48 hours.",
+      "button": "Request a Quote"
+    },
+    "legaltech": {
+      "title": "Legal Tech",
+      "subtitle": "Case management and AI documents",
+      "description": "Complete platforms for law firms: case management, trust accounting (IOLTA), time tracking, AI document generation, and court calendar.",
+      "features": [
+        "Case management",
+        "Trust accounting",
+        "AI documents",
+        "Court calendar"
+      ]
+    }
+  },
+  "portfolio": {
+    "meta": {
+      "title": "Portfolio - Red Broom Software",
+      "description": "Portfolio of products developed by Red Broom Software: 16 SaaS platforms + 5 B2C services for Mexican SMBs."
+    },
+    "hero": {
+      "badge": "16 platforms + 5 B2C services",
+      "titlePart1": "Our",
+      "titleHighlight": "Portfolio",
+      "subtitle": "SaaS platforms we have developed and operate. Each one solves real problems for Mexican businesses."
+    },
+    "products": {
+      "live": "Live",
+      "visitProduct": "Visit product",
+      "caracol": {
+        "name": "Caracol",
+        "subtitle": "Inventory & Import Management",
+        "description": "Comprehensive system for complex imports: container tracking, batch costing, customs control, multi-warehouse inventory, and automatic reconciliation with international suppliers.",
+        "highlights": [
+          "Container tracking",
+          "Batch costing",
+          "Multi-warehouse",
+          "Auto reconciliation"
+        ]
+      },
+      "lahoja": {
+        "name": "La Hoja",
+        "subtitle": "Restaurant and Retail ERP",
+        "description": "Complete ERP system for restaurants and food businesses: ultra-fast POS, FIFO inventory, supplier management, loyalty program, and analytics.",
+        "highlights": [
+          "High-speed POS",
+          "Loyalty program",
+          "Multi-location",
+          "Advanced analytics"
+        ]
+      },
+      "cosmos": {
+        "name": "Cosmos Pet",
+        "subtitle": "Veterinary Software",
+        "description": "Specialized SaaS platform for veterinary clinics: SOAP medical records, vaccine control, scheduling, pet grooming, and invoicing.",
+        "highlights": [
+          "SOAP Records",
+          "Vaccine control",
+          "Smart scheduling",
+          "Multi-clinic"
+        ]
+      },
+      "camino": {
+        "name": "Camino CRM",
+        "subtitle": "Multichannel AI CRM",
+        "description": "CRM with AI agents that automatically handle WhatsApp and phone calls. Unified customer context, lead scoring, sales pipeline.",
+        "highlights": [
+          "WhatsApp AI Agent",
+          "Voice AI Agent",
+          "Lead scoring",
+          "Full automation"
+        ]
+      },
+      "colectiva": {
+        "name": "Colectiva",
+        "subtitle": "B2B Payments and Billing Platform",
+        "description": "B2B multi-merchant platform: billing for the entire RBS ecosystem, payment gateway (CoDi, SPEI, MercadoPago, cards), subscriptions, and virtual wallet.",
+        "highlights": [
+          "Ecosystem billing",
+          "Multi-merchant",
+          "Subscriptions",
+          "Automatic reconciliation"
+        ]
+      },
+      "constanza": {
+        "name": "Constanza",
+        "subtitle": "Smart Accounting for Firms",
+        "description": "Multi-client platform for accountants: manage dozens of companies from a single dashboard. Tax AI, CFDI 4.0, automatic DIOT.",
+        "highlights": [
+          "Multi-client",
+          "Tax AI",
+          "Automatic DIOT/Balance",
+          "Group consolidation"
+        ]
+      },
+      "plenura": {
+        "name": "Plenura",
+        "subtitle": "AI Wellness Platform",
+        "description": "System for health and wellness professionals: smart patient matching, AI prescreening, automated session notes, and appointment management.",
+        "highlights": [
+          "AI Matching",
+          "Smart prescreening",
+          "AI session notes",
+          "Multi-professional"
+        ]
+      },
+      "agora": {
+        "name": "Agora",
+        "subtitle": "Legal Software for Firms",
+        "description": "Complete platform for law firms: case management, time tracking, IOLTA trust accounts, invoicing, AI documents, and court calendar.",
+        "highlights": [
+          "Case management",
+          "IOLTA Trust Accounts",
+          "Time tracking",
+          "AI for documents"
+        ]
+      },
+      "mancha": {
+        "name": "Mancha",
+        "subtitle": "Restaurant Reservations",
+        "description": "OpenTable-style platform for Mexican restaurants: online reservations, table management, automatic confirmations via email and WhatsApp, and occupancy analytics.",
+        "highlights": [
+          "24/7 Reservations",
+          "Automatic confirmations",
+          "Table management",
+          "Embeddable widget"
+        ]
+      },
+      "continua": {
+        "name": "Continua",
+        "subtitle": "Blood Donation Platform",
+        "description": "Connects donors with hospitals: donor registration, active emergencies, donation history, blood type notifications.",
+        "highlights": [
+          "Real-time emergencies",
+          "Type matching",
+          "Donation history",
+          "Hospital alerts"
+        ]
+      },
+      "puppylove": {
+        "name": "Puppy Love",
+        "subtitle": "Pet Matching",
+        "description": "Matching platform for pet owners: find playmates, breeding partners, and adoption. Verified profiles.",
+        "highlights": [
+          "Smart matching",
+          "Verified profiles",
+          "Integrated chat",
+          "Premium subscription"
+        ]
+      },
+      "baul": {
+        "name": "Baul",
+        "subtitle": "Storage and Warehousing",
+        "description": "Storage space rental: mini-warehouses, pallets, inventory management, pickup and home delivery.",
+        "highlights": [
+          "Multi-size",
+          "Home pickup",
+          "Access control",
+          "Digital inventory"
+        ]
+      },
+      "servilleta": {
+        "name": "Servilleta",
+        "subtitle": "Services Marketplace",
+        "description": "Connects clients with verified taskers for cleaning, moving, repairs, and more. Reviews, secure payments, and service guarantee.",
+        "highlights": [
+          "Verified taskers",
+          "Secure payments",
+          "Reviews",
+          "Service guarantee"
+        ]
+      },
+      "rito": {
+        "name": "Rito",
+        "subtitle": "Real Estate Private Equity",
+        "description": "Platform for real estate investment funds: deal underwriting, pro-formas, distribution waterfalls, investor management.",
+        "highlights": [
+          "Full underwriting",
+          "AI Deal Copilot",
+          "Investor portal",
+          "AI analysis"
+        ]
+      },
+      "comal": {
+        "name": "Comal",
+        "subtitle": "Multi-Tenant E-commerce",
+        "description": "Shopify-style platform for Mexico: online stores, subscription clubs, gated content, CoDi/MercadoPago payments and premium themes.",
+        "highlights": [
+          "Multi-tenant",
+          "Subscription clubs",
+          "Premium themes",
+          "Custom domain"
+        ]
+      },
+      "goodbay": {
+        "name": "Goodbay",
+        "subtitle": "Smart Vacation Rental",
+        "description": "Vacation rental platform with optimized tax model: property management, reservations, on-demand services, and cleaning management.",
+        "highlights": [
+          "Smart tax model",
+          "On-demand cleaning",
+          "Multi-property",
+          "Guest management"
+        ]
+      }
+    },
+    "b2cServices": {
+      "title": "B2C Services",
+      "subtitle": "In addition to software, we operate direct services for businesses that prefer turnkey solutions.",
+      "new": "New",
+      "active": "Active Service",
+      "comingSoon": "Coming Soon",
+      "learnMore": "Learn more",
+      "availableSoon": "Available soon",
+      "constanza": {
+        "name": "Constanza Services",
+        "subtitle": "Managed Accounting",
+        "description": "Your complete accounting department: tax filings, CFDI 4.0, DIOT, Balance, IMSS - all handled by experts. Starting at $8,900/month.",
+        "highlights": [
+          "100% SAT Compliance",
+          "Assigned accountant",
+          "Multi-regime",
+          "Hassle-free"
+        ]
+      },
+      "camino": {
+        "name": "Camino Services",
+        "subtitle": "Managed Marketing",
+        "description": "Your complete marketing department: social media, campaigns, WhatsApp AI, digital advertising, and analytics. Starting at $5,900/month.",
+        "highlights": [
+          "24/7 Social media",
+          "WhatsApp AI",
+          "Automated campaigns",
+          "Digital advertising"
+        ]
+      },
+      "colectiva": {
+        "name": "Colectiva Services",
+        "subtitle": "Managed Treasury",
+        "description": "Collections, SPEI disbursements, integrated payroll, and fully managed treasury. Starting at $3,900/month.",
+        "highlights": [
+          "CoDi/SPEI Collections",
+          "Mass disbursements",
+          "Integrated payroll",
+          "Automatic reconciliation"
+        ]
+      },
+      "aiSupport": {
+        "name": "AI Customer Support",
+        "subtitle": "Complete Ecosystem",
+        "description": "AI agents that handle WhatsApp and calls 24/7 for any business: restaurants, veterinaries, clinics, retail. Integrates with the entire ecosystem.",
+        "highlights": [
+          "Multi-industry",
+          "WhatsApp + Voice",
+          "Integrates with Mancha",
+          "Unified context"
+        ]
+      },
+      "mancha": {
+        "name": "Mancha Services",
+        "subtitle": "Universal Reservations",
+        "description": "Appointment and reservation system for any business: restaurants, veterinaries, clinics, salons, studios. Automatic confirmations and embeddable widget.",
+        "highlights": [
+          "Multi-industry",
+          "Auto confirmations",
+          "Embeddable widget",
+          "Integrates with Camino AI"
+        ]
+      }
+    },
+    "categories": {
+      "all": "All",
+      "core": "Core",
+      "hospitality": "Hospitality",
+      "verticals": "Verticals",
+      "fintech": "FinTech",
+      "marketplaces": "Marketplaces"
+    },
+    "stats": {
+      "saasProducts": "SaaS Products",
+      "b2cServices": "B2C Services",
+      "industries": "Industries",
+      "uptime": "Uptime",
+      "support": "Support"
+    },
+    "cta": {
+      "title": "Your product here?",
+      "subtitle": "We can develop the next platform for your industry.",
+      "button": "Let's talk"
+    },
+    "agentBadges": {
+      "aiAgents": "AI Agents",
+      "oracleAI": "Oracle AI",
+      "fiscalAI": "Fiscal AI",
+      "matchingAI": "AI Matching",
+      "dealCopilot": "Deal Copilot",
+      "docAI": "Doc AI"
+    }
+  },
+  "technology": {
+    "meta": {
+      "title": "Technology - Red Broom Software",
+      "description": "Red Broom Software's tech stack: SvelteKit, TypeScript, Supabase, OpenAI, and more. Modern development for Mexican SMBs."
+    },
+    "hero": {
+      "titlePart1": "Our",
+      "titleHighlight": "Technology",
+      "subtitle": "Modern stack, production-proven. Every technical decision optimized for performance, maintainability, and scalability."
+    },
+    "principles": {
+      "svelteFirst": {
+        "title": "Svelte-First",
+        "description": "We use SvelteKit for everything. Less JavaScript, better performance, superior developer experience."
+      },
+      "typeSafety": {
+        "title": "Type Safety",
+        "description": "Strict TypeScript across the entire codebase. Fewer bugs in production, reliable refactoring."
+      },
+      "edgePerformance": {
+        "title": "Edge Performance",
+        "description": "Serverless functions at the edge for minimal latency. Mexico first, global second."
+      },
+      "aiNative": {
+        "title": "AI-Native",
+        "description": "AI integrated from the design, not as an additional feature. Classification, automation, assistance."
+      }
+    },
+    "sections": {
+      "frontend": "Frontend",
+      "backend": "Backend & Database",
+      "ai": "Artificial Intelligence",
+      "integrations": "Integrations",
+      "infrastructure": "Infrastructure"
+    },
+    "stack": {
+      "sveltekit": {
+        "name": "SvelteKit",
+        "description": "Main framework for all applications"
+      },
+      "typescript": {
+        "name": "TypeScript",
+        "description": "Type safety across the codebase"
+      },
+      "tailwind": {
+        "name": "Tailwind CSS",
+        "description": "Consistent and responsive design"
+      },
+      "flutter": {
+        "name": "Flutter",
+        "description": "Cross-platform mobile apps"
+      },
+      "supabase": {
+        "name": "Supabase",
+        "description": "PostgreSQL, Auth, Realtime, Storage"
+      },
+      "firebase": {
+        "name": "Firebase",
+        "description": "Auth, Firestore for some products"
+      },
+      "nodejs": {
+        "name": "Node.js",
+        "description": "APIs and microservices"
+      },
+      "postgresql": {
+        "name": "PostgreSQL",
+        "description": "Primary database"
+      },
+      "gpt4": {
+        "name": "OpenAI GPT-4",
+        "description": "Conversational agents and classification"
+      },
+      "groq": {
+        "name": "Groq",
+        "description": "Primary provider: ultra-fast inference"
+      },
+      "claude": {
+        "name": "Anthropic Claude",
+        "description": "Tool-use agents and document analysis"
+      },
+      "gemini": {
+        "name": "Google Gemini",
+        "description": "Long context for extensive documents"
+      },
+      "whisper": {
+        "name": "Whisper",
+        "description": "Audio transcription"
+      },
+      "customml": {
+        "name": "Custom Models",
+        "description": "Scoring, matching, and domain-specific classification"
+      },
+      "satcfdi": {
+        "name": "SAT/CFDI 4.0",
+        "description": "Mexican electronic invoicing"
+      },
+      "speicodi": {
+        "name": "SPEI/CoDi",
+        "description": "Real-time bank payments"
+      },
+      "whatsapp": {
+        "name": "WhatsApp Cloud",
+        "description": "Business messaging"
+      },
+      "twilio": {
+        "name": "Twilio",
+        "description": "Voice, SMS, verification"
+      },
+      "fintocbelvo": {
+        "name": "Fintoc/Belvo",
+        "description": "Open Banking"
+      },
+      "stripe": {
+        "name": "Stripe",
+        "description": "International payments"
+      },
+      "vercel": {
+        "name": "Vercel",
+        "description": "Hosting and edge functions"
+      },
+      "supabasecloud": {
+        "name": "Supabase Cloud",
+        "description": "Managed database"
+      },
+      "github": {
+        "name": "GitHub Actions",
+        "description": "Automated CI/CD"
+      },
+      "cloudflare": {
+        "name": "Cloudflare",
+        "description": "DNS, CDN, protection"
+      }
+    },
+    "agents": {
+      "title": "Agent Architecture",
+      "subtitle": "All agents in the RBS ecosystem share centralized infrastructure: intelligent routing to the cheapest capable provider, MCP tools for real-time data access, and agentic loops for multi-step tasks.",
+      "live": "Live",
+      "liveTitle": "Agents in production",
+      "pipeline": {
+        "request": {
+          "title": "Client app",
+          "desc": "Camino, Rito, Plenura or another app sends messages and available tools to the centralized proxy"
+        },
+        "route": {
+          "title": "AI Router (Colectiva)",
+          "desc": "Tools → Anthropic · Long context → Gemini · Simple text → Groq"
+        },
+        "execute": {
+          "title": "MCP Tools",
+          "desc": "Access to Firestore, Supabase, external APIs. Agentic loop until task completion"
+        },
+        "meter": {
+          "title": "Centralized metering",
+          "desc": "Tokens counted, cost calculated in MXN, quota applied per organization"
+        }
+      },
+      "oracle": {
+        "title": "Oracle",
+        "desc": "Internal BI chat with 15+ MCP tools: real-time queries on agreements, distributions, quotas, wallets, and ecosystem health."
+      },
+      "dealCopilot": {
+        "title": "Deal Copilot",
+        "desc": "Underwriting assistant with 8 tools: analyzes deal PDFs, generates pro-formas, calculates distributions, and drafts packages for financial institutions."
+      },
+      "support": {
+        "title": "Support Agents",
+        "desc": "Handle WhatsApp and calls 24/7, qualify prospects, coordinate appointments, and synthesize conversations. The team only intervenes with real opportunities."
+      },
+      "wellness": {
+        "title": "Wellness Matching",
+        "desc": "Conversational prescreening, semantic patient-therapist matching, automated session notes, and review summaries."
+      },
+      "fiscal": {
+        "title": "Tax Classification",
+        "desc": "Classifies accounting transactions, suggests SAT accounts, detects deductions, and generates DIOT without manual intervention."
+      },
+      "legal": {
+        "title": "Legal Drafting",
+        "desc": "Generates 8 types of legal documents from case context: contracts, powers of attorney, agreements, and court filings in seconds."
+      }
+    },
+    "cta": {
+      "title": "Want to see the code?",
+      "subtitle": "If you're technical and want to evaluate our code quality, we can give you access to demo repos.",
+      "button": "Request Technical Demo"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact - Red Broom Software",
+      "description": "Contact us to discuss your software project. SaaS, POS, CRM, mobile app development and more for Mexican SMBs."
+    },
+    "hero": {
+      "titlePart1": "Let's talk about your",
+      "titleHighlight": "project",
+      "subtitle": "Tell us what you need and we'll give you a proposal within 48 hours."
+    },
+    "form": {
+      "title": "Send us a message",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "companyLabel": "Company",
+      "phoneLabel": "Phone",
+      "projectTypeLabel": "Project type",
+      "selectOption": "Select an option",
+      "messageLabel": "Tell us about your project",
+      "messagePlaceholder": "What problem do you want to solve? What features do you need?",
+      "submitButton": "Send message",
+      "submitting": "Sending...",
+      "successTitle": "Message sent",
+      "successMessage": "We'll respond within the next 48 hours.",
+      "required": "*",
+      "projectTypes": {
+        "saas": "SaaS Development",
+        "pos": "POS/ERP System",
+        "crm": "AI-Powered CRM",
+        "mobile": "Mobile App",
+        "integration": "Integration/API",
+        "consulting": "Consulting",
+        "other": "Other"
+      },
+      "errorSubmit": "Error submitting the form",
+      "errorGeneric": "Error submitting. Please try again."
+    },
+    "process": {
+      "title": "What's next?",
+      "step1": {
+        "title": "We receive your message",
+        "desc": "We review your project and assign the right team."
+      },
+      "step2": {
+        "title": "Discovery call",
+        "desc": "30 minutes to understand your business and requirements."
+      },
+      "step3": {
+        "title": "Detailed proposal",
+        "desc": "Scope, architecture, timeline, and budget."
+      }
+    },
+    "directContact": {
+      "title": "Direct contact"
+    },
+    "urgent": {
+      "title": "Urgent project?",
+      "desc": "If you have a critical deadline, mention it in your message and we'll prioritize you."
+    }
+  },
+  "footer": {
+    "description": "High-performance enterprise software development.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "ecosystem": "Ecosystem",
+    "copyright": "Red Broom Software S.A.S. de C.V. All rights reserved."
+  },
+  "plataformas": {
+    "meta": {
+      "title": "Platforms — Red Broom Software",
+      "description": "Integrated SaaS platforms for Mexican businesses. Point of sale, e-commerce, invoicing, CRM and more. Prices in pesos."
+    },
+    "hero": {
+      "title": "Solutions for your",
+      "titleHighlight": "Business",
+      "subtitle": "Each platform solves a real problem. Use the ones you need — the more you use, the more you save.",
+      "ctaPrimary": "Explore Platforms",
+      "ctaSecondary": "Custom Quote"
+    },
+    "bundle": {
+      "title": "Multi-app discount",
+      "subtitle": "automatic when subscribing to more than one platform",
+      "description": "Discounts apply to the base subscription. No codes, no hassle.",
+      "apps2": "2 apps",
+      "apps3": "3 apps",
+      "apps4": "4+ apps"
+    },
+    "grid": {
+      "title": "Our Platforms",
+      "subtitle": "Each with its own fair price, designed to solve a specific problem."
+    },
+    "trialButton": "Free Trial",
+    "enterprise": {
+      "title": "Need a custom solution?",
+      "subtitle": "For businesses with multiple locations, custom integrations, or high volumes — we design tailored packages with preferential pricing and dedicated support.",
+      "ctaPrimary": "Custom Quote",
+      "ctaSecondary": "Start with Free Trial"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Notice - Red Broom Software",
+      "description": "Privacy Notice of Red Broom Software S.A.S. de C.V. Learn how we protect and handle your personal data."
+    },
+    "title": "Privacy Notice",
+    "lastUpdated": "Last updated",
+    "date": "December 19, 2025",
+    "section1": {
+      "title": "1. Identity of the Data Controller",
+      "p1": "(hereinafter \"RBS\", \"we\" or \"the Company\"), with domicile in Mexico City, Mexico, is responsible for the processing of your personal data.",
+      "p2": "For any questions or exercise of ARCO rights, you can contact us at:"
+    },
+    "section2": {
+      "title": "2. Personal Data Collected",
+      "intro": "For the purposes stated in this privacy notice, we may collect the following categories of personal data:",
+      "items": {
+        "identification": {
+          "label": "Identification data:",
+          "desc": "full name, RFC, CURP, address"
+        },
+        "contact": {
+          "label": "Contact data:",
+          "desc": "email, phone number"
+        },
+        "work": {
+          "label": "Employment data:",
+          "desc": "company name, position, business sector"
+        },
+        "fiscal": {
+          "label": "Tax data:",
+          "desc": "tax regime, digital certificates (CSD), tax address"
+        },
+        "financial": {
+          "label": "Financial data:",
+          "desc": "banking information for payment processing"
+        },
+        "usage": {
+          "label": "Usage data:",
+          "desc": "information about how you use our services, access logs"
+        }
+      }
+    },
+    "section3": {
+      "title": "3. Purposes of Processing",
+      "intro": "Your personal data will be used for the following primary purposes:",
+      "primary": [
+        "Provision of contracted software services (POS, ERP, CRM, invoicing)",
+        "Issuance of Digital Tax Receipts via Internet (CFDI)",
+        "Payment and transaction processing",
+        "Technical support and customer service",
+        "Communications related to your account and services",
+        "Compliance with legal and tax obligations"
+      ],
+      "secondaryIntro": "Secondary purposes (you may object):",
+      "secondary": [
+        "Sending promotional and marketing communications",
+        "Satisfaction surveys and service improvement",
+        "Invitations to events and webinars"
+      ]
+    },
+    "section4": {
+      "title": "4. Data Transfers",
+      "intro": "Your personal data may be transferred to:",
+      "items": {
+        "cloud": {
+          "label": "Cloud service providers:",
+          "desc": "for storage and processing (Google Cloud, Firebase)"
+        },
+        "pac": {
+          "label": "Certificate Authorization Providers (PAC):",
+          "desc": "for CFDI stamping with the SAT"
+        },
+        "payment": {
+          "label": "Payment processors:",
+          "desc": "for transaction management"
+        },
+        "authorities": {
+          "label": "Competent authorities:",
+          "desc": "when required by law"
+        }
+      },
+      "note": "All transfers are made in accordance with applicable legislation and with the necessary security measures."
+    },
+    "section5": {
+      "title": "5. ARCO Rights",
+      "intro": "You have the right to:",
+      "access": {
+        "label": "Access",
+        "desc": "your personal data in our possession"
+      },
+      "rectify": {
+        "label": "Rectify",
+        "desc": "your data when it is inaccurate or incomplete"
+      },
+      "cancel": {
+        "label": "Cancel",
+        "desc": "your data when you consider it is not required for the purposes"
+      },
+      "oppose": {
+        "label": "Oppose",
+        "desc": "the processing of your data for specific purposes"
+      },
+      "howTo": "To exercise these rights, send your request to",
+      "howToSuffix": "with the following information: full name, clear description of your request, documents proving your identity."
+    },
+    "section6": {
+      "title": "6. Security Measures",
+      "intro": "We implement technical, administrative, and physical security measures to protect your personal data, including:",
+      "items": [
+        "AES-256 encryption for sensitive data",
+        "Secure connections via HTTPS/TLS",
+        "Role-based access controls",
+        "Access monitoring and auditing",
+        "Automatic backups and recovery plan",
+        "PCI DSS compliance for payment data"
+      ]
+    },
+    "section7": {
+      "title": "7. Use of Cookies and Technologies",
+      "content": "We use cookies and similar technologies to improve your experience on our websites. These technologies allow us to remember your preferences, analyze site usage, and personalize content. You can configure your browser to reject cookies, although this may affect site functionality."
+    },
+    "section8": {
+      "title": "8. Changes to the Privacy Notice",
+      "content": "We reserve the right to modify this privacy notice at any time. Changes will be published on this page and, in case of significant changes, we will notify you by email. We recommend reviewing this page periodically."
+    },
+    "section9": {
+      "title": "9. Contact",
+      "intro": "If you have questions about this privacy notice or about the processing of your personal data, you can contact us at:",
+      "location": "Mexico City, Mexico"
+    }
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms of Service - Red Broom Software",
+      "description": "Terms and Conditions of Use for Red Broom Software S.A.S. de C.V. services."
+    },
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated",
+    "date": "December 19, 2025",
+    "section1": {
+      "title": "1. Acceptance of Terms",
+      "content": "By accessing and using the services of Red Broom Software S.A.S. de C.V. (including but not limited to Caracol, La Hoja, Cosmos Pet, Camino CRM, Colectiva, and Constanza), you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, you may not access our services."
+    },
+    "section2": {
+      "title": "2. Description of Services",
+      "intro": "RBS provides enterprise software in SaaS (Software as a Service) mode, which includes:",
+      "items": {
+        "caracol": {
+          "label": "Caracol:",
+          "desc": "Inventory and complex import management"
+        },
+        "lahoja": {
+          "label": "La Hoja:",
+          "desc": "ERP for cafes and retail"
+        },
+        "cosmos": {
+          "label": "Cosmos Pet:",
+          "desc": "Software for veterinary clinics"
+        },
+        "camino": {
+          "label": "Camino CRM:",
+          "desc": "Customer relationship management system"
+        },
+        "colectiva": {
+          "label": "Colectiva:",
+          "desc": "Payment gateway and AI hub"
+        },
+        "constanza": {
+          "label": "Constanza:",
+          "desc": "Intelligent accounting platform"
+        }
+      }
+    },
+    "section3": {
+      "title": "3. Registration and Account",
+      "p1": "To use our services, you must create an account providing truthful, complete, and up-to-date information. You are responsible for maintaining the confidentiality of your access credentials and all activities that occur under your account. You must notify us immediately of any unauthorized use.",
+      "p2": "We reserve the right to suspend or cancel accounts that violate these terms or that remain inactive for prolonged periods without an active subscription."
+    },
+    "section4": {
+      "title": "4. Payments and Invoicing",
+      "intro": "RBS services are offered under a subscription model. By subscribing, you agree to:",
+      "items": [
+        "Pay the applicable fees according to the contracted plan",
+        "Initial implementation charges are payable before service begins",
+        "Monthly subscriptions are charged in advance",
+        "Prices may be updated with 30 days prior notice",
+        "No refunds for unused periods in case of early cancellation"
+      ],
+      "note": "Failure to pay may result in suspension or cancellation of service. We issue CFDI for all payments received."
+    },
+    "section5": {
+      "title": "5. Acceptable Use",
+      "intro": "By using our services, you agree NOT to:",
+      "items": [
+        "Violate applicable laws or regulations, including tax laws",
+        "Attempt to access systems or data without authorization",
+        "Transmit malware, viruses, or malicious code",
+        "Interfere with the operation of the services",
+        "Use the services for fraudulent or illegal activities",
+        "Resell or sublicense the services without authorization",
+        "Issue CFDI with false or fraudulent information",
+        "Share access credentials with unauthorized third parties"
+      ]
+    },
+    "section6": {
+      "title": "6. Intellectual Property",
+      "p1": "All software, design, code, documentation, and content of RBS services are the exclusive property of Red Broom Software S.A.S. de C.V. or its licensors. You are granted a limited, non-exclusive, and non-transferable license to use the services during the term of your subscription.",
+      "p2": "The data you enter into the systems remains your property. RBS will not claim ownership of your commercial, tax, or customer data."
+    },
+    "section7": {
+      "title": "7. Availability and Support",
+      "intro": "We strive to maintain 99.9% availability (SLA). However:",
+      "items": [
+        "Scheduled maintenance interruptions may occur (with prior notice)",
+        "Events beyond our control (force majeure) are not covered by the SLA",
+        "Technical support is available according to the contracted plan",
+        "Response times vary according to incident severity and plan"
+      ]
+    },
+    "section8": {
+      "title": "8. Electronic Invoicing (CFDI)",
+      "intro": "For electronic invoicing services, you acknowledge and agree:",
+      "items": [
+        "It is your responsibility to provide correct and up-to-date tax data",
+        "Digital Seal Certificates (CSD) are your exclusive responsibility",
+        "RBS acts as an intermediary with the SAT-authorized PAC",
+        "CFDI issued through our systems have legal validity",
+        "You must comply with all applicable tax obligations",
+        "RBS is not responsible for errors in user-provided data"
+      ]
+    },
+    "section9": {
+      "title": "9. Limitation of Liability",
+      "p1": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, RBS SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, OR ANY OTHER INTANGIBLE LOSS.",
+      "p2": "The total liability of RBS under these terms shall not exceed the amount paid by you in the last 12 months for the services related to the claim."
+    },
+    "section10": {
+      "title": "10. Cancellation and Termination",
+      "intro": "You may cancel your subscription at any time. Upon cancellation:",
+      "items": [
+        "Your access will continue until the end of the paid period",
+        "You may request a data export within the following 90 days",
+        "After 90 days, your data will be permanently deleted",
+        "Implementation charges are non-refundable"
+      ],
+      "note": "RBS may suspend or terminate your access if you violate these terms, fail to make corresponding payments, or by requirement of a competent authority."
+    },
+    "section11": {
+      "title": "11. Modifications",
+      "content": "We reserve the right to modify these terms at any time. Significant changes will be notified at least 30 days in advance. Continued use of the services after the effective date of changes constitutes your acceptance of the new terms."
+    },
+    "section12": {
+      "title": "12. Applicable Law and Jurisdiction",
+      "content": "These terms are governed by the laws of the United Mexican States. Any dispute arising from these terms shall be submitted to the competent courts of Mexico City, with the parties waiving any other jurisdiction that may correspond to them by reason of their present or future domicile."
+    },
+    "section13": {
+      "title": "13. Contact",
+      "intro": "For questions about these Terms of Service, contact us at:",
+      "location": "Mexico City, Mexico"
+    },
+    "acceptance": "By using Red Broom Software services, you confirm that you have read, understood, and agree to these Terms of Service in their entirety."
+  },
+  "chat": {
+    "salesAssistant": "Sales assistant",
+    "openChat": "Open chat",
+    "closeChat": "Close chat",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "continueWhatsApp": "Continue on WhatsApp",
+    "placeholder": "Type your message...",
+    "poweredBy": "Powered by RBS AI",
+    "greeting": "Hi! I'm the Red Broom Software assistant. How can I help you today? I can tell you about our products, schedule a demo, or answer your questions.",
+    "errorGeneric": "Sorry, there was an error. Please try again.",
+    "errorConnection": "Sorry, I couldn't connect to the server. Please try again.",
+    "whatsappPrefill": "Hi, I'm coming from the chat on your website. I was asking about: {message}",
+    "whatsappDefault": "Hi, I'd like more information about your products."
+  },
+  "ecosystemDiagram": {
+    "hub": "Ecosystem",
+    "roles": {
+      "camino": "CRM + SSO",
+      "colectiva": "Payments + AI",
+      "constanza": "Accounting",
+      "caracol": "Inventory",
+      "lahoja": "ERP",
+      "plenura": "Wellness",
+      "rito": "Real Estate",
+      "agora": "Legal",
+      "comal": "E-commerce",
+      "mancha": "Reservations"
+    }
+  }
 }
