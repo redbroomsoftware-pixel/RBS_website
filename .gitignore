@@ -9,3 +9,6 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vercel
+
+# Atrapa nombres como .ag.env o foo.env que `.env` / `.env.*` dejan pasar (S592)
+*.env
