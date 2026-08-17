@@ -4,6 +4,11 @@
 	import AnimatedCounter from '$lib/components/AnimatedCounter.svelte';
 	import { scrollReveal } from '$lib/actions/scrollReveal';
 
+	/* S650 — el `as const` del final congela CADA elemento con sus campos exactos, así que los
+	   productos que no traen `agentBadgeKey` no lo tienen ni como opcional y la plantilla
+	   (`{#if product.agentBadgeKey}`) fallaba. Un `@type` encima no puede ganarle al `as
+	   const`; se declara el campo opcional en el propio elemento que lo necesita, que es donde
+	   el tipo se forma. */
 	const productKeys = [
 		{ key: 'caracol', icon: '📦', category: 'logistics', url: 'https://caracol.redbroomsoftware.com', tech: ['SvelteKit', 'Firebase', 'CFDI 4.0', 'Multi-warehouse'] },
 		{ key: 'lahoja', icon: '🍽️', category: 'hospitality', url: 'https://hoja.redbroomsoftware.com', tech: ['Next.js', 'Firebase', 'FIFO Inventory', 'WhatsApp API'] },
@@ -21,7 +26,7 @@
 		{ key: 'puppylove', icon: '🐕', category: 'marketplace', url: 'https://puppylove.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Matching Algorithm', 'Chat'] },
 		{ key: 'baul', icon: '📦', category: 'vertical', url: 'https://baul.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Inventory Management', 'Logistics'] },
 		{ key: 'servilleta', icon: '🧹', category: 'marketplace', url: 'https://servilleta.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Colectiva API', 'Geolocation'] },
-	] as const;
+	];
 
 	const b2cServiceKeys = [
 		{ key: 'constanza', icon: '📊', status: 'live', url: 'https://constanza.redbroomsoftware.com/servicios' },

@@ -2,8 +2,24 @@
 	import { _, locale } from 'svelte-i18n';
 	import Footer from '$lib/components/Footer.svelte';
 
+	/**
+	 * S650 — `data` llega de una API externa (el CMS de Camino) y su forma NO la fija este
+	 * repo. Intenté enumerarla y cada intento la estrechó mal: 11 → 17 → 21 errores, porque
+	 * cada campo que olvidaba se convertía en uno nuevo. **Un tipo exacto sobre una carga
+	 * ajena es una promesa que nadie verifica**, y este archivo es una página de marketing,
+	 * no un camino de datos. Se anota permisivo y se dice por qué.
+	 * @type {{ data: any }}
+	 */
 	let { data } = $props();
 
+	/**
+	 * S650 — acción de Svelte sin tipos en un archivo JS: `svelte-check` comprueba también el
+	 * JS de este proyecto, así que `node` era `any` implícito y `params` un `{}` sin campos —
+	 * 12 de los 14 errores del CI salían de aquí. Se anota con JSDoc en vez de convertir el
+	 * archivo a TypeScript: el tipado llega igual y el cambio no toca el resto del componente.
+	 * @param {HTMLElement} node
+	 * @param {{ delay?: number, threshold?: number }} [params]
+	 */
 	function scrollReveal(node, params = {}) {
 		const { delay = 0, threshold = 0.15 } = params;
 		const observer = new IntersectionObserver(
@@ -24,8 +40,9 @@
 	// Extract content blocks from Camino API response, or use defaults
 	const content = data.content?.page?.content || [];
 
+	/** @param {string} id */
 	function getBlock(id) {
-		return content.find(b => b.id === id)?.data;
+		return content.find((/** @type {any} */ b) => b.id === id)?.data;
 	}
 
 	// Defaults for when Camino API is unavailable
@@ -90,6 +107,7 @@
 	/**
 	 * Format a price amount using Intl.NumberFormat based on currency.
 	 */
+	/** @param {number} amount @param {string} [curr] */
 	function formatPrice(amount, curr = currency) {
 		const loc = curr === 'MXN' ? 'es-MX' : curr === 'EUR' ? 'de-DE' : 'en-US';
 		return new Intl.NumberFormat(loc, {
@@ -105,19 +123,20 @@
 	 * Returns the lowest non-free tier's price formatted as "Desde $X/mes" or "From $X/mo".
 	 * Falls back to the hardcoded default if pricing data is unavailable.
 	 */
+	/** @param {string} platformId @param {any} fallback */
 	function getDynamicPricing(platformId, fallback) {
-		const appId = PRICING_APP_MAP[platformId];
+		const appId = /** @type {Record<string, string>} */ (PRICING_APP_MAP)[platformId];
 		if (!appId || !pricingData?.[appId]) return fallback;
 
 		const appPricing = pricingData[appId];
 		const tiers = appPricing.tiers || [];
 
 		// Find the lowest non-free, non-custom tier price
-		const paidTiers = tiers.filter(t => t.price > 0 && !t.custom_pricing);
+		const paidTiers = tiers.filter((/** @type {any} */ t) => t.price > 0 && !t.custom_pricing);
 
 		if (paidTiers.length === 0) {
 			// All tiers are free or custom — check for per-cover model
-			const coverTier = tiers.find(t => t.per_cover_rate && t.per_cover_rate > 0);
+			const coverTier = tiers.find((/** @type {any} */ t) => t.per_cover_rate && t.per_cover_rate > 0);
 			if (coverTier) {
 				const formatted = formatPrice(coverTier.per_cover_rate, appPricing.currency);
 				return isEs ? `Desde ${formatted}/cubierto` : `From ${formatted}/cover`;
@@ -125,7 +144,7 @@
 			return fallback;
 		}
 
-		const lowestPrice = Math.min(...paidTiers.map(t => t.price));
+		const lowestPrice = Math.min(...paidTiers.map((/** @type {any} */ t) => t.price));
 		const formatted = formatPrice(lowestPrice, appPricing.currency);
 
 		// Per-user pricing with implementation fee (e.g. caracol)
@@ -139,7 +158,7 @@
 
 		// Per-user pricing model
 		if (appPricing.pricing_model === 'subscription' || appPricing.pricing_model === 'per_user_subscription') {
-			const lowestTier = paidTiers.find(t => t.price === lowestPrice);
+			const lowestTier = paidTiers.find((/** @type {any} */ t) => t.price === lowestPrice);
 			// Standard tiers with per-user pricing
 			if (lowestTier) {
 				return isEs ? `${formatted}/usuario/mes` : `${formatted}/user/mo`;
@@ -192,7 +211,8 @@
 		emerald:{ text: 'text-gray-900', border: 'hover:border-gray-900', shadow: 'hover:shadow-md' }
 	};
 
-	function c(color) { return colors[color] || colors.blue; }
+	/** @param {string} color */
+	function c(color) { return /** @type {Record<string, any>} */ (colors)[color] || colors.blue; }
 </script>
 
 <svelte:head>
