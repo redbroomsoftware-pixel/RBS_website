@@ -7,7 +7,7 @@
 		{ name: 'Colectiva', url: 'https://colectiva.redbroomsoftware.com' },
 		{ name: 'Constanza', url: 'https://constanza.redbroomsoftware.com' },
 		{ name: 'Caracol', url: 'https://caracol.redbroomsoftware.com' },
-		{ name: 'La Hoja', url: 'https://lahoja.redbroomsoftware.com' },
+		{ name: 'La Hoja', url: 'https://hoja.redbroomsoftware.com' },
 		{ name: 'Plenura', url: 'https://plenura.redbroomsoftware.com' },
 		{ name: 'Rito', url: 'https://rito.redbroomsoftware.com' },
 		{ name: 'Agora', url: 'https://agora.redbroomsoftware.com' },
