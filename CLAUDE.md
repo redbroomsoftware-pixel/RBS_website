@@ -126,17 +126,28 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the ecosyste
 18. Hospitality Fiscal — Vacation Rentals
 
 ## Components
-| Component | Purpose |
+Se citan con su ruta para que el canario pueda verificarlas
+(`node ~/Projects/ecosystem-sdk/scripts/audit-claude-md-citas.mjs RBS_website`).
+
+| Componente | Uso |
 |-----------|---------|
-| Header | Sticky nav, mobile menu, scroll shadow |
-| Footer | Links, ecosystem strip, GitHub |
-| LanguageSwitcher | ES/EN toggle (stores in localStorage) |
-| TypewriterText | Animated cycling text for hero |
-| AnimatedCounter | Count-up animation on scroll |
-| EcosystemDiagram | Product connection visual |
+| `src/lib/components/Footer.svelte` | Enlaces, tira del ecosistema, GitHub — 9 importadores |
+| `src/lib/components/TypewriterText.svelte` | Texto cíclico del hero |
+| `src/lib/components/AnimatedCounter.svelte` | Cuenta ascendente al entrar en pantalla |
+| `src/lib/components/EcosystemDiagram.svelte` | Órbita con haces animados (S709) |
+
+> ⚠️ **Muerto, conservado a propósito de momento** (S709): `src/lib/components/Header.svelte`
+> y `src/lib/components/ChatWidget.svelte` tienen **cero importadores** — la cabecera real es
+> `SiteHeader` de `@r-bsoftware/palacio-ui`, montada en `src/routes/+layout.svelte`.
+> `src/lib/components/LanguageSwitcher.svelte` sólo lo importa ese `Header` muerto, y arrastra
+> el mismo defecto de locale que se corrigió en `/plataformas` — invisible justamente porque
+> no se renderiza. Esta tabla los listaba como vivos: documentación de un cadáver.
+> Decidir ship/borrar, no dejarlos pudrirse.
 
 ## Custom Actions
-- `scrollReveal.ts` — IntersectionObserver for fade-in-up animations
+- `src/lib/actions/scrollReveal.ts` — IntersectionObserver para las entradas al hacer scroll
+- `src/lib/actions/spotlight.ts` — foco que sigue al cursor (escribe `--fx`/`--fy`; el
+  resplandor lo pinta `.foco::before` en `src/app.css`)
 
 ## Routes (8 pages, most prerendered)
 | Route | Purpose | Rendering |
