@@ -136,13 +136,15 @@ Se citan con su ruta para que el canario pueda verificarlas
 | `src/lib/components/AnimatedCounter.svelte` | Cuenta ascendente al entrar en pantalla |
 | `src/lib/components/EcosystemDiagram.svelte` | Órbita con haces animados (S709) |
 
-> ⚠️ **Muerto, conservado a propósito de momento** (S709): `src/lib/components/Header.svelte`
-> y `src/lib/components/ChatWidget.svelte` tienen **cero importadores** — la cabecera real es
-> `SiteHeader` de `@r-bsoftware/palacio-ui`, montada en `src/routes/+layout.svelte`.
-> `src/lib/components/LanguageSwitcher.svelte` sólo lo importa ese `Header` muerto, y arrastra
-> el mismo defecto de locale que se corrigió en `/plataformas` — invisible justamente porque
-> no se renderiza. Esta tabla los listaba como vivos: documentación de un cadáver.
-> Decidir ship/borrar, no dejarlos pudrirse.
+> 🗑️ **Retirados en S709**: `Header.svelte` (99 L), `ChatWidget.svelte` (279 L) y
+> `LanguageSwitcher.svelte` (19 L) — 397 líneas con **cero importadores**, que esta tabla
+> listaba como vivas. La cabecera real es `SiteHeader` de `@r-bsoftware/palacio-ui`, montada
+> en [`src/routes/+layout.svelte`](src/routes/+layout.svelte); `LanguageSwitcher` sólo lo
+> importaba el `Header` muerto y arrastraba el mismo defecto de locale corregido en
+> `/plataformas` — invisible justamente porque no se renderizaba, y casi se "arregla" antes
+> de censar importadores. Verificado por tres vías antes de borrar: sin importadores
+> estáticos, sin `import()` dinámico, y **ausentes del bundle construido**.
+> Si vuelve a hacer falta un widget de chat, está en el historial.
 
 ## Custom Actions
 - `src/lib/actions/scrollReveal.ts` — IntersectionObserver para las entradas al hacer scroll
