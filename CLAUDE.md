@@ -54,8 +54,15 @@
 # RBS Website — Claude Working Instructions
 
 ## Purpose
-Corporate marketing website for Red Broom Software S.A.S. Showcases the 18-product ecosystem to potential customers.
+Corporate marketing website for Red Broom Software S.A.S. Showcases the ecosystem to potential customers.
 - **URL**: `redbroomsoftware.com`
+
+> ⚠️ **Los conteos NO se escriben en prosa — ni aquí ni en el copy.** Las apps del ecosistema salen de
+> `src/lib/ecosystem-stats.json` (derivado del canon `apps.json`); el portafolio público sale de
+> `productKeys` / `b2cServiceKeys` en [`src/routes/portafolio/+page.svelte`](src/routes/portafolio/+page.svelte).
+> Esta sección decía "18-product" mientras la página listaba 16+5 y el canon 25, y el hero anunciaba
+> "22 Aplicaciones" bajo un título que decía 25 — con el JSON-LD que Google indexa afirmando "22-app"
+> (corregido S709: contador y schema ahora derivan de `appCount`).
 
 ## Decision Boundaries
 
@@ -98,7 +105,7 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the 18-produ
 - **i18n**: svelte-i18n (580 keys ES/EN, fully wired — all 8 pages + 5 components use $_())
 - **Error Tracking**: Sentry (@sentry/sveltekit)
 
-## Portfolio (18 Products + 3 B2C Services)
+## Portfolio (16 productos + 5 servicios B2C — verificado S709 contra `productKeys`/`b2cServiceKeys`)
 1. Caracol — Restaurant POS
 2. La Hoja — ERP for Restaurants
 3. Cosmos Pet — Veterinary SaaS
@@ -136,7 +143,7 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the 18-produ
 |-------|---------|-----------|
 | `/` | Hero, stats, capabilities, products grid | Prerendered |
 | `/plataformas` | Camino-powered platforms showcase | SSR (fetches from Camino content API) |
-| `/portafolio` | 18 products + 3 B2C services | Prerendered |
+| `/portafolio` | 16 productos + 5 servicios B2C | Prerendered |
 | `/servicios` | Service offerings | Prerendered |
 | `/tecnologia` | Tech stack showcase | Prerendered |
 | `/contacto` | Contact form → Camino CRM | Prerendered |
@@ -152,7 +159,10 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the 18-produ
 ## Deployment
 - Vercel (project: `rbs-website`, adapter-vercel)
 - Custom domain: `redbroomsoftware.com` (A record → 76.76.21.21)
-- Deploy: `npx vercel deploy --prod`
+- Deploy: **automático** — `rbs-website` tiene git conectado en Vercel, así que un `git push origin
+  master` **ES** un deploy a producción (verificado S709: push → prod sirviendo en ~75 s). La disciplina
+  de pre-deploy (compuertas verdes + rollback identificado + anuncio en lc) aplica al **push**, no a un
+  comando aparte. Estado por proyecto: `~/.claude/deploy-log/deploy-modes.json`, nunca en prosa.
 
 ## Camino Integration
 - `/plataformas` fetches content from `camino.redbroomsoftware.com/api/public/page/plataformas` (SSR)
