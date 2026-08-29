@@ -27,12 +27,32 @@ export const load: PageServerLoad = async ({ url, cookies, request }) => {
 	if (utmMedium) params.set('utm_medium', utmMedium);
 	if (utmCampaign) params.set('utm_campaign', utmCampaign);
 
-	// Resolve geo region — forward to Camino pricing API
+	/* Resolución de región (corregido S709).
+	 *
+	 * La intención original era reenviar `x-vercel-ip-country` a la API de precios de
+	 * Camino, pero esa API IGNORA la cabecera — medido: con `x-vercel-ip-country: ZZ`
+	 * devuelve MX igual que sin cabecera. Lo único que respeta es el query param
+	 * `region`, y ese sólo se enviaba cuando alguien lo ponía a mano en la URL.
+	 *
+	 * Efecto: la petición sale del SERVIDOR de Vercel (IP estadounidense), Camino
+	 * geolocaliza a quien llama —no al visitante— y devolvía `region: US`,
+	 * `currency: USD`. La página en producción recibía Caracol a 59 en vez de 425.
+	 *
+	 * Hoy eso queda latente porque los precios visibles vienen del contenido de
+	 * Camino; el camino de RESPALDO (`getDynamicPricing`) sí usa estos datos, y como
+	 * `formatPrice` usa locale en-US para USD, habría pintado "$59/usuario/mes" — que
+	 * un lector mexicano lee como 59 PESOS. No es un precio en otra moneda: es un
+	 * precio ambiguo, que es peor.
+	 *
+	 * Por eso la región viaja ahora como parámetro. La API sólo reconoce MX y US;
+	 * cualquier otro país cae a su default (MX), que es lo correcto para un negocio
+	 * mexicano. No cambia ningún precio: sirve el que ya existe para cada región. */
 	const regionOverride = url.searchParams.get('region');
 	const countryHeader = request.headers.get('x-vercel-ip-country') || '';
 	const pricingParams = new URLSearchParams();
-	if (regionOverride) {
-		pricingParams.set('region', regionOverride);
+	const regionEfectiva = regionOverride || countryHeader;
+	if (regionEfectiva) {
+		pricingParams.set('region', regionEfectiva);
 	}
 
 	// Fetch content and pricing in parallel
