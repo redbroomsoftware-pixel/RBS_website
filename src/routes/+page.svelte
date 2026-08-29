@@ -74,7 +74,7 @@
 		"description": "${appCount}-app AI-powered business ecosystem. POS, CRM, payments, accounting, legal, e-commerce — all connected.",
 		"foundingDate": "2023",
 		"address": { "@type": "PostalAddress", "addressCountry": "MX" },
-		"contactPoint": [{ "@type": "ContactPoint", "email": "dia@redbroomsoftware.com", "contactType": "sales", "availableLanguage": ["Spanish", "English"] }],
+		"contactPoint": [{ "@type": "ContactPoint", "email": "contacto@redbroomsoftware.com", "contactType": "sales", "availableLanguage": ["Spanish", "English"] }],
 		"sameAs": ["https://github.com/r-bsoftware"]
 	}
 	\u003C/script>`}
@@ -246,7 +246,7 @@
 				<a href="https://patadas.redbroomsoftware.com/get-started" target="_blank" rel="noopener noreferrer" class="px-10 py-5 bg-black text-white rounded-xl hover:bg-gray-800 transition-all text-lg font-semibold hover:-translate-y-0.5">
 					{$_('home.finalCta.findSolution')}
 				</a>
-				<a href="mailto:dia@redbroomsoftware.com" class="px-10 py-5 bg-white text-gray-900 border border-gray-300 rounded-xl hover:border-gray-900 transition-all text-lg font-semibold">
+				<a href="mailto:contacto@redbroomsoftware.com" class="px-10 py-5 bg-white text-gray-900 border border-gray-300 rounded-xl hover:border-gray-900 transition-all text-lg font-semibold">
 					{$_('home.finalCta.directContact')}
 				</a>
 			</div>

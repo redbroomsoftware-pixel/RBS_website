@@ -300,11 +300,11 @@
 				<div class="glass rounded-2xl p-6">
 					<h4 class="text-gray-900 font-semibold mb-4">{$_('contact.directContact.title')}</h4>
 					<div class="space-y-3">
-						<a href="mailto:dia@redbroomsoftware.com" class="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors">
+						<a href="mailto:contacto@redbroomsoftware.com" class="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors">
 							<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
 							</svg>
-							dia@redbroomsoftware.com
+							contacto@redbroomsoftware.com
 						</a>
 					</div>
 				</div>

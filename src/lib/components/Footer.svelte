@@ -78,8 +78,8 @@
 
 			<div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
 				<p class="text-gray-400 text-sm">&copy; {new Date().getFullYear()} {$_("footer.copyright")}</p>
-				<a href="mailto:dia@redbroomsoftware.com" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-					dia@redbroomsoftware.com
+				<a href="mailto:contacto@redbroomsoftware.com" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+					contacto@redbroomsoftware.com
 				</a>
 			</div>
 		</div>
@@ -91,8 +91,8 @@
 			<div class="flex items-center gap-6">
 				<a href="/privacidad" class="text-gray-400 hover:text-gray-900 text-sm">{$_("nav.privacy")}</a>
 				<a href="/terminos" class="text-gray-400 hover:text-gray-900 text-sm">{$_("nav.terms")}</a>
-				<a href="mailto:dia@redbroomsoftware.com" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-					dia@redbroomsoftware.com
+				<a href="mailto:contacto@redbroomsoftware.com" class="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+					contacto@redbroomsoftware.com
 				</a>
 			</div>
 		</div>

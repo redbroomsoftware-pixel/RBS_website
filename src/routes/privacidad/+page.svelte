@@ -35,7 +35,7 @@
 				</p>
 				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('privacy.section1.p2')}
-					<a href="mailto:dia@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">dia@redbroomsoftware.com</a>
+					<a href="mailto:contacto@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">contacto@redbroomsoftware.com</a>
 				</p>
 			</section>
 
@@ -98,7 +98,7 @@
 				</ul>
 				<p class="text-gray-700 leading-relaxed mt-4">
 					{$_('privacy.section5.howTo')}
-					<a href="mailto:dia@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">dia@redbroomsoftware.com</a>
+					<a href="mailto:contacto@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">contacto@redbroomsoftware.com</a>
 					{$_('privacy.section5.howToSuffix')}
 				</p>
 			</section>
@@ -137,7 +137,7 @@
 				<div class="mt-4 text-gray-700">
 					<p><strong class="text-gray-900">Red Broom Software S.A.S. de C.V.</strong></p>
 					<p>{$_('privacy.section9.location')}</p>
-					<p>Email: <a href="mailto:dia@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">dia@redbroomsoftware.com</a></p>
+					<p>Email: <a href="mailto:contacto@redbroomsoftware.com" class="text-gray-900 underline hover:text-gray-600">contacto@redbroomsoftware.com</a></p>
 				</div>
 			</section>
 		</div>
