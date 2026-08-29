@@ -12,8 +12,15 @@
 		if (stored) setLocale(stored);
 	});
 
-	// Shared shell expects a narrowed 'es' | 'en'; default anything else to 'es'.
-	const shellLocale = $derived(($locale === 'en' ? 'en' : 'es') as 'es' | 'en');
+	// Shared shell expects a narrowed 'es' | 'en'. Se estrecha por PREFIJO de idioma,
+	// no por igualdad: `$locale` sale de getLocaleFromNavigator(), que devuelve la
+	// variante regional del navegador ('es-419', 'es-MX', 'en-US') y casi nunca el
+	// código pelado. Comparar `=== 'en'` mandaba a un usuario con 'en-US' al shell en
+	// castellano mientras svelte-i18n le servía el contenido en inglés — el mismo
+	// defecto que en /plataformas, ahí en la otra dirección (S709).
+	const shellLocale = $derived(
+		(String($locale ?? 'es').toLowerCase().startsWith('en') ? 'en' : 'es') as 'es' | 'en'
+	);
 
 	// Bridge the shared shell's (key, fallback) translator to svelte-i18n.
 	// $_ returns the key itself when a key is missing, so fall back in that case.

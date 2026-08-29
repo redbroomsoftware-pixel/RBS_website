@@ -102,7 +102,23 @@
 
 	const pricingData = data.pricing;
 	const currency = data.currency || 'MXN';
-	const isEs = $locale === 'es';
+	/* Dos defectos apilados, y el segundo sólo se ve al quitar el primero (S709).
+
+	   1. Era `const isEs = $locale === 'es'` — una asignación suelta, que se evalúa
+	      UNA vez al inicializar el componente y no vuelve a recalcularse. El resto
+	      del archivo ya usaba $derived en sus otros cuatro cómputos; a éste se le
+	      escapó.
+	   2. Puesto en $derived, SEGUÍA sirviendo inglés: `=== 'es'` sólo acierta si el
+	      navegador reporta exactamente 'es', y casi ninguno lo hace — el de prueba
+	      reporta `es-419`, y un usuario mexicano reporta `es-MX`. svelte-i18n resuelve
+	      igual las traducciones (hace fallback de es-419 a es), así que TODO el resto
+	      de la página salía en castellano y sólo estos dos textos caían al inglés:
+	      "Not sure which one you need?" y "Get free recommendation →".
+
+	   Por eso se compara por PREFIJO de idioma y no por igualdad: cualquier variante
+	   regional de español entra por la puerta correcta, y sólo el inglés explícito
+	   ('en', 'en-US', 'en-GB') sale por la otra. */
+	const isEs = $derived(!String($locale ?? 'es').toLowerCase().startsWith('en'));
 
 	/**
 	 * Format a price amount using Intl.NumberFormat based on currency.
