@@ -6,6 +6,7 @@
 	import AnimatedCounter from '$lib/components/AnimatedCounter.svelte';
 	import EcosystemDiagram from '$lib/components/EcosystemDiagram.svelte';
 	import { scrollReveal } from '$lib/actions/scrollReveal';
+	import { spotlight } from '$lib/actions/spotlight';
 	// El número de apps NO se escribe en la prosa: se deriva del canon
 	// (`apps.json`) y se interpola. Antes vivía a mano en once cadenas y decía 22
 	// cuando el ecosistema tenía 25.
@@ -82,23 +83,29 @@
 <!-- Hero -->
 	<section class="relative py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
 		<div class="max-w-7xl mx-auto text-center relative">
-			<div class="inline-flex items-center px-4 py-2 glass rounded-full text-sm text-gray-600 mb-8">
+			<div
+				class="entra inline-flex items-center px-4 py-2 glass rounded-full text-sm text-gray-600 mb-8"
+				style="--paso: 0ms"
+			>
 				<span class="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
 				{$_('home.hero.badge', conCuenta)}
 			</div>
 
-			<h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+			<h1
+				class="entra text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight"
+				style="--paso: 90ms"
+			>
 				{$_('home.hero.titlePart1')}<br />
 				<TypewriterText words={[$_('home.hero.typewriterWords.0'), $_('home.hero.typewriterWords.1'), $_('home.hero.typewriterWords.2'), $_('home.hero.typewriterWords.3')]} interval={2500} />
 				<br />
 				<span class="text-gray-500">{$_('home.hero.forGlobalBusiness')}</span>
 			</h1>
 
-			<p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+			<p class="entra text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed" style="--paso: 180ms">
 				{$_('home.hero.subtitle', conCuenta)}
 			</p>
 
-			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+			<div class="entra flex flex-col sm:flex-row gap-4 justify-center" style="--paso: 270ms">
 				<a href="https://patadas.redbroomsoftware.com/get-started" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-black text-white rounded-xl hover:bg-gray-800 transition-all text-lg font-semibold hover:-translate-y-0.5">
 					{$_('home.cta.findSolution')}
 				</a>
@@ -108,7 +115,7 @@
 			</div>
 
 			<!-- Stats -->
-			<div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-20 max-w-3xl mx-auto">
+			<div class="entra grid grid-cols-2 sm:grid-cols-4 gap-8 mt-20 max-w-3xl mx-auto" style="--paso: 360ms">
 				<div>
 					<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={appCount} /></p>
 					<p class="text-gray-500 text-sm">{$_('home.stats.apps')}</p>
@@ -172,7 +179,8 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						use:scrollReveal={{ delay: i * 100 }}
-						class="glass rounded-2xl p-8 hover:border-gray-900 transition-all group block"
+						use:spotlight
+						class="foco glass rounded-2xl p-8 hover:border-gray-900 transition-all group block"
 					>
 						<div class="text-4xl mb-4">{fn.icon}</div>
 						<h3 class="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-2">{$_(`home.functions.${fn.key}.tagline`)}</h3>
@@ -199,7 +207,8 @@
 				{#each ecosystemAppKeys as app, i}
 					<div
 						use:scrollReveal={{ delay: i * 50 }}
-						class="glass rounded-xl p-5 hover:shadow-md transition-all group"
+						use:spotlight
+						class="foco glass rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all group"
 					>
 						<div class="w-10 h-10 rounded-lg bg-gradient-to-r {app.gradient} mb-3 opacity-90 group-hover:opacity-100 transition-opacity"></div>
 						<span class="inline-block px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full text-[10px] font-medium mb-2">

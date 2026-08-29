@@ -37,6 +37,86 @@ html {
 	transform: translateY(0);
 }
 
+/* ── Entrada del hero ───────────────────────────────────────────────────────
+   El hero aparecía de golpe: no está dentro de scrollReveal porque ya se ve al
+   cargar, así que nunca tuvo entrada. Cada pieza sube con su propio retraso
+   (`--paso`) para que se lea como una frase y no como un parpadeo simultáneo. */
+.entra {
+	opacity: 0;
+	animation: entrar 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	animation-delay: var(--paso, 0ms);
+}
+
+@keyframes entrar {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ── Foco que sigue al cursor ───────────────────────────────────────────────
+   El resplandor vive en un pseudo-elemento para no tocar el fondo de la
+   tarjeta, y sólo se enciende al pasar por encima. Las coordenadas las pone la
+   acción `spotlight` en --fx/--fy. */
+.foco {
+	position: relative;
+	overflow: hidden;
+}
+
+.foco::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	opacity: 0;
+	transition: opacity 0.35s ease-out;
+	pointer-events: none;
+	background: radial-gradient(
+		380px circle at var(--fx, 50%) var(--fy, 50%),
+		rgba(59, 130, 246, 0.09),
+		transparent 42%
+	);
+}
+
+.foco:hover::before,
+.foco:focus-within::before {
+	opacity: 1;
+}
+
+/* ── Movimiento reducido ────────────────────────────────────────────────────
+   Quien lo pide ve el sitio COMPLETO y quieto. Importa especialmente para
+   .scroll-reveal: son 22 bloques que arrancan en opacity:0, así que apagar la
+   animación sin devolver la opacidad los dejaría invisibles para siempre. */
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	.scroll-reveal,
+	.entra {
+		opacity: 1;
+		transform: none;
+		transition: none;
+		animation: none;
+	}
+
+	.foco::before {
+		transition: none;
+	}
+
+	.animate-float,
+	.animate-marquee,
+	.animate-glow,
+	.animate-pulse,
+	.animate-bounce {
+		animation: none;
+	}
+}
+
 /* Custom scrollbar — light */
 ::-webkit-scrollbar {
 	width: 8px;
