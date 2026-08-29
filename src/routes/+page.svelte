@@ -70,7 +70,7 @@
 		"alternateName": ["RBS", "RedBroom"],
 		"url": "https://redbroomsoftware.com",
 		"logo": { "@type": "ImageObject", "url": "https://redbroomsoftware.com/logo.svg" },
-		"description": "22-app AI-powered business ecosystem. POS, CRM, payments, accounting, legal, e-commerce — all connected.",
+		"description": "${appCount}-app AI-powered business ecosystem. POS, CRM, payments, accounting, legal, e-commerce — all connected.",
 		"foundingDate": "2023",
 		"address": { "@type": "PostalAddress", "addressCountry": "MX" },
 		"contactPoint": [{ "@type": "ContactPoint", "email": "dia@redbroomsoftware.com", "contactType": "sales", "availableLanguage": ["Spanish", "English"] }],
@@ -110,7 +110,7 @@
 			<!-- Stats -->
 			<div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-20 max-w-3xl mx-auto">
 				<div>
-					<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={22} /></p>
+					<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={appCount} /></p>
 					<p class="text-gray-500 text-sm">{$_('home.stats.apps')}</p>
 				</div>
 				<div>
