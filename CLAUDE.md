@@ -101,8 +101,9 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the ecosyste
 - **Framework**: SvelteKit 2 with Svelte 5 runes ($state, $derived, $effect, $props)
 - **UI**: Tailwind CSS 3.3 + custom animations (fadeInUp, float, glow, marquee, countUp)
 - **Fonts**: Inter Variable (@fontsource-variable/inter)
-- **Deployment**: Vercel (SSR via adapter-vercel, Node.js 22.x)
-- **i18n**: svelte-i18n (580 keys ES/EN, fully wired — all 8 pages + 5 components use $_())
+- **Deployment**: Vercel (SSR via adapter-vercel, Node.js 24.x — CI se alineó en `f5378c1`)
+- **i18n**: svelte-i18n (561 keys ES/EN — `jq` recursivo sobre `src/lib/i18n/locales/{es,en}.json`,
+  0 huecos entre idiomas —, fully wired — all 8 pages + 5 components use $_())
 - **Error Tracking**: Sentry (@sentry/sveltekit)
 
 ## Portfolio (16 productos + 5 servicios B2C — verificado S709 contra `productKeys`/`b2cServiceKeys`)
