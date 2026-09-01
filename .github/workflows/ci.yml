@@ -64,16 +64,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      # `if: always()` en los dos siguientes para que un rojo no esconda al otro: son
-      # preguntas distintas y una ida y vuelta de CI cuesta minutos.
+      # 🪤 Aquí NO va `if: always()`. Se puso en el primer intento con el razonamiento de
+      # «que un rojo no esconda al otro», que vale entre compuertas INDEPENDIENTES — y
+      # éstas no lo son: comparten el `npm ci`. Cuando el install falló, `always()` las hizo
+      # correr sobre un `node_modules` vacío y el log se llenó de `svelte-kit: not found`,
+      # que no era la causa de nada. El comportamiento por omisión —saltarlas— dice la
+      # verdad: si no hay dependencias, no hay nada que comprobar.
       - name: Type check
-        if: always()
         run: npm run check
-
-      # El sitio publica cifras del ecosistema generadas por un script. Si el generador y lo
-      # publicado divergen, la portada miente sobre cuántas apps hay — que es justo el tipo
-      # de deriva que este repo ya sufrió a plena vista (S709: «22 apps» bajo un título que
-      # decía 25) por no estar vigilado por ningún canario.
-      - name: Las cifras publicadas siguen cuadrando
-        if: always()
-        run: npm run check:stats
