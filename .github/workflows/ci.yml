@@ -1,0 +1,79 @@
+name: CI
+
+# ── POR QUÉ ESTE FICHERO SUSTITUYE A `deploy.yml` (S724, 2026-09-01) ───────────────────
+# El anterior se llamaba «Deploy to GitHub Pages» y hacía exactamente eso:
+# `upload-pages-artifact` + `deploy-pages`. Pero **este sitio se mudó a Vercel el
+# 2026-03-20** —lo dicen sus propios commits, «feat: migrate to Vercel SSR» y «docs: update
+# CLAUDE.md for Vercel migration»— y desde entonces el workflow no ha vuelto a pasar: lleva
+# **más de cinco meses en rojo** desplegando a una plataforma que ya no se usa.
+#
+# Medido antes de retirarlo, no supuesto:
+#   · `deploy-modes.json` → RBS_website está en **auto** en Vercel (verificado S583)
+#   · `gh api repos/.../pages` → **404**: GitHub Pages ni siquiera está configurado, así que
+#     `deploy-pages@v4` sólo podía fallar
+#   · `probe.mjs route https://redbroomsoftware.com` → **200 frente a 404 del control**: el
+#     sitio vive, y lo sirve Vercel
+#
+# O sea que la pregunta correcta no era «¿cómo lo pongo en verde?» sino **«¿esto debería
+# estar corriendo?»** (regla 4 de la disciplina de despacho del CLAUDE.md raíz). No: el
+# despliegue sobra. Lo que SÍ hacía falta y estaba enterrado dentro es la **validación** —
+# en este repo el `git push` es el deploy, así que sin ella nada mira el build antes de que
+# salga a producción.
+#
+# Las tres compuertas se midieron en verde antes de escribir esto: `build` 16 s ·
+# `check` 0 errores (1071 ficheros, 3 warnings) · `check:stats` al día.
+
+on:
+  push:
+    branches: ['master']
+  pull_request:
+    branches: ['master']
+  workflow_dispatch:
+
+# Sólo lectura: este workflow ya no publica nada. Los permisos `pages: write` e
+# `id-token: write` del anterior se van con él — no se dejan «por si acaso», que es como
+# un workflow retirado conserva capacidad de escritura que nadie recuerda.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Build & Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          # Producción (Vercel) corre Node 24. El CI en 20 fue la deriva que S650 midió en
+          # cinco CI a la vez: verde aquí y roto allí no sirve de nada.
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # `if: always()` en los dos siguientes para que un rojo no esconda al otro: son
+      # preguntas distintas y una ida y vuelta de CI cuesta minutos.
+      - name: Type check
+        if: always()
+        run: npm run check
+
+      # El sitio publica cifras del ecosistema generadas por un script. Si el generador y lo
+      # publicado divergen, la portada miente sobre cuántas apps hay — que es justo el tipo
+      # de deriva que este repo ya sufrió a plena vista (S709: «22 apps» bajo un título que
+      # decía 25) por no estar vigilado por ningún canario.
+      - name: Las cifras publicadas siguen cuadrando
+        if: always()
+        run: npm run check:stats
