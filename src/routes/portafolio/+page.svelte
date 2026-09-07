@@ -3,30 +3,41 @@
 	import { _, locale } from 'svelte-i18n';
 	import AnimatedCounter from '$lib/components/AnimatedCounter.svelte';
 	import { scrollReveal } from '$lib/actions/scrollReveal';
+	import { listarEscenas, listarRecorridos } from '@r-bsoftware/scene-registry';
 
 	/* S650 — el `as const` del final congela CADA elemento con sus campos exactos, así que los
 	   productos que no traen `agentBadgeKey` no lo tienen ni como opcional y la plantilla
 	   (`{#if product.agentBadgeKey}`) fallaba. Un `@type` encima no puede ganarle al `as
 	   const`; se declara el campo opcional en el propio elemento que lo necesita, que es donde
 	   el tipo se forma. */
-	const productKeys = [
-		{ key: 'caracol', icon: '📦', category: 'logistics', url: 'https://caracol.redbroomsoftware.com', tech: ['SvelteKit', 'Firebase', 'CFDI 4.0', 'Multi-warehouse'] },
-		{ key: 'lahoja', icon: '🍽️', category: 'hospitality', url: 'https://hoja.redbroomsoftware.com', tech: ['Next.js', 'Firebase', 'FIFO Inventory', 'WhatsApp API'] },
-		{ key: 'cosmos', icon: '🐾', category: 'vertical', url: 'https://cosmos.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'SOAP Records', 'Notifications'] },
-		{ key: 'camino', icon: '🛤️', category: 'core', agentBadgeKey: 'portfolio.agentBadges.aiAgents', url: 'https://camino.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Multi-provider AI', 'Twilio', 'WhatsApp Cloud API'] },
-		{ key: 'colectiva', icon: '💳', category: 'core', agentBadgeKey: 'portfolio.agentBadges.oracleAI', url: 'https://colectiva.redbroomsoftware.com', tech: ['SvelteKit', 'SPEI', 'CoDi', 'MercadoPago', 'Polygon', 'Multi-provider AI'] },
-		{ key: 'constanza', icon: '📊', category: 'core', agentBadgeKey: 'portfolio.agentBadges.fiscalAI', url: 'https://constanza.redbroomsoftware.com', tech: ['SvelteKit', 'Firebase', 'SAT APIs', 'AI Classification'] },
-		{ key: 'comal', icon: '🛒', category: 'core', url: 'https://comal.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Colectiva', 'Theme Engine'] },
-		{ key: 'plenura', icon: '🧘', category: 'vertical', agentBadgeKey: 'portfolio.agentBadges.matchingAI', url: 'https://plenura.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Multi-provider AI', 'Smart Matching'] },
-		{ key: 'rito', icon: '🏢', category: 'fintech', agentBadgeKey: 'portfolio.agentBadges.dealCopilot', url: 'https://rito.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Claude AI', 'Financial Modeling'] },
-		{ key: 'agora', icon: '⚖️', category: 'vertical', agentBadgeKey: 'portfolio.agentBadges.docAI', url: 'https://agora.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Trust Accounting', 'AI Documents'] },
-		{ key: 'goodbay', icon: '🏖️', category: 'hospitality', url: 'https://goodbay.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Booking Engine', 'Fiscal Optimization'] },
-		{ key: 'mancha', icon: '🪑', category: 'hospitality', url: 'https://mancha.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Camino API', 'Real-time'] },
-		{ key: 'continua', icon: '🩸', category: 'vertical', url: 'https://continua.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Geolocation', 'Push Notifications'] },
-		{ key: 'puppylove', icon: '🐕', category: 'marketplace', url: 'https://puppylove.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Matching Algorithm', 'Chat'] },
-		{ key: 'baul', icon: '📦', category: 'vertical', url: 'https://baul.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Inventory Management', 'Logistics'] },
-		{ key: 'servilleta', icon: '🧹', category: 'marketplace', url: 'https://servilleta.redbroomsoftware.com', tech: ['SvelteKit', 'Supabase', 'Colectiva API', 'Geolocation'] },
-	];
+	/**
+	 * S755 — el catálogo sale del REGISTRO, no de una lista a mano.
+	 *
+	 * Aquí vivían 16 productos escritos a mano (+5 B2C) mientras el canon eran 25, y dos de ellos
+	 * seguían publicando `la-hoja`, un slug RETIRADO en PD-044/S205. Era una de las cuatro listas
+	 * rivales del ecosistema; ésta muere aquí.
+	 *
+	 * El dato es el mismo que consume el catálogo cinemático de Patadas: una sola fuente, dos
+	 * consumidores. Los textos del registro ya son bilingües, así que no pasan por i18n.
+	 */
+	const escenas = listarEscenas();
+	const recorridos = listarRecorridos();
+
+	/** Los filtros son los SECTORES del registro: la misma agrupación que ve el visitante en Patadas. */
+	const sectoresDe = (slug: string) =>
+		recorridos.filter((r) => r.protagonista === slug || r.acompanantes.includes(slug)).map((r) => r.sector);
+
+	const sectores = recorridos.map((r) => r.sector).filter((x) => x !== 'generico');
+
+	const etiquetaSector: Record<string, { es: string; en: string }> = {
+		restaurante: { es: 'Restaurantes', en: 'Restaurants' },
+		hospedaje: { es: 'Hospedaje', en: 'Hospitality' },
+		'salud-y-cuidado': { es: 'Salud y cuidado', en: 'Health & care' },
+		despacho: { es: 'Despachos', en: 'Practices' },
+		'comercio-y-logistica': { es: 'Comercio y logística', en: 'Retail & logistics' },
+		educacion: { es: 'Educación', en: 'Education' },
+		comunidad: { es: 'Comunidad', en: 'Community' }
+	};
 
 	const b2cServiceKeys = [
 		{ key: 'constanza', icon: '📊', status: 'live', url: 'https://constanza.redbroomsoftware.com/servicios' },
@@ -36,22 +47,15 @@
 		{ key: 'mancha', icon: '📅', status: 'live', url: 'https://mancha.redbroomsoftware.com' }
 	] as const;
 
-	const categoryKeys = [
-		{ value: '', labelKey: 'portfolio.categories.all' },
-		{ value: 'core', labelKey: 'portfolio.categories.core' },
-		{ value: 'hospitality', labelKey: 'portfolio.categories.hospitality' },
-		{ value: 'vertical', labelKey: 'portfolio.categories.verticals' },
-		{ value: 'fintech', labelKey: 'portfolio.categories.fintech' },
-		{ value: 'marketplace', labelKey: 'portfolio.categories.marketplaces' }
-	] as const;
 
 	const highlightIndices = [0, 1, 2, 3];
 
 	let activeCategory = $state('');
 
-	const filteredProducts = $derived(
-		activeCategory ? productKeys.filter(p => p.category === activeCategory) : productKeys
+	const escenasVisibles = $derived(
+		activeCategory ? escenas.filter((e) => sectoresDe(e.slug).includes(activeCategory as never)) : escenas
 	);
+	const idioma = $derived($locale === 'en' ? 'en' : 'es');
 </script>
 
 <svelte:head>
@@ -83,84 +87,61 @@
 	</div>
 </section>
 
-<!-- Category Filters -->
+<!-- Filtros por sector — del registro, no de una lista a mano -->
 <section class="px-4 sm:px-6 lg:px-8 pb-8">
 	<div class="max-w-7xl mx-auto">
 		<div class="flex flex-wrap gap-2 justify-center">
-			{#each categoryKeys as cat}
+			<button
+				onclick={() => (activeCategory = '')}
+				class="px-4 py-2 rounded-full text-sm font-medium transition-all
+					{activeCategory === '' ? 'bg-black text-white border border-black' : 'glass text-gray-600 hover:text-gray-900'}"
+			>
+				{idioma === 'en' ? 'All' : 'Todas'}
+			</button>
+			{#each sectores as sector}
 				<button
-					onclick={() => activeCategory = cat.value}
+					onclick={() => (activeCategory = sector)}
 					class="px-4 py-2 rounded-full text-sm font-medium transition-all
-						{activeCategory === cat.value
-							? 'bg-black text-white border border-black'
-							: 'glass text-gray-600 hover:text-gray-900'}"
+						{activeCategory === sector ? 'bg-black text-white border border-black' : 'glass text-gray-600 hover:text-gray-900'}"
 				>
-					{$_(cat.labelKey)}
+					{etiquetaSector[sector]?.[idioma] ?? sector}
 				</button>
 			{/each}
 		</div>
 	</div>
 </section>
 
-<!-- Products Grid -->
+<!-- Las escenas — una por app, reveladas al hacer scroll (S755) -->
 <section class="py-8 px-4 sm:px-6 lg:px-8">
 	<div class="max-w-7xl mx-auto">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-			{#each filteredProducts as product, i (product.key)}
-				<article
-					use:scrollReveal={{ delay: Math.min(i * 80, 400) }}
-					class="glass rounded-2xl p-6 hover:border-gray-900 transition-all hover:shadow-md group"
-				>
-					<div class="flex items-start justify-between mb-4">
-						<div class="flex items-center gap-4">
-							<div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-								{product.icon}
-							</div>
-							<div>
-								<h3 class="text-xl font-bold text-gray-900">{$_(`portfolio.products.${product.key}.name`)}</h3>
-								<p class="text-sm text-gray-500">{$_(`portfolio.products.${product.key}.subtitle`)}</p>
-							</div>
-						</div>
-						<div class="flex flex-col items-end gap-1">
-							<span class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full text-xs font-medium">
-								{$_('portfolio.products.live')}
-							</span>
-							{#if product.agentBadgeKey}
-								<span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-									{$_(product.agentBadgeKey)}
-								</span>
-							{/if}
-						</div>
-					</div>
-
-					<p class="text-gray-600 text-sm mb-4">{$_(`portfolio.products.${product.key}.description`)}</p>
-
-					<div class="flex flex-wrap gap-2 mb-4">
-						{#each product.tech as tech}
-							<span class="px-2 py-1 bg-gray-100 text-gray-600 rounded text-xs">{tech}</span>
-						{/each}
-					</div>
-
-					<ul class="grid grid-cols-2 gap-2 mb-4">
-						{#each highlightIndices as idx}
-							<li class="flex items-center text-sm text-gray-700">
-								<svg class="w-4 h-4 text-emerald-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-								</svg>
-								{$_(`portfolio.products.${product.key}.highlights.${idx}`)}
-							</li>
-						{/each}
-					</ul>
-
-					<a href={product.url} target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors">
+		{#each escenasVisibles as escena, i (escena.slug)}
+			<article class="escena" data-slug={escena.slug}>
+				<div class="lienzo">
+					{#if escena.asset.tipo === 'captura'}
+						<img src={escena.asset.url} alt="" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" width="1280" height="800" />
+					{:else}
+						<div class="degradado" style="--from:{escena.asset.from};--to:{escena.asset.to}" aria-hidden="true"></div>
+					{/if}
+				</div>
+				<div>
+					<h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-tight">
+						{escena.escena.titular[idioma]}
+					</h3>
+					<p class="text-gray-600 text-lg mb-5 leading-relaxed">{escena.escena.frase[idioma]}</p>
+					<a
+						href={escena.destino}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center text-gray-900 hover:text-gray-600 text-sm font-medium transition-colors"
+					>
 						{$_('portfolio.products.visitProduct')}
 						<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
 						</svg>
 					</a>
-				</article>
-			{/each}
-		</div>
+				</div>
+			</article>
+		{/each}
 	</div>
 </section>
 
@@ -240,7 +221,7 @@
 	<div class="max-w-7xl mx-auto">
 		<div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center" use:scrollReveal>
 			<div>
-				<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={16} /></p>
+				<p class="text-4xl font-bold text-gray-900"><AnimatedCounter value={escenas.length} /></p>
 				<p class="text-gray-500">{$_("portfolio.stats.saasProducts")}</p>
 			</div>
 			<div>
@@ -275,3 +256,65 @@
 </section>
 
 <Footer />
+
+<style>
+	/* La animación REVELA lo que ya está en el DOM. Estado base VISIBLE dentro de un @supports:
+	   al revés —ocultar por defecto y mostrar al animar— un navegador sin `animation-timeline`
+	   serviría una página en blanco, que es el modo de fallo clásico de esta técnica. Y nunca
+	   `opacity: 0` como base: esconde a la vista, no al dedo ni al lector de pantalla (#130). */
+	.escena {
+		display: grid;
+		gap: 1.5rem;
+		align-items: center;
+		padding: 3.5rem 0;
+		opacity: 1;
+	}
+
+	@media (min-width: 64rem) {
+		.escena {
+			grid-template-columns: 1.15fr 1fr;
+			gap: 3rem;
+			padding: 5rem 0;
+		}
+		.escena:nth-child(even) .lienzo {
+			order: 2;
+		}
+	}
+
+	.lienzo {
+		border-radius: 1rem;
+		overflow: hidden;
+		box-shadow: 0 1rem 2.5rem -0.75rem rgb(0 0 0 / 0.18);
+	}
+
+	.lienzo :global(img) {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.degradado {
+		aspect-ratio: 16 / 10;
+		background: linear-gradient(140deg, var(--from), var(--to));
+	}
+
+	@supports (animation-timeline: view()) {
+		@media (prefers-reduced-motion: no-preference) {
+			.escena {
+				animation: entrar linear both;
+				animation-timeline: view();
+				animation-range: entry 5% cover 32%;
+			}
+			@keyframes entrar {
+				from {
+					opacity: 0.35;
+					transform: translateY(2rem) scale(0.99);
+				}
+				to {
+					opacity: 1;
+					transform: none;
+				}
+			}
+		}
+	}
+</style>
