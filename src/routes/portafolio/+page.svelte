@@ -20,6 +20,15 @@
 	 * El dato es el mismo que consume el catálogo cinemático de Patadas: una sola fuente, dos
 	 * consumidores. Los textos del registro ya son bilingües, así que no pasan por i18n.
 	 */
+	/**
+	 * S776 — El badge del hero CUENTA estas dos listas; no lleva cifra escrita a mano.
+	 *
+	 * S755 mató la lista de 16 productos (ver comentario de arriba) pero dejó vivo un
+	 * `portfolio.hero.badge` que seguía diciendo «16 plataformas + 5 servicios B2C» mientras la
+	 * página servía 25 tarjetas — medido contra el HTML de producción. La lista se migró al
+	 * registro y su CONTEO se quedó atrás: prosa que se pudre al lado del dato que la desmiente
+	 * (Principle #24). Interpolar el conteo hace que la corrección sea imposible de olvidar.
+	 */
 	const escenas = listarEscenas();
 	const recorridos = listarRecorridos();
 
@@ -42,7 +51,9 @@
 	const b2cServiceKeys = [
 		{ key: 'constanza', icon: '📊', status: 'live', url: 'https://constanza.redbroomsoftware.com/servicios' },
 		{ key: 'camino', icon: '📣', status: 'live', url: 'https://camino.redbroomsoftware.com/servicios' },
-		{ key: 'colectiva', icon: '💳', status: 'live', url: 'https://colectiva.redbroomsoftware.com/servicios' },
+		// S776 — era `/servicios`, que da 404 (medido con control: una ruta inventada da lo mismo,
+		// y la raíz da 200). Un enlace muerto en el portafolio pierde al visitante que sí quería entrar.
+		{ key: 'colectiva', icon: '💳', status: 'live', url: 'https://colectiva.redbroomsoftware.com' },
 		{ key: 'aiSupport', icon: '🤖', status: 'live', url: 'https://camino.redbroomsoftware.com' },
 		{ key: 'mancha', icon: '📅', status: 'live', url: 'https://mancha.redbroomsoftware.com' }
 	] as const;
@@ -76,7 +87,7 @@
 	<div class="max-w-7xl mx-auto text-center relative">
 		<div class="inline-flex items-center px-4 py-2 glass rounded-full text-sm text-gray-600 mb-6">
 			<span class="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
-			{$_("portfolio.hero.badge")}
+			{$_("portfolio.hero.badge", { values: { plataformas: escenas.length, b2c: b2cServiceKeys.length } })}
 		</div>
 		<h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 tracking-tight">
 			{$_("portfolio.hero.titlePart1")} <span class="text-gray-500">{$_("portfolio.hero.titleHighlight")}</span>

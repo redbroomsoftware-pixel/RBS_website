@@ -286,10 +286,10 @@
   "portfolio": {
     "meta": {
       "title": "Portafolio - Red Broom Software",
-      "description": "Portafolio de productos desarrollados por Red Broom Software: 16 plataformas SaaS + 5 servicios B2C para PyMEs mexicanas."
+      "description": "Portafolio de productos desarrollados por Red Broom Software: plataformas SaaS y servicios B2C para PyMEs mexicanas."
     },
     "hero": {
-      "badge": "16 plataformas + 5 servicios B2C",
+      "badge": "{plataformas} plataformas + {b2c} servicios B2C",
       "titlePart1": "Nuestro",
       "titleHighlight": "Portafolio",
       "subtitle": "Plataformas SaaS que hemos desarrollado y operamos. Cada una resuelve problemas reales de negocios mexicanos."
@@ -507,7 +507,7 @@
       "colectiva": {
         "name": "Colectiva Servicios",
         "subtitle": "Tesorería Administrada",
-        "description": "Cobranza, dispersiones SPEI, nomina integrada y tesorería completamente administrada. Desde $3,900/mes.",
+        "description": "Cobranza, dispersiones SPEI y nómina integrada, con conciliación y reportes. Desde $3,900/mes.",
         "highlights": [
           "Cobranza CoDi/SPEI",
           "Dispersiones masivas",

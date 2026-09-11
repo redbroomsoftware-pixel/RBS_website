@@ -286,10 +286,10 @@
   "portfolio": {
     "meta": {
       "title": "Portfolio - Red Broom Software",
-      "description": "Portfolio of products developed by Red Broom Software: 16 SaaS platforms + 5 B2C services for Mexican SMBs."
+      "description": "Portfolio of products developed by Red Broom Software: SaaS platforms and B2C services for Mexican SMBs."
     },
     "hero": {
-      "badge": "16 platforms + 5 B2C services",
+      "badge": "{plataformas} platforms + {b2c} B2C services",
       "titlePart1": "Our",
       "titleHighlight": "Portfolio",
       "subtitle": "SaaS platforms we have developed and operate. Each one solves real problems for Mexican businesses."
@@ -507,7 +507,7 @@
       "colectiva": {
         "name": "Colectiva Services",
         "subtitle": "Managed Treasury",
-        "description": "Collections, SPEI disbursements, integrated payroll, and fully managed treasury. Starting at $3,900/month.",
+        "description": "Collections, SPEI disbursements and integrated payroll, with reconciliation and reporting. Starting at $3,900/month.",
         "highlights": [
           "CoDi/SPEI Collections",
           "Mass disbursements",
