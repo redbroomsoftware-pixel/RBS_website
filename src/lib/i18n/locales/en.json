@@ -95,7 +95,7 @@
         },
         "colectiva": {
           "name": "Colectiva",
-          "desc": "Payments, escrow, wallets, AI brain",
+          "desc": "Payments, escrow, AI brain",
           "badge": "Infrastructure"
         },
         "constanza": {
@@ -344,7 +344,7 @@
       "colectiva": {
         "name": "Colectiva",
         "subtitle": "B2B Payments and Billing Platform",
-        "description": "B2B multi-merchant platform: billing for the entire RBS ecosystem, payment gateway (CoDi, SPEI, MercadoPago, cards), subscriptions, and virtual wallet.",
+        "description": "B2B multi-merchant platform: billing for the entire RBS ecosystem, payment gateway (CoDi, SPEI, MercadoPago, cards), and subscriptions.",
         "highlights": [
           "Ecosystem billing",
           "Multi-merchant",
