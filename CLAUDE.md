@@ -152,21 +152,29 @@ Se citan con su ruta para que el canario pueda verificarlas
 - `src/lib/actions/spotlight.ts` — foco que sigue al cursor (escribe `--fx`/`--fy`; el
   resplandor lo pinta `.foco::before` en `src/app.css`)
 
-## Routes (8 pages, most prerendered)
+## Routes (8 pages — NINGUNA prerenderizada)
+
+> ⚠️ Corregido S796e: esta tabla decía «Prerendered» en 7 de 8 filas y la sección de patrones
+> afirmaba «All pages statically prerendered via `+layout.js`». Es **falso y lo era desde que
+> `+layout.js:4` dice `export const prerender = false`**: el build **no genera**
+> `.svelte-kit/output/prerendered/` (medido contra el artefacto, no leído del código). Todo se
+> sirve por SSR en Vercel. Importa porque de ahí se deduce si una ruta puede llevar `+server.ts`
+> o leer cabeceras — y con la doc vieja se deduce al revés.
+
 | Route | Purpose | Rendering |
 |-------|---------|-----------|
-| `/` | Hero, stats, capabilities, products grid | Prerendered |
+| `/` | Hero, stats, capabilities, products grid | SSR |
 | `/plataformas` | Camino-powered platforms showcase | SSR (fetches from Camino content API) |
-| `/portafolio` | 16 productos + 5 servicios B2C | Prerendered |
-| `/servicios` | Service offerings | Prerendered |
-| `/tecnologia` | Tech stack showcase | Prerendered |
-| `/contacto` | Contact form → Camino CRM | Prerendered |
-| `/privacidad` | Privacy policy | Prerendered |
-| `/terminos` | Terms of service | Prerendered |
+| `/portafolio` | 16 productos + 5 servicios B2C | SSR |
+| `/servicios` | Service offerings | SSR |
+| `/tecnologia` | Tech stack showcase | SSR |
+| `/contacto` | Contact form → Camino CRM | SSR |
+| `/privacidad` | Privacy policy | SSR |
+| `/terminos` | Terms of service | SSR |
 
 ## Key Patterns
 - Contact form submits to Camino CRM API with UTM tracking
-- All pages statically prerendered via `+layout.js`
+- Ninguna página se prerenderiza: `src/routes/+layout.js:4` fija `prerender = false` (SSR en Vercel)
 - Glassmorphism with backdrop-blur effects
 - Design: dark slate backgrounds, blue→purple gradients
 
