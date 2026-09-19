@@ -789,6 +789,7 @@
         "other": "Otro"
       },
       "errorSubmit": "Error al enviar el formulario",
+      "errorFallbackEmail": "No pudimos completar la verificación de seguridad. Escríbenos directamente a contacto@redbroomsoftware.com y te respondemos igual.",
       "errorGeneric": "Error al enviar. Por favor intenta de nuevo."
     },
     "process": {

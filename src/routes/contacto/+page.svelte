@@ -7,23 +7,41 @@
 	// Camino CRM API endpoint for lead capture
 	const CAMINO_API_URL = 'https://camino.redbroomsoftware.com/api/leads';
 
-	// reCAPTCHA v3 site key (GCP: Colectiva-RBS)
-	const RECAPTCHA_SITE_KEY = '6LdpE2IrAAAAACprbiG263FNJ7p3DfTT-Q-uuCtG';
+	// reCAPTCHA v3 site key.
+	//
+	// ⚠️ DEBE ser la MISMA que usa Camino (`camino/src/lib/recaptcha.ts:15`), porque quien
+	// verifica el token es Camino con su `RECAPTCHA_SECRET_KEY`, y un secreto sólo hace pareja
+	// con UNA site key. Antes aquí vivía `6LdpE2Ir…`, que no hace pareja con ese secreto: el
+	// token ni siquiera se acuñaba en este dominio, y aunque se hubiera acuñado, `siteverify`
+	// lo habría rechazado. Resultado: `/api/leads` devolvía 403 al 100% de los envíos.
+	// No la cambies por una nueva sin cambiar también el secreto de Camino — son un par.
+	const RECAPTCHA_SITE_KEY = '6LcgqGstAAAAAIhuGzGKb8h0VkB7Lv936KpjTDzr';
 
 	let recaptchaLoaded = $state(false);
+	let recaptchaFailed = $state(false);
 
 	function loadRecaptcha() {
 		if (!RECAPTCHA_SITE_KEY || typeof window === 'undefined') return;
 		const script = document.createElement('script');
 		script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
 		script.onload = () => { recaptchaLoaded = true; };
+		script.onerror = () => { recaptchaFailed = true; };
 		document.head.appendChild(script);
 	}
 
 	async function getRecaptchaToken(): Promise<string | null> {
-		if (!RECAPTCHA_SITE_KEY || !recaptchaLoaded) return null;
+		if (!RECAPTCHA_SITE_KEY) return null;
+		// Esperar a que el script cargue en vez de rendirse al instante: quien rellena el
+		// formulario deprisa, o con una red lenta, llegaba aquí con `recaptchaLoaded=false`
+		// y mandaba `null` — que Camino rechaza con 403.
+		const deadline = Date.now() + 8000;
+		while (!recaptchaLoaded && !recaptchaFailed && Date.now() < deadline) {
+			await new Promise((r) => setTimeout(r, 150));
+		}
+		if (!recaptchaLoaded) return null;
 		try {
 			const grecaptcha = (window as any).grecaptcha;
+			await new Promise<void>((resolve) => grecaptcha.ready(resolve));
 			return await grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_form' });
 		} catch { return null; }
 	}
@@ -90,6 +108,17 @@
 		try {
 			const urlParams = new URLSearchParams(window.location.search);
 			const recaptchaToken = await getRecaptchaToken();
+
+			// Camino rechaza con 403 cualquier envío del navegador sin token, así que mandarlo
+			// sólo produciría un error opaco ("Verificación de seguridad requerida") que no le
+			// dice nada a quien está intentando contactarnos. Si el token no se pudo acuñar
+			// (bloqueador de anuncios, red caída), dale la dirección de correo: se pierde el
+			// registro en el CRM, no la persona.
+			if (!recaptchaToken) {
+				submitStatus = 'error';
+				errorMessage = $_('contact.form.errorFallbackEmail');
+				return;
+			}
 
 			const response = await fetch(CAMINO_API_URL, {
 				method: 'POST',

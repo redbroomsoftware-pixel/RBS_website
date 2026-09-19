@@ -789,6 +789,7 @@
         "other": "Other"
       },
       "errorSubmit": "Error submitting the form",
+      "errorFallbackEmail": "We couldn't complete the security check. Email us directly at contacto@redbroomsoftware.com and we'll get back to you just the same.",
       "errorGeneric": "Error submitting. Please try again."
     },
     "process": {
