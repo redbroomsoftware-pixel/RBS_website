@@ -476,7 +476,7 @@
     },
     "b2cServices": {
       "title": "Servicios B2C",
-      "subtitle": "Ademas de software, operamos servicios directos para empresas que prefieren solución llave en mano.",
+      "subtitle": "Además de software, operamos servicios directos para empresas que prefieren solución llave en mano.",
       "new": "Nuevo",
       "active": "Servicio Activo",
       "comingSoon": "Próximamente",
@@ -902,7 +902,7 @@
       "title": "3. Finalidades del Tratamiento",
       "intro": "Sus datos personales serán utilizados para las siguientes finalidades primarias:",
       "primary": [
-        "Provision de servicios de software contratados (POS, ERP, CRM, facturación)",
+        "Provisión de servicios de software contratados (POS, ERP, CRM, facturación)",
         "Emisión de Comprobantes Fiscales Digitales por Internet (CFDI)",
         "Procesamiento de pagos y transacciones",
         "Soporte técnico y atención al cliente",
