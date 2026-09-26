@@ -116,7 +116,39 @@ if (process.argv.includes('--autotest')) {
   console.log(`  ${localOk ? '✓' : '✗'}  detecta LOCAL con la marca real`);
   console.log(`  ${nubeOk ? '✓' : '✗'}  detecta NUBE con una marca ausente (control)`);
   if (!localOk || !nubeOk) fallos++;
-  console.log(fallos === 0 ? `\n${casos.length + 2}/${casos.length + 2} ✅` : `\n🔴 ${fallos} fallo(s)`);
+  // ── el control que faltaba (S827) ─────────────────────────────────────────────────
+  // La v1 de este hook era `.js` y CRASHEABA en los 27 repos que declaran
+  // `"type": "module"`: Node lo cargaba como ESM y `require` no existe ahí. Salía con
+  // exit 1, que Claude Code trata como error NO bloqueante — sólo el 2 bloquea. O sea:
+  // desplegado en 30 repos y sin bloquear nada. El autotest no lo vio porque se corría
+  // desde ecosystem-sdk, el único sitio donde NO falla.
+  // Por eso ahora el autotest se ejecuta a sí mismo dentro de un paquete ESM.
+  const os = require('os');
+  const path = require('path');
+  const { execFileSync } = require('child_process');
+  const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'hook-esm-'));
+  let esmOk = false, esmDetalle = '';
+  try {
+    fs.writeFileSync(path.join(tmp, 'package.json'), '{"type":"module"}');
+    const copia = path.join(tmp, path.basename(__filename));
+    fs.copyFileSync(__filename, copia);
+    const r = require('child_process').spawnSync(process.execPath, [copia], {
+      input: JSON.stringify({ tool_name: 'Bash', tool_input: { command: 'git push origin main' }, cwd: tmp }),
+      encoding: 'utf8', env: { ...process.env },
+    });
+    // En LOCAL debe salir 0 (no bloquea). Lo que NO puede pasar es que reviente.
+    esmOk = !/require is not defined|Cannot use import statement|SyntaxError/.test(r.stderr || '');
+    esmDetalle = esmOk ? `exit ${r.status}, sin crash` : (r.stderr || '').split('\n').find(Boolean) || '?';
+  } catch (e) {
+    esmDetalle = String(e.message);
+  } finally {
+    fs.rmSync(tmp, { recursive: true, force: true });
+  }
+  console.log(`  ${esmOk ? '✓' : '✗'}  no revienta dentro de un paquete "type":"module"  (${esmDetalle})`);
+  if (!esmOk) fallos++;
+
+  const total = casos.length + 3;
+  console.log(fallos === 0 ? `\n${total}/${total} ✅` : `\n🔴 ${fallos} fallo(s)`);
   process.exit(fallos === 0 ? 0 : 1);
 }
 
