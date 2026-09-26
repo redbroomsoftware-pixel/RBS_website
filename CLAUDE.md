@@ -58,11 +58,16 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the ecosyste
 - **URL**: `redbroomsoftware.com`
 
 > ⚠️ **Los conteos NO se escriben en prosa — ni aquí ni en el copy.** Las apps del ecosistema salen de
-> `src/lib/ecosystem-stats.json` (derivado del canon `apps.json`); el portafolio público sale de
-> `productKeys` / `b2cServiceKeys` en [`src/routes/portafolio/+page.svelte`](src/routes/portafolio/+page.svelte).
-> Esta sección decía "18-product" mientras la página listaba 16+5 y el canon 25, y el hero anunciaba
-> "22 Aplicaciones" bajo un título que decía 25 — con el JSON-LD que Google indexa afirmando "22-app"
-> (corregido S709: contador y schema ahora derivan de `appCount`).
+> `src/lib/ecosystem-stats.json` (derivado del canon `apps.json`, hoy `appCount: 25`, usado por
+> `/` para el hero, el JSON-LD y las stats — verificado S827, sin literales sueltos). El portafolio
+> público (`/portafolio`) ya NO usa una lista a mano: desde S755 sale de
+> `listarEscenas()`/`listarRecorridos()` de `@r-bsoftware/scene-registry` (25 escenas medidas S827,
+> `node --input-type=module -e "import{listarEscenas}from '@r-bsoftware/scene-registry';console.log(listarEscenas().length)"`)
+> más `b2cServiceKeys` (5) declarado en
+> [`src/routes/portafolio/+page.svelte`](src/routes/portafolio/+page.svelte); el badge del hero
+> (S776) interpola ambos conteos, nunca los escribe. **La sección "Portfolio" de abajo describía
+> `productKeys` — un identificador que S755 borró — y una lista de 18 productos a mano que ya no
+> corresponde a ningún dato real (corregido S827, ver esa sección).**
 
 ## Decision Boundaries
 
@@ -106,25 +111,36 @@ Corporate marketing website for Red Broom Software S.A.S. Showcases the ecosyste
   0 huecos entre idiomas —, fully wired — all 8 pages + 5 components use $_())
 - **Error Tracking**: Sentry (@sentry/sveltekit)
 
-## Portfolio (16 productos + 5 servicios B2C — verificado S709 contra `productKeys`/`b2cServiceKeys`)
-1. Caracol — Restaurant POS
-2. La Hoja — ERP for Restaurants
-3. Cosmos Pet — Veterinary SaaS
-4. Camino — CRM + AI Agents
-5. Colectiva — B2B Payments + Capital
-6. Constanza — Accounting
-7. Comal — E-commerce SaaS
-8. Plenura — Wellness Platform
-9. Rito — Real Estate PE
-10. Agora — Legal Tech
-11. Goodbay — Farewell Marketplace
-12. Mancha — Restaurant Reservations
-13. Cookie Monster — Bakery E-commerce
-14. Continua — Blood Donation
-15. Puppy Love — Pet Matching
-16. Baul — Storage Marketplace
-17. Servilleta — Task Marketplace
-18. Hospitality Fiscal — Vacation Rentals
+> ✅ **"~522 cadenas sin tilde" (raíz, S709) ya NO describe este repo — medido, no descartado de
+> oído (S827).** `node ecosystem-sdk/scripts/lint-es-accents.mjs src/lib/i18n/locales` sobre
+> `es.json` de cara al usuario da **2** hallazgos reales, no ~522 — ambos corregidos S827:
+> `portfolio.b2cServices.subtitle` ("Ademas"→"Además") y `privacy.section3.primary[0]`
+> ("Provision"→"Provisión", este último fuera del diccionario del canario — hallado a mano
+> auditando cada `...sion(es)?\b` sin acentuar en el archivo). El resto de coincidencias del
+> canario en `.svelte`/`.ts` (`Footer.svelte`, `tecnologia/+page.svelte`,
+> `plataformas/+page.server.ts`, `terms/+page.server.ts`) son **falsos positivos**: caen sobre
+> rutas (`/tecnologia`, `/terminos`) o el parámetro de API `region` — identificadores, no texto
+> de cara al usuario, y esta tarea tenía instrucción explícita de no tocarlos. El propio canario
+> también da un falso positivo verificado (`\b` de JS no trata una vocal acentuada como carácter
+> de palabra, así que "Envíanos" — ya correcto — parece contener "anos"); se descartó a mano, no
+> con `--fix`.
+
+## Portfolio (25 plataformas del registro + 5 servicios B2C — corregido S827)
+
+> 🔴 **Esta sección decía "16 productos + 5 servicios B2C" y listaba 18 productos escritos a
+> mano citando `productKeys`.** Las tres cifras eran falsas a la vez y ninguna corresponde al
+> código actual: `productKeys` fue **borrado en S755** (comentario `src/routes/portafolio/
+> +page.svelte:14-21`) precisamente porque esa lista de 16 (+5 B2C) vivía a mano mientras el
+> canon ya tenía 25, y dos de sus entradas seguían publicando `la-hoja`, un slug retirado en
+> PD-044/S205. Hoy `/portafolio` no tiene una lista de productos en este repo: renderiza
+> `listarEscenas()` de `@r-bsoftware/scene-registry` — **25 escenas medidas S827** (`camino,
+> colectiva, constanza, caracol, mancha, hoja, goodbay, garita, cosmos-pet, madriguera,
+> puppy-love, plenura, agora, comal, baul, agente, escuela, bee, continua, servilleta, patadas,
+> hub, rito, kiina, cookie-monster`) — más `b2cServiceKeys` (5, sin cambios: constanza, camino,
+> colectiva, aiSupport/camino, mancha), declarado inline en
+> [`src/routes/portafolio/+page.svelte`](src/routes/portafolio/+page.svelte). El catálogo de
+> las 25 vive en el paquete `scene-registry`, no en este repo — no se copia aquí para no crear
+> una sexta lista rival (Principle: "los conteos NO se escriben en prosa").
 
 ## Components
 Se citan con su ruta para que el canario pueda verificarlas
@@ -165,7 +181,7 @@ Se citan con su ruta para que el canario pueda verificarlas
 |-------|---------|-----------|
 | `/` | Hero, stats, capabilities, products grid | SSR |
 | `/plataformas` | Camino-powered platforms showcase | SSR (fetches from Camino content API) |
-| `/portafolio` | 16 productos + 5 servicios B2C | SSR |
+| `/portafolio` | 25 plataformas del registro + 5 servicios B2C | SSR |
 | `/servicios` | Service offerings | SSR |
 | `/tecnologia` | Tech stack showcase | SSR |
 | `/contacto` | Contact form → Camino CRM | SSR |
