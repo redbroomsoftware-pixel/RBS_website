@@ -65,11 +65,35 @@
 		]
 	});
 
-	const gridData = $derived(getBlock('plataformas-grid') || {
-		title: $_('plataformas.grid.title'),
-		subtitle: $_('plataformas.grid.subtitle'),
-		platforms: defaultPlatforms()
-	});
+	/**
+	 * S851 — Fichas VERIFICADAS por el censo promesa×estado (cada una tiene presentación honesta o
+	 * sus promesas se midieron contra el código). Sustituyen a la ficha del CMS de camino con el
+	 * mismo id: el CMS (`plataformas-grid`) seguía anunciando «CFDI automático por venta», «clubes
+	 * incluidos», «RESICO Guardian» y Hoja como `la-hoja` a $499. Las demás siguen saliendo del CMS.
+	 */
+	const VERIFICADAS = new Set(['caracol', 'constanza', 'comal', 'hoja']);
+	const ALIAS_CMS = /** @type {Record<string, string>} */ ({ 'la-hoja': 'hoja' });
+	function conFichasVerificadas(/** @type {any} */ bloque) {
+		const locales = new Map(
+			defaultPlatforms()
+				.filter((p) => VERIFICADAS.has(p.id))
+				.map((p) => [p.id, p])
+		);
+		return {
+			...bloque,
+			platforms: (bloque.platforms || []).map((/** @type {any} */ p) => locales.get(ALIAS_CMS[p.id] ?? p.id) ?? p)
+		};
+	}
+
+	const gridData = $derived(
+		conFichasVerificadas(
+			getBlock('plataformas-grid') || {
+				title: $_('plataformas.grid.title'),
+				subtitle: $_('plataformas.grid.subtitle'),
+				platforms: defaultPlatforms()
+			}
+		)
+	);
 
 	const ctaData = $derived(getBlock('enterprise-cta') || {
 		title: $_('plataformas.enterprise.title'),
@@ -87,7 +111,8 @@
 		'plenura': 'plenura',
 		'rito': 'rito',
 		'agora': 'agora',
-		'la-hoja': 'la-hoja',
+		// S851 — la ficha usa el slug del canon (hoja); la API de precios de camino sigue keyada por la-hoja.
+		hoja: 'la-hoja',
 		'mancha': 'mancha',
 		'cosmos-pet': 'cosmos_pet',
 		'garita': 'garita',
@@ -172,8 +197,10 @@
 			}
 		}
 
-		// Per-user pricing model
-		if (appPricing.pricing_model === 'subscription' || appPricing.pricing_model === 'per_user_subscription') {
+		// Per-user pricing model. S851 — incluía `subscription`, que es el modelo POR NIVELES y por
+		// negocio (hoja, constanza, comal, colectiva, cosmos_pet): la página decía «$999/usuario/mes»
+		// de Hoja, que cobra por negocio. Por usuario sólo son `per_user` y `per_user_subscription`.
+		if (appPricing.pricing_model === 'per_user' || appPricing.pricing_model === 'per_user_subscription') {
 			const lowestTier = paidTiers.find((/** @type {any} */ t) => t.price === lowestPrice);
 			// Standard tiers with per-user pricing
 			if (lowestTier) {
@@ -190,13 +217,13 @@
 	// the Camino content merge logic.
 	function defaultPlatforms() {
 		return [
-			{ id: 'caracol', name: 'Caracol POS', tagline: 'Punto de venta para restaurantes y bares', pricing: getDynamicPricing('caracol', '$425/usuario/mes'), features: ['CFDI 4.0 en punto de venta', 'Control de inventario y añadas', 'Modo mostrador rápido'], color: 'amber', cta_href: 'https://camino.redbroomsoftware.com/register?app=caracol&utm_source=rbs_website&utm_medium=plataformas' },
-			{ id: 'comal', name: 'Comal', tagline: 'Tu tienda en línea — en pesos, con facturación', pricing: getDynamicPricing('comal', 'Desde $399/mes'), features: ['Vs Shopify: $399 vs $600+ MXN', 'Clubs de suscripción incluidos', 'CFDI automático por venta'], color: 'rose', cta_href: 'https://camino.redbroomsoftware.com/register?app=comal&utm_source=rbs_website&utm_medium=plataformas' },
-			{ id: 'constanza', name: 'Constanza', tagline: 'Facturación CFDI y contabilidad fiscal', pricing: getDynamicPricing('constanza', 'Desde $590/mes'), features: ['Timbrado CFDI con clasificación IA', 'Conciliación bancaria automática', 'RESICO Guardian (optimizador fiscal)'], color: 'purple', cta_href: 'https://camino.redbroomsoftware.com/register?app=constanza&utm_source=rbs_website&utm_medium=plataformas' },
+			{ id: 'caracol', name: 'Caracol', tagline: 'Punto de venta e inventario por lote para vinos, tienda y restaurante-bar', pricing: getDynamicPricing('caracol', '$425/usuario de gestión/mes'), features: ['Inventario por añada y pedimento, del lote más antiguo primero', 'Venta por botella o por copa', 'Meseros y cajeros sin costo'], color: 'purple', cta_href: 'https://caracol.redbroomsoftware.com/presentacion.html?utm_source=rbs_website&utm_medium=plataformas' },
+			{ id: 'comal', name: 'Comal', tagline: 'Tu tienda en línea, en pesos', pricing: getDynamicPricing('comal', 'Desde $399/mes'), features: ['Catálogo, carrito e inventario', 'Cupones y tarjetas de regalo', 'Envíos con tarifa plana o tu cuenta de Skydropx'], color: 'rose', cta_href: 'https://comal.redbroomsoftware.com/precios?utm_source=rbs_website&utm_medium=plataformas' },
+			{ id: 'constanza', name: 'Constanza', tagline: 'Facturación CFDI 4.0 y contabilidad desde tus XML', pricing: getDynamicPricing('constanza', 'Desde $590/mes'), features: ['Factura con tu propio sello (CSD)', 'Pólizas, estado de resultados y balance', 'Cálculo de tus declaraciones mensuales y anual'], color: 'purple', cta_href: 'https://constanza.redbroomsoftware.com/presentacion.html?utm_source=rbs_website&utm_medium=plataformas' },
 			{ id: 'plenura', name: 'Plenura', tagline: 'Marketplace de bienestar y terapia', pricing: getDynamicPricing('plenura', 'Desde $299/mes + comisión'), features: ['Escrow protege a ambas partes', '5 herramientas de IA clínica', 'Video sesiones integradas'], color: 'teal', cta_href: 'https://camino.redbroomsoftware.com/register?app=plenura&utm_source=rbs_website&utm_medium=plataformas' },
 			{ id: 'rito', name: 'Rito', tagline: 'Capital privado inmobiliario', pricing: getDynamicPricing('rito', 'Desde $2,499/mes'), features: ['AI Copilot para análisis de deals', 'Portal LP con capital calls', 'Cumplimiento fiscal mexicano nativo'], color: 'indigo', cta_href: 'https://camino.redbroomsoftware.com/register?app=rito&utm_source=rbs_website&utm_medium=plataformas' },
 			{ id: 'agora', name: 'Agora', tagline: 'Gestión de despachos jurídicos', pricing: getDynamicPricing('agora', 'Próximamente'), features: ['IOLTA trust accounting', 'Redacción IA con plantillas MX', 'Ghost timer para tiempo facturable'], color: 'sky', cta_href: 'https://camino.redbroomsoftware.com/register?app=agora&utm_source=rbs_website&utm_medium=plataformas' },
-			{ id: 'la-hoja', name: 'La Hoja', tagline: 'ERP para cafeterías y panaderías', pricing: 'Desde $499/mes', features: ['Inventario FIFO para perecederos', 'Gestión multi-sucursal', 'Reportes operativos en tiempo real'], color: 'lime', cta_href: 'https://camino.redbroomsoftware.com/register?app=la-hoja&utm_source=rbs_website&utm_medium=plataformas' },
+			{ id: 'hoja', name: 'Hoja', tagline: 'Punto de venta para restaurantes y cafeterías que sabe cuánto cuesta cada platillo', pricing: getDynamicPricing('hoja', 'Desde $999/mes'), features: ['Comandas impresas por estación', 'Recetas con costo por porción y margen', 'Corte de caja con arqueo'], color: 'lime', cta_href: 'https://hoja.redbroomsoftware.com/presentacion.html?utm_source=rbs_website&utm_medium=plataformas' },
 			{ id: 'mancha', name: 'Mancha', tagline: 'Reservaciones para restaurantes', pricing: getDynamicPricing('mancha', 'Desde $12/cubierto'), features: ['Integración nativa con Caracol POS', 'Booking por WhatsApp con IA', 'Pricing dinámico por demanda'], color: 'orange', cta_href: 'https://camino.redbroomsoftware.com/register?app=mancha&utm_source=rbs_website&utm_medium=plataformas' },
 			{ id: 'cosmos-pet', name: 'Cosmos Pet', tagline: 'Gestión de clínicas veterinarias', pricing: getDynamicPricing('cosmos-pet', 'Desde $599/mes'), features: ['Expediente clínico digital', 'Inventario veterinario', 'Facturación CFDI integrada'], color: 'cyan', cta_href: 'https://camino.redbroomsoftware.com/register?app=cosmos-pet&utm_source=rbs_website&utm_medium=plataformas' },
 			{ id: 'garita', name: 'Garita', tagline: 'Control de acceso y amenidades para propiedades', pricing: getDynamicPricing('garita', 'Desde $1,500/mes'), features: ['Control de acceso inteligente', '8 verticales: residencial, gym, spa, club, coworking', 'Portal de residente y reservaciones'], color: 'emerald', cta_href: 'https://garita.redbroomsoftware.com?utm_source=rbs_website&utm_medium=plataformas' },
