@@ -131,10 +131,13 @@
 					{#if escena.asset.tipo === 'captura'}
 						<img src={escena.asset.url} alt="" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" width="1280" height="800" />
 					{:else}
-						<div class="degradado" style="--from:{escena.asset.from};--to:{escena.asset.to}" aria-hidden="true"></div>
+						<div class="degradado" style="--from:{escena.asset.from};--to:{escena.asset.to}" aria-hidden="true"><span>{escena.nombre}</span></div>
 					{/if}
 				</div>
 				<div>
+					<!-- S851 — sin esto la escena no decía QUÉ producto era: un titular de beneficio y un
+					     «Visitar producto» anónimo. El nombre viene del registro (la marca que se vende hoy). -->
+					<p class="text-sm font-semibold tracking-wide uppercase text-gray-500 mb-2">{escena.nombre}</p>
 					<h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 leading-tight">
 						{escena.escena.titular[idioma]}
 					</h3>
@@ -307,6 +310,18 @@
 	.degradado {
 		aspect-ratio: 16 / 10;
 		background: linear-gradient(140deg, var(--from), var(--to));
+		/* S851 — mientras no haya captura, el lienzo lleva la marca: un degradado sin nombre se leía
+		   como un recuadro vacío. Decorativo (aria-hidden): el nombre accesible está junto al titular. */
+		display: grid;
+		place-items: center;
+	}
+
+	.degradado span {
+		color: rgb(255 255 255 / 0.92);
+		font-weight: 800;
+		font-size: clamp(2rem, 6vw, 3.75rem);
+		letter-spacing: -0.03em;
+		text-shadow: 0 2px 18px rgb(0 0 0 / 0.18);
 	}
 
 	@supports (animation-timeline: view()) {
